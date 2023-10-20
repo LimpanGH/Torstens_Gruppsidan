@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <head>
+        <a href="index.html"><button>Back to home</button></a>
+        <H1>Bli medlem i Torstens Änglar</H1>
+        <br>
+    </head>
+
+
+    <main>
+        
+        <div class="wrapper">
+            
+        <form class="form">
+            
+            <label for="name">Användarnamn:</label>
+            <input type="text" name="name" id="name">
+
+            <label for="email">E-post:</label>
+            <input type="email" name="email" id="email">
+
+            <label for="password">Lösenord:</label>
+            <input type="password" name="password" id="email">
+
+            <h4>Avlsuta följande meningar:</h4>
+
+            <label for="question-1">It's not a bug:</label>
+            <select name="question-1" id="question-1" required>
+                <option value="none">--selected answer--</option>
+                <option value="wrong">it's a new dance move</option>
+                <option value="wrong">it's a fly</option>
+                <option value="correct">it's a feature</option>
+                <option value="wrong">it's superman</option>
+            </select>
+
+            <label for="question-2">The answer is:</label>
+            <select name="question-2" id="question-2" required>
+                <option value="none">--selected answer--</option>
+                <option value="wrong">to be or not to be</option>
+                <option value="correct">Stackoverflow</option>
+                <option value="wrong">forty-two</option>
+                <option value="wrong">somwhere over the rainbow</option>
+            </select>
+
+            <label for="question-3">It ain't working because:</label>
+            <select name="question-3" id="question-3">
+                <option value="none">--selected answer--</option>
+                <option value="correct"> it's compiling</option>
+                <option value="wrong">the office gremlins are on strike</option>
+                <option value="wrong">we are out of coffee </option>
+                <option value="wrong">the plant believes it's an oasis</option>
+            </select>
+
+            <input type="submit" value="gå med">
+
+        </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+
+@media(max-width:1024){}
+@media screen and (max-width: 768px) {
+    
+}
+@media(max-width: 600){}
+
+*{
+    margin: 0px;
+    font-family:'Times New Roman', Times, serif;
+    color: #746543;
+    box-sizing: border-box;
+    list-style: none;
+    text-align: center;
+}
+.nav_zabi{
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    background-color: #d4d1c6;  
+}
+.nav-links-zabi{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 25px;
+    font-size: 17px;
+    align-items: center;
+    padding-right: 10px;
+}
+.headline_zabi{
+    width: 100px;
+    height: 50vh;
+    min-width: 100px;
+    background-size: cover;
+    background-color: #ede9dd;
+    background-size: 650px, 650px, auto;
+    background-repeat: no-repeat;
+
+}
+img{
+    margin: 10px;
+}
+main.container img{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+}

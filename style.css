@@ -1,0 +1,296 @@
+* {
+  margin: 0px;
+  font-family: "Lora", serif;
+  color: #544013;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024) {}
+
+@media (max-width: 800) {}
+
+@media (max-width: 600) {}
+
+
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+.nav {
+  position: fixed;
+  height: 5rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #d4d1c6;
+}
+
+.nav-header {
+  display: flex;
+  background-color: #d4d1c6;
+}
+
+.nav-title {
+  /* display: inline-block; */
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #544013;
+  padding: 15px;
+  animation: fadeColor ease-in 5s;
+}
+
+/* animation for Torstens änglar: <animation-name><animation-duration><animation-timing-function><animation-delay><animation-iteration-count><animation-direction><animation-fill-mode>; */
+
+@keyframes fadeColor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    color: #c85a14;
+  }
+
+  100% {
+    color: #544013;
+  }
+
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  font-size: 17px;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: 19px;
+  text-decoration: none;
+  /*color: rgb(30, 18, 18);*/
+}
+
+.nav-links>a:hover {
+  background-color: #c85a14;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background-color: #ede9dd;
+}
+
+
+/*Header*/
+.headline {
+  width: 100%;
+  height: 50vh;
+  min-width: 200px;
+  background-size: cover;
+  /* background-color: #ede9dd; */
+  background-image: url(/img/img-main/cloudy-sky.jpg);
+  background-size: cover;
+}
+
+.headline>h1 {
+  text-align: center;
+  padding: 10rem 0 0 0;
+  color: #544013;
+  font-size: xx-large;
+}
+
+.headline>p {
+  text-align: center;
+  padding: 1rem;
+  color: #544013;
+  font-size: xx-large;
+}
+
+/*content*/
+.container {
+  width: min(100% - 15rem);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 0 0 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  width: 250px;
+  background-color: #d4d1c6;
+  border-radius: 10px;
+  margin: 40px;
+  /*box-shadow: 5px 10px 18px;*/
+}
+
+
+/* Anders animations experiment */
+
+.hide:hover,
+.hide:focus {
+  transition: opacity 0.3s;
+  opacity: 0;
+
+}
+
+/* Här slutar Anders experiment med animation */
+
+
+.image {
+  background-color: #eeeeee;
+  height: 200px;
+  background-color: cover;
+}
+
+.card-1 {
+  box-shadow: 5px 10px 18px;
+  background-image: url();
+}
+
+#card-lili {
+  box-shadow: 5px 10px 18px;
+  background-image: url(img/Leila/leila.png);
+  background-size: cover;
+
+}
+
+#card-linus {
+  box-shadow: 5px 10px 18px;
+  background-image: url(linus/img/imgLinus.jpeg);
+  background-size: cover;
+}
+
+#card-anders {
+  box-shadow: 5px 10px 18px;
+  background-image: url(/img/anders.jpg);
+  background-size: cover;
+}
+#card-zabi{
+  box-shadow: 5px 10px 18px;
+  background-image: url(/img/image_Zabi.jpg);
+  background-size: cover;
+}
+
+#card-su {
+  box-shadow: 5px 10px 18px;
+  background-image: url(/img/imagesu.PNG);
+  background-size: cover;
+  width: 50%;
+}
+
+#card-gabriel {
+  box-shadow: 5px 10px 18px;
+  background-image: url(/Gruppuppgifter/img/ai.jpg);
+  background-size: cover;
+}
+
+.content {
+  margin: 10px;
+  text-align: center;
+  padding: 0 10px 10px;
+}
+
+.content h3,
+p {
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.btn {
+  background-color: #ede9dd;
+  border: 2px solid #ede9dd;
+  border-radius: 20px;
+  /*color: rgb(56 37 135); Anders removed, not sure there is a difference*/
+  margin-top: 15px;
+  padding: 10px 23px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #c85a14;
+  transition: 0.5s;
+  transform: scale(1.1);
+  border: none;
+}
+
+/*Sub-page-container*/
+.subcontainer {
+  background-color: #176b87;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.subcard {
+  width: 400px;
+  background-color: #053b50;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.subimage {
+  background-color: #eeeeee;
+  height: 350px;
+  background-color: cover;
+}
+
+.subcard-1 {
+  background-image: url();
+}
+
+#subcard-anders {
+  background-image: url(/img/anders-2.jpg);
+  background-size: cover;
+}
+
+/*footer*/
+
+.footer {
+  height: 50px;
+  width: 100%;
+  background-color: #d4d1c6;
+  position: relative;
+}
+
+.footer-header {
+  display: inline;
+  background-color: #d4d1c6;
+}
+
+.footer-title {
+  display: flex;
+  font-size: 22px;
+  color: antiquewhite;
+  padding: 10px;
+  justify-content: center;
+}
+
+.footer-links {
+  display: inline;
+  float: right;
+  font-size: 17px;
+}
+
+.footer-links a {
+  display: inline-block;
+  padding: 13px;
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.footer-links>a:hover {
+  background-color: antiquewhite;
+}

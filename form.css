@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* body {} */
+
+header {
+    height: 10rem;
+    text-align: center;
+}
+
+.wrapper {
+    
+    width: min(100% - 3rem, 65ch);
+    /* margin-inline: auto; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#d4d1c6 ;
+    
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 1rem 1rem;
+    /* gap: 1rem; */
+}
+
+label {
+    margin-top: 1rem;
+    padding: 0.4rem .2rem;
+}
+
+input,
+select {
+    margin-bottom: 1rem;
+    padding: 0.4rem .2rem;
+    
+}
+
+/* input:read-only {} */

@@ -1,0 +1,133 @@
+*,
+::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+body {
+    /* min-height: 100vh; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    padding: 0 2rem;
+    /* width: 600px; */
+    /* height: 100vh; */
+    margin: 0 auto;
+}
+
+label,
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Hero beginns */
+
+.hero-image {
+    background-image: url("img/fatty-corgi-Zn5chZcnFRA-unsplash.jpg");
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 1rem;
+}
+
+.hero-text {
+
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(29, 28, 28);
+}
+
+/* Hero ends */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eeeeee;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+
+/* Avatar image design */
+
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+/* .column {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1;
+} */
+
+.split__child {
+    /* flex-basis: 25%; */
+    display: block;
+    margin: 0 auto;
+
+}
+
+.avatar {
+    /* vertical-align: middle; */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.avatar:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    border: 2px solid red
+}
+
+.form__styling {
+    margin-top: 1rem;
+
+}
+
+.form__styling button {
+    background-color: darkslategray;
+    color: white;
+    border-radius: 20px;
+    padding: 0.2rem 2rem 0.2rem 2rem;
+    border: none;
+
+}
+
+.form__styling button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: darkslategray
+}

@@ -1,0 +1,25 @@
+nav {
+    text-align: left;
+    color: #ffffff;
+    height: 50px;
+    width: 100%;
+
+}
+
+
+
+
+img {
+
+    box-shadow: 5px 10px 18px;
+    background-color: rgb(233, 233, 233);
+    margin-left: 45%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.nav-title {
+    color: #ffffff;
+}
+
