@@ -10,6 +10,9 @@
 - knapp styling Vem? Leila klart
 - Rules for game pop-up Gabrielle Ej klart
 - Flex på form och start button Gabriel Klart.
+-   Få bark.mp3 att fungera onclick på varje figur (eventuellt skapa en border on click med)
+- För över valda bilden till gamingsidan för spelaren
+- För över random bild till gamingsidan för datorn
 
 <!-- Gamingsidan -->
 
@@ -17,6 +20,9 @@
 - navbar Vem? Su Ej klart
 - player/computer Vem? Ej klart
 - scoreboard Vem? Su Ej klart
+- Skapa inner html för ta fram bild vid math.random (sten sax påse)
+-  skapa html för att ta fram bild för människa (sten sax påse)     [Kanske använd get elementbyid?]
+- skriv js för scoreboarden
 
 **Leila**
 
