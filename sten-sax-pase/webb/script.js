@@ -100,15 +100,13 @@ function makeSelection(selection) {
 
 const a = 10;
 
-// What to do for  bark Audio on icon click:
-// 1. Get the element by class/id for icon buttons
-// 2. make a function that plays the Audio
-// 3. make the function run onclick
-// 4. connect the onclick to  appropriate html element
 
 
-// let bark = document.getElementsByClassName(avatar-flex);
-// element.addEventListener("click" function, (e) => {
-//  play
-  
-//   )
+function playAudio(file) {
+  new Audio(file).play();
+}
+
+function borderClick(box) {
+  box.style.border= "5px solid red";
+
+}
