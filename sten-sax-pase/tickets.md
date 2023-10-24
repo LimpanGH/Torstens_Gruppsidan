@@ -5,14 +5,14 @@
 - Fixa border runt ikonerna när man klickar på dem, på startsidan. Gabriel Klart
 - Responsiv design (370 600 och 800) Leila Ej klart
 - marginaler Vem? Ej klart
-- skalad hero image Linus Ej klart
+- skalad hero image Linus klart
 - fält styling Vem? Ej klart
 - knapp styling Vem? Leila klart
 - Rules for game pop-up Gabrielle Ej klart
 - Flex på form och start button Gabriel Klart.
 -   Få bark.mp3 att fungera onclick på varje figur (eventuellt skapa en border on click med)
-- För över valda bilden till gamingsidan för spelaren
-- För över random bild till gamingsidan för datorn
+- För över valda bilden till gamingsidan för spelaren - Gabriel Ej Klart
+- För över random bild till gamingsidan för datorn - Gabriel Ej Klart
 
 <!-- Gamingsidan -->
 
