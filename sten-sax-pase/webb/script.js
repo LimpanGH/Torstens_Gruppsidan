@@ -13,6 +13,7 @@
 
 const asdf = () => {};
 
+//function to select users choice
 const getUserInput = (userInput) => {
   userInput = userInput.toUpperCase();
 
@@ -25,6 +26,7 @@ const getUserInput = (userInput) => {
 
 // console.log(getUserInput("rock"));
 
+//function to decide computers choice
 const getComputerChoice = () => {
   const computerChoice = Math.floor(Math.random() * 3);
 
@@ -43,6 +45,8 @@ const getComputerChoice = () => {
 
 // console.log(getComputerChoice());
 
+
+//comparison between user and computer to declare a winner 
 const winner = (userInput, computerChoice) => {
   if (userInput == computerChoice) {
     return "It/s a tie";
@@ -101,12 +105,18 @@ function makeSelection(selection) {
 const a = 10;
 
 
-
+// onClick function for bark.mp3
 function playAudio(file) {
   new Audio(file).play();
 }
 
 function borderClick(box) {
-  box.style.border= "5px solid red";
+  //selects all avatars as eligible items, and allows a max of 1 item to be affected by borderClick
+  var allAvatars = document.querySelectorAll('.avatar');
+  allAvatars.forEach(function (avatar) {
+    avatar.style.border = 'none';
+  });
 
+ //styles borders on click
+  box.style.border = '5px solid red';
 }
