@@ -17,41 +17,34 @@ document.getElementById("name").textContent = fullName;
 
 
 // Make user input equal to button click content
-const rockbtn = document.getElementById("rock");
-const paperbtn = document.getElementById("paper");
-const scissorbtn = document.getElementById("scissor");
+const choice = document.querySelectorAll("#btn")
+const result = document.getElementById(choice)
 
 
-let user = "";
+choice.forEach(button => button.addEventListener('click', () => {
+    player = button.textContent;
+    result.textContent =`Result: ${player}`;
+  
+  
+  }));
 
 
 
-rockbtn.addEventListener("click", () => {
-  user = rockbtn.textContent});
-
-
-  paperbtn.addEventListener("click", () => {
-    user = paperbtn.textContent;
-  });
-
-  scissorbtn.addEventListener("click", () => {
-    user = scissorbtn.textContent;
-     
-  });
 
 
  
 
 
 
-const getUserInput = (user) => {
- 
-  if (userInput == "ROCK" || userInput == "PAPER" || userInput == "SCISSORS") {
-    return userInput;
-  } else {
-    return "error";
-  }
-};
+// const getUserInput = (userInput) => {
+//   userInput = userInput.toUpperCase();
+
+//   if (userInput == "ROCK" || userInput == "PAPER" || userInput == "SCISSORS") {
+//     return userInput;
+//   } else {
+//     return "error";
+//   }
+// };
 
 // console.log(getUserInput("rock"));
 
