@@ -105,11 +105,11 @@ p {
     /* leila */
 }
 
-/* .avatar:hover {
+.avatar:hover {
     cursor: pointer;
-    transform: scale(1.4, 1.4)
+   
     
-} */
+} 
 
 .playernam{
         display: flex;
