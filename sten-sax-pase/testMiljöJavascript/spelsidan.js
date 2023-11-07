@@ -21,6 +21,7 @@ const rockbtn = document.getElementById("rock");
 const paperbtn = document.getElementById("paper");
 const scissorbtn = document.getElementById("scissor");
 
+
 let user = "";
 
 
@@ -35,14 +36,16 @@ rockbtn.addEventListener("click", () => {
 
   scissorbtn.addEventListener("click", () => {
     user = scissorbtn.textContent;
+     
   });
 
 
+ 
 
 
-const getUserInput = (userInput) => {
-  userInput = userInput.toUpperCase();
 
+const getUserInput = (user) => {
+ 
   if (userInput == "ROCK" || userInput == "PAPER" || userInput == "SCISSORS") {
     return userInput;
   } else {
