@@ -7,16 +7,12 @@
 6 Adjust scoreboard
 */
 
-// ROCK = PAW
-// PAPER = NOSE
-// SCISSORS = TAIL
-
 const asdf = () => {};
 
 const getUserInput = (userInput) => {
   userInput = userInput.toUpperCase();
 
-  if (userInput == "PAW" || userInput == "NOSE" || userInput == "TAIL") {
+  if (userInput == "ROCK" || userInput == "PAPER" || userInput == "SCISSORS") {
     return userInput;
   } else {
     return "error";
@@ -30,13 +26,13 @@ const getComputerChoice = () => {
 
   switch (computerChoice) {
     case 0:
-      return "PAW";
+      return "ROCK";
       break;
     case 1:
       return "PAPER";
       break;
     case 2:
-      return "NOSE";
+      return "SCISSORS";
       break;
   }
 };
@@ -106,9 +102,8 @@ const a = 10;
 // 3. make the function run onclick
 // 4. connect the onclick to  appropriate html element
 
-
 // let bark = document.getElementsByClassName(avatar-flex);
 // element.addEventListener("click" function, (e) => {
 //  play
-  
+
 //   )

@@ -1,0 +1,1 @@
+Detta är en testmiljö för att prova ut funktionalitet för javascript. Koden kan sedan kopieras över till huvudprojektet.
