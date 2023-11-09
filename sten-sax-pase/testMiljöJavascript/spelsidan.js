@@ -69,6 +69,7 @@ function paperRound() {
     roundResult.textContent = "DRAW";
   } else if (computerInput === "ROCK") {
     winPlayer++;
+    animationPlayer++
     roundResult.textContent = "WIN";
   } else {
     winComputer++;
@@ -96,6 +97,8 @@ function checkWinner() {
     roundResult.textContent = "You won the game!";
   }
 }
+
+
 
 // ------------------ ⬇️ Old parts that we might reuse ⬇️--------------------------
 
