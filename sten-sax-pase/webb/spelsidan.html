@@ -9,63 +9,31 @@
   <link rel="stylesheet" href="spelsidan.css" />
   <script defer type="text/javascript" src="/sten-sax-pase/webb/script.js"></script>
 </head>
-
 <body>
   <header>
     <img class="logo" src="" alt="logo">
-    <nav class="nav">
-      <ul class="nav__links">
-        <li><a href="#">Restart</a></li>
-        <li><a href="#">Quit</a></li>
-      </ul>
-    </nav>
 
-  </header>
-  <div class="player">
-    <div class="name"></div>
-    <div class="avatar">
-      <label for="avatar6">
-        <h2 id="avatar6">player</h2>
-      </label>
-      <input type="hidden" id="avatar3" name="avatar" value="avatar3" />
-      <img src="img/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg" alt="Avatar 3" class="avatar" />
-    </div>
-  </div>
-  <div class="score">
-    <div class="user-score">
-      <span>0</span>: <span id="computer-score">0</span>
+    <div class="nav__scoreboard">
+      <span class="nav__scoreboards nav__scoreboards--comp">comp area</span>
+      <span class="nav__scoreboards nav__scoreboards--player">Play area</span>
     </div>
 
-    <ul class="player1">
-      <li data-selection="rock">
-        <div class="icon">
-          <a href="#"><img src="img/pawprint.png" alt="" /></a>
-        </div>
-      </li>
-      <li data-selection="paper">
-        <div class="icon">
-          <a href="#"><img src="img/dog-nose (1).png" alt="" /></a>
-        </div>
-      </li>
-      <li data-selection="scissors">
-        <div class="icon">
-          <a href="#"><img src="img/dog-chasing-tail.png" alt="" /></a>
-        </div>
-      </li>
+    <ul class="nav__links">
+      <li><a href="#">Restart</a></li>
+      <li><a href="#">Quit</a></li>
     </ul>
-  </div>
-  <div class="computer">
-    <div class="name"></div>
-    <div class="avatar">
-      <label for="avatar6">
-        <h2 id="avatar6">computer</h2>
-      </label>
-      <input type="hidden" id="avatar3" name="avatar" value="avatar3" />
-      <img src="img/alvan-nee-brFsZ7qszSY-unsplash.jpg" alt="Avatar 2" class="avatar" />
-    </div>
-  </div>
-  <div class="footer"></div>
-  </div>
+  </header>
+
+  <main>
+
+    <section class="controls">
+
+      <button data-selection="rock" class="button">Sten</button>
+      <button data-selection="paper" class="button">Sax</button>
+      <button data-selection="scissors" class="button">Påse</button>
+
+    </section>
+  </main>
 </body>
 
 </html>
