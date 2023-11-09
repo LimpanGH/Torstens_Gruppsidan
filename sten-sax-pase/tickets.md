@@ -30,6 +30,8 @@
 
 15-10-2023 13:00
 
+15-10-2023 13:00
+
 - Create new branch (Leila)
 - Add somthing on my branch and I will want to change some design on my spelsidan after approval from the group may be put on main branch
 - Fix main frame on center
@@ -44,6 +46,21 @@
 - Put avatar and design according avatar animate zoom in(in section tiyle and put icon)
 - Also put image in section(computer)(player )with icon and fixing padding and margin
   -put hover in link on section of icon(Paw,noise,tail)
+
+  07-11-2023  13:00
+
+  - redesigned startsidan
+  -added animation  for title and dog just with shape created animation  as dog walkin and cratetd with various shape is hust code not image
+  -responsive for mobile
+  -setting padding and margin fo all avator and button
+  added placeholder for input button for write your name when you want register on play.
+ - worked a little on javascript and test it on consol with 3 button rock, papper, scissors through onclick on html code and pop on with alert() to show the result.
+
+
+ 08-11-2023   10:00
+ -(StartSidan)changed title like button and matched with second page for button(Sten, Sax, Påse) 
+ -finde some images for match them as Avator and when click on used animation and change image like zoom in and relataed to bachgrund image(changed avator with animation (zoom in))
+ - (StartSidan)change backgrund color and text color  and matched with second page(responsive just for mobile)
 
 <!-- Linus -->
 
