@@ -30,7 +30,7 @@
 
 15-10-2023 13:00
 
-- Create new branch (LEila)
+- Create new branch (Leila)
 - Add somthing on my branch and I will want to change some design on my spelsidan after approval from the group may be put on main branch
 - Fix main frame on center
 - Fix all margin and padding (image/text/h1/h2)
