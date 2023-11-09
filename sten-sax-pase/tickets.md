@@ -16,11 +16,16 @@
 
 <!-- Gamingsidan -->
 
+Grundlayout för webbisdan klart i mobilt läge, iPhone 12 format
+Bestämma hur sidan ska se ut och bete sig i större format:
+ - Tankar: max width för att hålla storleken nere
+ - flytta knappar och information mer bort från spelytan.
+
 - Grid Vem? Leila ej klart
 - navbar Vem? Su Ej klart
-- player/computer Vem? Ej klart
-- scoreboard Vem? Su Ej klart
-- Skapa inner html för ta fram bild vid math.random (sten sax påse)
+- player/computer Vem? Anders - utrymme för samtliga delar skapat
+- scoreboard Vem? Klart, Anders. Scoreboarden är hur hundarna rör sig över racingbanan
+- Skapa inner html för ta fram bild vid math.random (sten sax påse), Anders - förslagsvis i avatarfönstret att avataren byts ut mot handen, eller att man har den under....
 -  skapa html för att ta fram bild för människa (sten sax påse)     [Kanske använd get elementbyid?]
 - skriv js för scoreboarden
 
