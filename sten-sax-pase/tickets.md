@@ -60,7 +60,7 @@
  08-11-2023   10:00
  -(StartSidan)changed title like button and matched with second page for button(Sten, Sax, Påse) 
  -finde some images for match them as Avator and when click on used animation and change image like zoom in and relataed to bachgrund image(changed avator with animation (zoom in))
- - (StartSidan)change backgrund color and text color  and matched with second page(responsive just for mobile)
+ - (StartSidan)--->change backgrund color and text color  and matched with second page(responsive just for mobile)
 
 <!-- Linus -->
 
