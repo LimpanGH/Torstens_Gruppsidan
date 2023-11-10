@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="spelsidan.css" />
+    <script
+      defer
+      type="text/javascript"
+      src="/sten-sax-pase/webb/script.js"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="spelsidan.css" />
-  <script defer type="text/javascript" src="/sten-sax-pase/webb/script.js"></script>
-</head>
-<body>
-  <header>
-    <img class="logo" src="" alt="logo">
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Paw::nose::tail</h1>
+        <div class="image"></div>
+      </div>
+      <div class="player">
+        <div class="name"></div>
+        <div class="avatar">
+          <label for="avatar6"><h2 id="avatar6">player</h2></label>
+          <input type="hidden" id="avatar3" name="avatar" value="avatar3" />
+          <img
+            src="img/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg"
+            alt="Avatar 3"
+            class="avatar"
+          />
+        </div>
+      </div>
+      <div class="score">
+        <div class="user-score">
+          <span>0</span>: <span id="computer-score">0</span>
+        </div>
 
-    <div class="nav__scoreboard">
-      <span class="nav__scoreboards nav__scoreboards--comp">comp area</span>
-      <span class="nav__scoreboards nav__scoreboards--player">Play area</span>
+        <ul class="player1">
+          <li data-selection="rock">
+            <div class="icon">
+              <a href="#"><img src="img/pawprint.png" alt="" /></a>
+            </div>
+          </li>
+          <li data-selection="paper">
+            <div class="icon">
+              <a href="#"><img src="img/dog-nose (1).png" alt="" /></a>
+            </div>
+          </li>
+          <li data-selection="scissors">
+            <div class="icon">
+              <a href="#"><img src="img/dog-chasing-tail.png" alt="" /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="computer">
+        <div class="name"></div>
+        <div class="avatar">
+          <label for="avatar6">
+            <h2 id="avatar6">computer</h2>
+          </label>
+          <input type="hidden" id="avatar3" name="avatar" value="avatar3" />
+          <img
+            src="img/alvan-nee-brFsZ7qszSY-unsplash.jpg"
+            alt="Avatar 2"
+            class="avatar"
+          />
+        </div>
+      </div>
+      <div class="footer"></div>
     </div>
-
-    <ul class="nav__links">
-      <li><a href="#">Restart</a></li>
-      <li><a href="#">Quit</a></li>
-    </ul>
-  </header>
-
-  <main>
-
-    <section class="controls">
-
-      <button data-selection="rock" class="button">Sten</button>
-      <button data-selection="paper" class="button">Sax</button>
-      <button data-selection="scissors" class="button">Påse</button>
-
-    </section>
-  </main>
-</body>
-
+  </body>
 </html>

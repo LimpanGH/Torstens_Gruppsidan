@@ -7,12 +7,16 @@
 6 Adjust scoreboard
 */
 
+// ROCK = PAW
+// PAPER = NOSE
+// SCISSORS = TAIL
+
 const asdf = () => {};
 
 const getUserInput = (userInput) => {
   userInput = userInput.toUpperCase();
 
-  if (userInput == "ROCK" || userInput == "PAPER" || userInput == "SCISSORS") {
+  if (userInput == "PAW" || userInput == "NOSE" || userInput == "TAIL") {
     return userInput;
   } else {
     return "error";
@@ -26,13 +30,13 @@ const getComputerChoice = () => {
 
   switch (computerChoice) {
     case 0:
-      return "ROCK";
+      return "PAW";
       break;
     case 1:
       return "PAPER";
       break;
     case 2:
-      return "SCISSORS";
+      return "NOSE";
       break;
   }
 };
@@ -81,10 +85,6 @@ const winner = (userInput, computerChoice) => {
 
 // runGame();
 
-
-
-
-
 const gameButtons = document.querySelectorAll("[data-selection]");
 
 gameButtons.forEach((gameButtons) => {
@@ -99,33 +99,3 @@ function makeSelection(selection) {
 }
 
 const a = 10;
-
-// What to do for  bark Audio on icon click:
-// 1. Get the element by class/id for icon buttons
-// 2. make a function that plays the Audio
-// 3. make the function run onclick
-// 4. connect the onclick to  appropriate html element
-
-// let bark = document.getElementsByClassName(avatar-flex);
-// element.addEventListener("click" function, (e) => {
-//  play
-
-//   )
-
-
-
-// onClick function for bark.mp3
-function playAudio(file) {
-  new Audio(file).play();
-}
-
-function borderClick(box) {
-  //selects all avatars as eligible items, and allows a max of 1 item to be affected by borderClick
-  var allAvatars = document.querySelectorAll('.avatar');
-  allAvatars.forEach(function (avatar) {
-    avatar.style.border = 'none';
-  });
-
- //styles borders on click
-  box.style.border = '5px solid red';
-}
