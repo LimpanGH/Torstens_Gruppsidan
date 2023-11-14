@@ -106,3 +106,35 @@ header {
     width: 190px;
     margin-top: -30px;
 }
+
+@keyframes moveDog{
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes moveDog2 {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.computer-avatar img {
+    animation: moveDog 1s ease-in-out infinite;
+}
+
+.player-avatar img{
+    animation: moveDog2 1s ease-in-out infinite ;
+}
