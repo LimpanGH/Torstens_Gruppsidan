@@ -10,17 +10,12 @@
 - When player or computer won 5 times: declare winner
 */
 
-// Receive and display user name that we got from startsidan
+// Extracting data from localstorage using the getItem-method and by putting the key inside the parenthes, we assign the value to our varable.
 const fullName = localStorage.getItem("fullName");
-document.getElementById("name").textContent = fullName; // Make user input equal to button click content
-const choice = document.querySelectorAll("#btn");
-const result = document.getElementById(choice);
-choice.forEach((button) =>
-  button.addEventListener("click", () => {
-    player = button.textContent;
-    result.textContent = `Result: ${player}`;
-  })
-);
+// Selecting the span-element with #name and writing the value from localstorage to the span.
+document.getElementById("name").textContent = fullName; 
+
+
 
 // MAKE rock-round/paper-round/scissors-round function
 //make a wincount function.
