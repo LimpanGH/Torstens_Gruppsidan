@@ -97,7 +97,7 @@ function scissorsRound() {
     roundResult.textContent = "WIN";
   } else {
     winComputer++;
-    winAnimationComputer() 
+    winAnimationComputer();
     roundResult.textContent = "LOSE";
   }
 }
@@ -112,28 +112,65 @@ function checkWinner() {
 
 // for loop with winplayer and wincomputer
 function winAnimationPlayer() {
-  scoreElementPlayer.classList.add('win-anim-P');
+  switch (winPlayer)
+  {
+  
+    case 1:
+      scoreElementPlayer.classList.add('win-anim-P');
+      
+      break;
+    case 2:
+      scoreElementPlayer.classList.add('win-anim-P-2');
+      
+      break;
+      case 3:
+        scoreElementPlayer.classList.add('win-anim-P-3');
+
+        break;
+        case 4:
+          scoreElementPlayer.classList.add('win-anim-P-4');
+
+        break;
+        case 5:
+           scoreElementPlayer.classList.add('win-anim-P-5');
+        break;
+
+  }
+  
 }
   
 
   function winAnimationComputer() {
-    
-  scoreElementComputer.classList.add('win-anim-C');
-  }
-
-  switch (winPlayer)
+    switch (winComputer)
   {
-    case 0:
-      
-      break;
+  
     case 1:
+      scoreElementComputer.classList.add('win-anim-C');
       
       break;
     case 2:
+      scoreElementComputer.classList.add('win-anim-C-2');
       
       break;
       case 3:
+        scoreElementComputer.classList.add('win-anim-C-3');
+
+        break;
+        case 4:
+          scoreElementComputer.classList.add('win-anim-C-4');
+
+        break;
+        case 5:
+           scoreElementComputer.classList.add('win-anim-C-5');
+        break;
+
   }
+  
+    
+  
+  }
+
+  
 
 
   
