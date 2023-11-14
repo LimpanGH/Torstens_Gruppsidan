@@ -11,44 +11,57 @@ body{
 
 li,
 a,
+p,
 button {
     font-family: "montserrat", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
     text-decoration: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: underline;
 }
 
 /* -------- Navbar start --------- */
 
-header {
+.header {
     display: flex;
-    justify-content: space-between;
-    padding: 0.6rem 3%;
-    /* background: rgba(134, 133, 133, 0.281); */
-
+    /* justify-content: space-between; */
+    gap: 1rem;
+    padding: 0.6rem 2%;
+    background: rgba(134, 133, 133, 0.281);
 }
 
-.nav__scoreboards {
+/* -------- Scoreboard area start --------- */
+
+.scoreboardwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreboard {
     background-color: azure;
-    padding: 4rem 1rem;
-    margin: 0rem 0.5rem;
+    padding: 1rem 0rem;
+    margin: 0.5rem 0rem;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
-    
 }
 
-.nav__scoreboards--comp {
+.scoreboard--computer {
     border: 5px solid #82e274;
-    
 }
 
-.nav__scoreboards--player {
-    border: 5px solid #7498e2;    
+.scoreboard--player {
+    border: 5px solid #7498e2;
 }
+
+/* -------- Scoreboard area end --------- */
 
 .nav__links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     list-style: none;
 }
 
@@ -57,12 +70,23 @@ header {
     cursor: pointer;
 }
 
-/* .nav__links li:nth-of-type(1) {
+.header--center {
+    align-self: center;
+    height: 60px;
+    width: 60px;
+}
+
+/* Puts the logo and the links on each sides */
+
+.header div:nth-of-type(1) {
     margin-left: auto;
-} */
+}
+
+.header div:nth-of-type(3) {
+    margin-left: auto;
+}
 
 /* -------- Navbar slut --------- */
-
 
 
 /* -------- Spelkontroller start --------- */
@@ -73,9 +97,8 @@ header {
     position: absolute;
     width: 100%;
     bottom: 0px;
-    padding: 1rem 3%;
+    padding: 0.7rem 2%;
     gap: 1rem;
-
 }
 
 .button {
@@ -90,7 +113,6 @@ header {
     background-color: #7499e2ce;
     cursor: pointer;
 }
-
 
 /* -------- Spelkontroller slut --------- */
 

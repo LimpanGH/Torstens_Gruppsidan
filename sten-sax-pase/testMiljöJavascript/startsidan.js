@@ -1,8 +1,4 @@
-// Objective
-// - Get the user’s name
-// - Send the name to spelsidan
-
-// Getting user input and taking it over to Spelsidan.
+// Getting user input and taking it over to Spelsidan, fully working.
 const form = document.getElementById("form");
 const playerName = document.getElementById("name");
 // Appending a submit-event to form that fires when we click on the submit-button , and when an input is submittet, the fc runs .
@@ -16,44 +12,48 @@ form.addEventListener("submit", (e) => {
   // it gives you a set of methods to store, read, clear or delete items.
   // The setItem() method of the Storage interface takes two arguments, and when passed a key- name and value, will add that key to the given Storage object, or update that key's value if it already exists.
   window.localStorage.setItem("fullName", nameValue);
+  // Redirects to our other page (spelsidan) when our form is submitted and the items have been set to localstorage
   window.location.href = "spelsidan.html";
 });
 //To check what is in your local storage: console.log(localStorage);
 
-// Getting the chosen avatar and taking it over to spelsidan
-const body = document.body;
+
+// Getting the chosen avatar and taking it over to spelsidan, not working yet.
 const avatar = document.querySelectorAll(".avatar");
 
-avatar.addEventListener("click", getChosenAvatar);
-
-function getChosenAvatar() {
-  switch (avatar) {
-    case avatar == ".avatar" && avatar == "#avatar 1":
-      //   return;
-      console.log("#avatar 1");
+let switchFunction = () => {
+  switch (true) {
+    case avatar.id == "#avatar1":
+      chosenAvatar = src = "img/charlesdeluvio-Mv9hjnEUHR4-unsplash.jpg";
+      return;
+      chosenAvatar;
       break;
-    case avatar == ".avatar" && avatar == "#avatar 2":
+    case avatar.id == "#avatar 2":
       return;
       "#avatar 2";
       break;
-    case avatar == ".avatar" && avatar == "#avatar 3":
+    case avatar.id == "#avatar 3":
       return;
       "#avatar 3";
       break;
-    case avatar == ".avatar" && avatar == "#avatar 4":
+    case avatar.id == "#avatar 4":
       return;
       "#avatar 4";
       break;
-    case avatar == ".avatar" && avatar == "#avatar 5":
+    case avatar.id == "#avatar 5":
       return;
       "#avatar 5";
       break;
-    case avatar == ".avatar" && avatar == "#avatar 6":
+    case avatar.id == "#avatar 6":
       return;
       "#avatar 6";
       break;
   }
-}
+  window.localStorage.setItem("myAvatar", chosenAvatar);
+  window.location.href = "spelsidan.html";
+};
+
+avatar.addEventListener("click", switchFunction);
 
 // const form = document.getElementById("form");
 // const playerName = document.getElementById("name");
