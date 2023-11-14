@@ -9,19 +9,31 @@
   <link rel="stylesheet" href="spelsidan.css" />
   <script defer type="text/javascript" src="/sten-sax-pase/webb/script.js"></script>
 </head>
-<body>
-  <header>
+
+  <body>
+  <header class="header">
     <img class="logo" src="" alt="logo">
 
-    <div class="nav__scoreboard">
-      <span class="nav__scoreboards nav__scoreboards--comp">comp area</span>
-      <span class="nav__scoreboards nav__scoreboards--player">Play area</span>
+    <div class="scoreboardwrapper">
+      <p>Computer</p>
+      <span class="scoreboard scoreboard--computer">comp area</span>
     </div>
 
-    <ul class="nav__links">
-      <li><a href="#">Restart</a></li>
-      <li><a href="#">Quit</a></li>
-    </ul>
+    <img src="img/left-hand-paper-svgrepo-com.svg" alt="" class="header--center">
+
+    <p class="header--center">VS</p>
+
+    <img src="img/right-hand-rock-svgrepo-com.svg" alt="" class="header--center">
+
+    <div class="scoreboardwrapper">
+      <p>Player</p>
+      <span class="scoreboard scoreboard--player">Play area</span>
+    </div>
+
+    <div class="nav__links">
+      <a href="#">Restart</a>
+      <a href="#">Quit</a>
+    </div>
   </header>
 
   <main>
