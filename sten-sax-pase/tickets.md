@@ -62,6 +62,12 @@
  -finde some images for match them as Avator and when click on used animation and change image like zoom in and relataed to bachgrund image(changed avator with animation (zoom in))
  - (StartSidan)--->change backgrund color and text color  and matched with second page(responsive just for mobile)
 
+
+ 14-11-2023   10:00
+
+ -Changed avatar to human na d fixing hover avatar with Javascripy when click on every avatar slect it with red border!!
+ -Redit title(ste,sax,påse)
+
 <!-- Linus -->
 
 2023-10-17

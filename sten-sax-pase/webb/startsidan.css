@@ -912,6 +912,7 @@ select {
     /* Leila */
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
    
@@ -936,7 +937,8 @@ p {
     padding-bottom: 6rem;
     padding-left: 2rem;
 
-    animation: skew-y-shake 2.5s infinite;
+
+/*     animation: skew-y-shake 2.5s infinite;
         }
         
         @keyframes skew-y-shake {
@@ -955,34 +957,32 @@ p {
         
             100% {
                 transform: skewY(0deg);
-            }
- }
- #sten{
+            }*/
+ } 
+
+#sten{
     width: 4rem;
     height: 4rem;
     padding: 1rem 0;
-    border: 5px solid #7498e2;
-    background:#7498e2 ;
+    font-size: xx-large;        
     border-radius: 50%;
-    color: white;
+    color: rgb(247, 239, 239);
  }
  #sax{
+        font-size: xx-large;
         width: 4rem;
         height: 4rem;
         padding: 1rem 0;
-        border: 5px solid #7498e2;
-        background: #7498e2;
         border-radius: 50%;
-        color: white;
+        color: rgb(244, 235, 235);
  }
  #påse{
+    font-size: xx-large;
     width: 4rem;
     height: 4rem;
     padding: 1rem 0;
-    border: 5px solid #7498e2;
-    background: #7498e2;
     border-radius: 50%;
-    color: white;
+    color: rgb(243, 237, 237);
  }
 
 
@@ -1061,16 +1061,23 @@ p {
     height: 65px;
     border-radius: 50%;
     border: none;
-    transition: all 1s ease-in-out;
+    /* transition: all 1s ease-in-out; */
     /* leila */
 }
 
 .avatar:hover {
 
     cursor: pointer;
-    transform: scale(1.4, 1.4)
+    /* transform: scale(1.2); */
+ /*    border: #544258; */
+   /*  border-radius: 5px solid black; */
+   
         /* Leila */
 
+}
+.avatar.clicked{
+    border-radius: 50%;
+    border: 5px solid red;
 }
 #avatar1 {
 
@@ -1078,15 +1085,15 @@ p {
     height: 65px;
     border-radius: 50%;
     border: none;
-    transition: all 1s ease-in-out;
+  /*   transition: all 1s ease-in-out; */
     /* leila */
 }
-#avatar2:hover {
+/* #avatar2:hover {
     content: url(img/s-j-508khDxcc5I-unsplash.jpg);
     cursor: pointer;
     transform: scale(1.4, 1.4)
 
-}
+} */
 #avatar1:hover {
     content: url(img/istockphoto-1090693262-612x612.jpg);
     cursor: pointer;
@@ -1111,6 +1118,7 @@ p {
        
        
     }
+  
 
 
  /* Does form styling even reference to anything? - Gabriel */
