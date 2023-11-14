@@ -68,6 +68,9 @@
  -Changed avatar to human na d fixing hover avatar with Javascripy when click on every avatar slect it with red border!!
  -Redit title(ste,sax,påse)
 
+ -Responsive startsidan for mobile and desktop 
+
+
 <!-- Linus -->
 
 2023-10-17
