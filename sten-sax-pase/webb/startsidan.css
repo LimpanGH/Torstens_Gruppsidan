@@ -938,49 +938,46 @@ p {
     padding-left: 2rem;
 
 
-/*     animation: skew-y-shake 2.5s infinite;
+ animation: skew-y-shake 2.5s infinite;
         }
         
-        @keyframes skew-y-shake {
+     /*    @keyframes skew-y-shake {
         0% {
-        
-                margin-right: 0;
+                transform: translateX(-100%);
+                opacity: 0;
             }
         
             50% {
-                margin-left: 100%;
+                transform: translateX(0);
+                opacity: 1;
             }
         
             100% {
-                margin-right: 0;
+                transform: translateX(100%);
+                opacity: 0;
             }
-        
-            100% {
-                transform: skewY(0deg);
-            }*/
- } 
+ }  */
 
 #sten{
-    width: 4rem;
-    height: 4rem;
-    padding: 1rem 0;
-    font-size: xx-large;        
-    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    padding: 2rem 0;
+    font-size: xxx-large;        
     color: rgb(247, 239, 239);
  }
  #sax{
-        font-size: xx-large;
-        width: 4rem;
-        height: 4rem;
-        padding: 1rem 0;
+        font-size: xxx-large;
+        width: 8rem;
+        height: 8rem;
+        padding: 2rem 0;
         border-radius: 50%;
         color: rgb(244, 235, 235);
  }
  #påse{
-    font-size: xx-large;
-    width: 4rem;
-    height: 4rem;
-    padding: 1rem 0;
+    font-size: xxx-large;
+    width: 8rem;
+    height: 8rem;
+    padding: 2rem 0;
     border-radius: 50%;
     color: rgb(243, 237, 237);
  }
@@ -988,12 +985,13 @@ p {
 
 .title{
     color: #7498e2;
+    font-size: 3rem;
 }
 /* Grid wrapper */
 
 .wrapper {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 850px;
     background-color: #bdd681;
     padding:3rem 2rem 0 0;
     grid: column;
@@ -1051,14 +1049,14 @@ p {
     flex-direction:row;
     flex: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 2.5rem;
     margin-top: 10px;
 }
 
 .avatar {
 
-    width: 65px;
-    height: 65px;
+    width: 15%;
+    height:15%;
     border-radius: 50%;
     border: none;
     /* transition: all 1s ease-in-out; */
@@ -1157,10 +1155,14 @@ form {
     justify-content: center;
     border: none;
     padding-left:1.5rem;
+    
 
 }
+input{
+    width: 50%;
+}
 button{
-    width: 100px;
+    width:100px;
 }
 
 button:hover {
@@ -1181,6 +1183,47 @@ button:hover {
             position: relative;
             margin-bottom: 1rem;
         }
+        .wrapper {
+            margin: 0 auto;
+            max-width: 600px;
+            background-color: #bdd681;
+            padding: 3rem 2rem 0 0;
+            grid: column;
+            border-radius: var(--radius);
+                }
+        .title {
+            color: #7498e2;
+            font-size: 1.5rem;
+            }
+             input {
+                 width: 50%;
+                }
+            
+            button {
+                  width: 80px;
+                 }
+#sten{
+    padding: 1rem 0;
+    font-size: xx-large;        
+    color: rgb(247, 239, 239);
+    width: 6rem;
+    height: 6rem;
+ }
+ #sax{
+        font-size: xx-large;
+        padding: 1rem 0;
+        color: rgb(244, 235, 235);
+        width: 6rem;
+        height: 6rem;
+ }
+ #påse{
+    font-size: xx-large;
+    padding: 1rem 0;
+    color: rgb(243, 237, 237);
+    width: 6rem;
+    height: 6rem;
+ }
+                
 
 }
 
