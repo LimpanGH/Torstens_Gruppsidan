@@ -93,3 +93,16 @@ header {
 
 
 /* -------- Spelkontroller slut --------- */
+
+
+/* -------- Hundarnas Utseende  --------- */
+
+.computer-avatar img{
+    width: 190px;
+    margin-top: 90px;
+}
+
+.player-avatar img{
+    width: 190px;
+    margin-top: -30px;
+}
