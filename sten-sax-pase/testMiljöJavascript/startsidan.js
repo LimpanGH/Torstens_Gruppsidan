@@ -2,21 +2,29 @@
 // - Get the user’s name
 // - Send the name to spelsidan
 
-// Getting user input and taking it over to spelsidan
+// Getting user input and taking it over to Spelsidan.
 const form = document.getElementById("form");
 const playerName = document.getElementById("name");
+// Appending a submit-event to form that fires when we click on the submit-button , and when an input is submittet, the fc runs .
 form.addEventListener("submit", (e) => {
+  // Prevents the default action of the submit-method which is submitting the form itself and refreshing the page.
   e.preventDefault();
+  // .value is a property in JavaScript that retrieves the current value of an input field in a form, we store the value in a variable.
   const nameValue = playerName.value;
-  localStorage.setItem("fullName", nameValue);
+  // Using the Local-storage API to store the values in the users browser, making it avalable on the global window. So we dont really need to put window in front of .localStorage.
+  // The localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions,
+  // it gives you a set of methods to store, read, clear or delete items.
+  // The setItem() method of the Storage interface takes two arguments, and when passed a key- name and value, will add that key to the given Storage object, or update that key's value if it already exists.
+  window.localStorage.setItem("fullName", nameValue);
   window.location.href = "spelsidan.html";
 });
+//To check what is in your local storage: console.log(localStorage);
 
 // Getting the chosen avatar and taking it over to spelsidan
 const body = document.body;
 const avatar = document.querySelectorAll(".avatar");
 
-avatar.addEventListener("click", (getChosenAvatar));
+avatar.addEventListener("click", getChosenAvatar);
 
 function getChosenAvatar() {
   switch (avatar) {

@@ -31,6 +31,10 @@ Gabriel: Randomised computerChoice, added onclick for playerChoice and round bei
 Added "loop" function to determine winner of game.
 will start working on making animation step on win/ lose
 
+231101:
+Linus:
+
+Gabriel:
 
 Resources: ---------------------------------------------
 
