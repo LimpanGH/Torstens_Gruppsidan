@@ -3,10 +3,11 @@
 2023-11-14:
 Spelsidan:
 CSS
-*mer blått över banan, mer grått under
-*Utrymme för sten sax påse symbolerna mellan avatarerna
+*mer blått över banan, mer grått under: Done, Anders
+*Utrymme för sten sax påse symbolerna mellan avatarerna, Done, Anders
 *Namn ovanför avatarerna
 *Placera hundar
+*Finjustera headern så deet blir en bra balans ninth kan vara ett sätt.
 
 Javascript:
 *Rörelse/animation hundar
