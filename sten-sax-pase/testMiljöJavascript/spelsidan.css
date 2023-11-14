@@ -1,0 +1,74 @@
+#playerDog, #computerDog {
+
+  height: 100px;
+  width: 100px;
+   background-color: black;
+   margin:10px;
+
+
+}
+#computerDog {
+    background-color: red;
+
+}
+
+.win-anim-P {
+    -webkit-animation: win-anim-P 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: win-anim-P 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes win-anim-P {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+}
+
+@keyframes win-anim-P {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+}
+
+
+.win-anim-C{
+    -webkit-animation: win-anim-C 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: win-anim-C 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@keyframes win-anim-C {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+}
+
+@-webkit-keyframes win-anim-C {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+}
+

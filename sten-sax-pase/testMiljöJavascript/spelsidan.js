@@ -27,11 +27,17 @@ choice.forEach((button) =>
 
 let winPlayer = 0;
 let winComputer = 0;
+
+//Dom Manipulation  
 const roundResult = document.getElementById("result");
 const rock = document.getElementById("btnR");
 const paper = document.getElementById("btnP");
 const scissors = document.getElementById("btnS");
+const scoreElementPlayer = document.getElementById('playerDog'); 
+const scoreElementComputer = document.getElementById('computerDog');  
 
+
+//function to make computer choose r-p or s
 const getComputerChoice = () => {
   const computerInput = Math.floor(Math.random() * 3);
 
@@ -55,9 +61,11 @@ function rockRound() {
     roundResult.textContent = "DRAW";
   } else if (computerInput === "SCISSORS") {
     winPlayer++;
+    winAnimationPlayer();
     roundResult.textContent = "WIN";
   } else {
     winComputer++;
+    winAnimationComputer() 
     roundResult.textContent = "LOSE";
   }
   checkWinner();
@@ -69,10 +77,11 @@ function paperRound() {
     roundResult.textContent = "DRAW";
   } else if (computerInput === "ROCK") {
     winPlayer++;
-    animationPlayer++
+    winAnimationPlayer();
     roundResult.textContent = "WIN";
   } else {
     winComputer++;
+    winAnimationComputer() 
     roundResult.textContent = "LOSE";
   }
   checkWinner();
@@ -84,9 +93,11 @@ function scissorsRound() {
     roundResult.textContent = "DRAW";
   } else if (computerInput === "PAPER") {
     winPlayer++;
+    winAnimationPlayer();
     roundResult.textContent = "WIN";
   } else {
     winComputer++;
+    winAnimationComputer() 
     roundResult.textContent = "LOSE";
   }
 }
@@ -97,6 +108,38 @@ function checkWinner() {
     roundResult.textContent = "You won the game!";
   }
 }
+
+
+// for loop with winplayer and wincomputer
+function winAnimationPlayer() {
+  scoreElementPlayer.classList.add('win-anim-P');
+}
+  
+
+  function winAnimationComputer() {
+    
+  scoreElementComputer.classList.add('win-anim-C');
+  }
+
+  switch (winPlayer)
+  {
+    case 0:
+      
+      break;
+    case 1:
+      
+      break;
+    case 2:
+      
+      break;
+      case 3:
+  }
+
+
+  
+
+
+
 
 
 
