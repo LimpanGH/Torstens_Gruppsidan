@@ -54,11 +54,11 @@ function rockRound() {
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
     roundResult.textContent = "DRAW";
-  } else if (computerInput === "SCISSORS") {
+  } else if (computerInput === "SCISSORS" && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
     roundResult.textContent = "WIN";
-  } else {
+  } else if(winComputer <= 5){
     winComputer++;
     winAnimationComputer() 
     roundResult.textContent = "LOSE";
@@ -70,35 +70,39 @@ function paperRound() {
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
     roundResult.textContent = "DRAW";
-  } else if (computerInput === "ROCK") {
+  } else if (computerInput === "ROCK" && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
     roundResult.textContent = "WIN";
-  } else {
+  } else  if(winComputer <= 5){
     winComputer++;
     winAnimationComputer() 
     roundResult.textContent = "LOSE";
   }
   checkWinner();
 }
+
+//plays single round  as scissors
 function scissorsRound() {
   let userInput = "SCISSORS";
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
     roundResult.textContent = "DRAW";
-  } else if (computerInput === "PAPER") {
+  } else if (computerInput === "PAPER" && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
     roundResult.textContent = "WIN";
-  } else {
+  } else if(winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
     roundResult.textContent = "LOSE";
   }
+   checkWinner();
 }
 function checkWinner() {
   if (winComputer == 5) {
     roundResult.textContent = "You lost the game!";
+    
   } else if (winPlayer == 5) {
     roundResult.textContent = "You won the game!";
   }
