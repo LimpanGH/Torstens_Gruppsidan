@@ -1,13 +1,13 @@
 /* Objective
 - Receive and display user name that we got from startsidan
-- Get the user’s choice.
-- Get the computer’s choice.
-- Compare the two choices and determine a winner.
-- Start the program and display the results. 
+// - Get the user’s choice.
+// - Get the computer’s choice.
+// - Compare the two choices and determine a winner.
+// - Start the program and display the results. 
 - Display image of player's choice and computer's choice
 - Adjust scoreboard
-- Make winning dog move forward one step
-- When player or computer won 5 times: declare winner
+// - Make winning dog move forward one step
+// - When player or computer won 5 times: declare winner
 */
 
 // Extracting data from localstorage using the getItem-method and by putting the key inside the parenthes, we assign the value to our varable.
@@ -17,8 +17,6 @@ document.getElementById("name").textContent = fullName;
 
 
 
-// MAKE rock-round/paper-round/scissors-round function
-//make a wincount function.
 
 let winPlayer = 0;
 let winComputer = 0;
@@ -30,6 +28,7 @@ const paper = document.getElementById("btnP");
 const scissors = document.getElementById("btnS");
 const scoreElementPlayer = document.getElementById('playerDog'); 
 const scoreElementComputer = document.getElementById('computerDog');  
+const restart = document.getElementById('restart');
 
 
 //function to make computer choose r-p or s
@@ -48,7 +47,9 @@ const getComputerChoice = () => {
       break;
   }
 };
-
+//plays a single round as rock
+// if win, increments winplayer and adds a animation class.
+//if lose increments wincomputer and adds a animation class
 function rockRound() {
   let userInput = "ROCK";
   let computerInput = getComputerChoice();
@@ -65,6 +66,9 @@ function rockRound() {
   }
   checkWinner();
 }
+//plays a single round as paper
+// if win, increments winplayer and adds a animation class.
+//if lose increments wincomputer and adds a animation class
 function paperRound() {
   let userInput = "PAPER";
   let computerInput = getComputerChoice();
@@ -83,6 +87,8 @@ function paperRound() {
 }
 
 //plays single round  as scissors
+// if win, increments winplayer and adds a animation class.
+//if lose increments wincomputer and adds a animation class
 function scissorsRound() {
   let userInput = "SCISSORS";
   let computerInput = getComputerChoice();
@@ -99,6 +105,8 @@ function scissorsRound() {
   }
    checkWinner();
 }
+
+//function that is ran after every (rock/paper/scissors round to check for a winner of the game (first to 5))
 function checkWinner() {
   if (winComputer == 5) {
     roundResult.textContent = "You lost the game!";
@@ -108,8 +116,7 @@ function checkWinner() {
   }
 }
 
-
-// for loop with winplayer and wincomputer
+// function that adds animation classes to the dog element for player. one class is added per win for player
 function winAnimationPlayer() {
   switch (winPlayer)
   {
@@ -138,7 +145,7 @@ function winAnimationPlayer() {
   
 }
   
-
+// function that adds animation classes to the dog element for computer. one class is added per win for computer
   function winAnimationComputer() {
     switch (winComputer)
   {
@@ -163,12 +170,18 @@ function winAnimationPlayer() {
            scoreElementComputer.classList.add('win-anim-C-5');
         break;
 
-  }
-  
-    
-  
+  } 
   }
 
+// Restart function that sets score to 0 (line 172-173) and removes amination classes from dogs (line 174-175)
+function restartgame () {
+  let winPlayer = 0;
+  let winComputer = 0;
+  scoreElementComputer.classList.remove ('win-anim-C', 'win-anim-C-2',  'win-anim-C-3', 'win-anim-C-4', 'win-anim-C-5')
+   scoreElementPlayer.classList.remove ('win-anim-P', 'win-anim-P-2',  'win-anim-P-3', 'win-anim-P-4', 'win-anim-P-5')
+   roundResult.textContent = "RESULT"
+
+}
   
 
 
