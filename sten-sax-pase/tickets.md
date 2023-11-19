@@ -7,15 +7,14 @@ CSS
 *Utrymme för sten sax påse symbolerna mellan avatarerna, Done, Anders
 *Namn ovanför avatarerna
 *Placera hundar
-*Finjustera headern så deet blir en bra balans ninth kan vara ett sätt.
+\*Finjustera headern så deet blir en bra balans ninth kan vara ett sätt.
 
 Javascript:
-*Rörelse/animation hundar
+\*Rörelse/animation hundar
 Få över avatar från start till spel
-Koppla på javascript till 
+Koppla på javascript till
 
-
-<!-- Startsidan -->
+<!-- Startsidan to do -->
 
 - Fixa border runt ikonerna när man klickar på dem, på startsidan. Gabriel Klart
 - Responsiv design (370 600 och 800) Leila Ej klart
@@ -25,23 +24,24 @@ Koppla på javascript till
 - knapp styling Vem? Leila klart
 - Rules for game pop-up Gabrielle Ej klart
 - Flex på form och start button Gabriel Klart.
--   Få bark.mp3 att fungera onclick på varje figur (eventuellt skapa en border on click med)
+- Få bark.mp3 att fungera onclick på varje figur (eventuellt skapa en border on click med)
 - För över valda bilden till gamingsidan för spelaren
 - För över random bild till gamingsidan för datorn
 
-<!-- Gamingsidan -->
+<!-- Gamingsidan to do-->
 
 Grundlayout för webbisdan klart i mobilt läge, iPhone 12 format
 Bestämma hur sidan ska se ut och bete sig i större format:
- - Tankar: max width för att hålla storleken nere
- - flytta knappar och information mer bort från spelytan.
+
+- Tankar: max width för att hålla storleken nere
+- flytta knappar och information mer bort från spelytan.
 
 - Grid Vem? Leila ej klart
 - navbar Vem? Su Ej klart
 - player/computer Vem? Anders - utrymme för samtliga delar skapat
 - scoreboard Vem? Klart, Anders. Scoreboarden är hur hundarna rör sig över racingbanan
 - Skapa inner html för ta fram bild vid math.random (sten sax påse), Anders - förslagsvis i avatarfönstret att avataren byts ut mot handen, eller att man har den under....
--  skapa html för att ta fram bild för människa (sten sax påse)     [Kanske använd get elementbyid?]
+- skapa html för att ta fram bild för människa (sten sax påse) [Kanske använd get elementbyid?]
 - skriv js för scoreboarden
 
 **Leila**
@@ -65,7 +65,7 @@ Bestämma hur sidan ska se ut och bete sig i större format:
 - Also put image in section(computer)(player )with icon and fixing padding and margin
   -put hover in link on section of icon(Paw,noise,tail)
 
-<!-- Linus -->
+<!-- ⬇️ Linus ⬇️ -->
 
 2023-10-17
 Added .js with functions getUserChoice and getComputerChoice.
@@ -75,3 +75,29 @@ Added queryselector and eventlistener for player choice.
 
 2023-10-19
 Moved old index.html to folder "Files not used"
+
+231101:
+
+- Startsidan: Fetcha namn till spelsidan. Pågående
+
+231101:
+
+- Getting user input and storing it to localstorage and grabbing it on spelsidan, now working.
+- Started working on how the selected avatar can be stored and grabbed on spelsidan.
+
+231119:
+
+- Made a branch called testMiljöJavascript.
+- Integrated localstorage for name to current html and css in main on branch testMiljöJavascript.
+- Added localstorage for avatar image so that it is displayed on spelsidan on branch testMiljöJavascript.
+- Minor changes to startsidan.html, spelsidan .html and spelsidan.css for the above adds to function correctly.-
+
+Resources Linus: ---------------------------------------------
+
+- Pass a Variable Value from One HTML Page to Another https://www.youtube.com/watch?v=x0VcigW9kN0
+- How to clear local storage in Chrome:
+  Select “Application” in the console's top menu.
+  Select “Local Storage” in the console's left menu.
+  Right click the sites that are relevant for you, click clear to delete the local storage.
+
+<!-- ⬆️ Linus ⬆️ -->

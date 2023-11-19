@@ -34,6 +34,15 @@ a {
     background: rgba(134, 133, 133, 0.281);
 }
 
+/* Styling the playerAvatarImg */
+#imgOfPlayerAvatar {
+
+    max-width: 65px;
+    max-height: 65px;
+    border-radius: 50%;
+    border: none;
+}
+
 /* -------- Scoreboard area start --------- */
 
 .scoreboardwrapper {

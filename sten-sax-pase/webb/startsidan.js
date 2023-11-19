@@ -18,58 +18,31 @@ form.addEventListener('submit', (e) => {
 //To check what is in your local storage:
 console.log(localStorage);
 
-
-
 // Getting the chosen avatar and taking it over to spelsidan, not working yet.
-const avatar = document.querySelectorAll('input');
+const avatars = document.querySelectorAll('.avatar')
 
-let switchFunction = () => {
-  switch (true) {
-    case img.id == '#avatar1':
-      chosenAvatar = src = 'img/charlesdeluvio-Mv9hjnEUHR4-unsplash.jpg';
-      console.log(chosenAvatar);
-      break;
-    case avatar.id == '#avatar 2':
-      return;
-      '#avatar 2';
-      break;
-    case avatar.id == '#avatar 3':
-      return;
-      '#avatar 3';
-      break;
-    case avatar.id == '#avatar 4':
-      return;
-      '#avatar 4';
-      break;
-    case avatar.id == '#avatar 5':
-      return;
-      '#avatar 5';
-      break;
-    case avatar.id == '#avatar 6':
-      return;
-      '#avatar 6';
-      break;
-  }
-  window.localStorage.setItem('myAvatar', chosenAvatar);
-  window.location.href = 'spelsidan.html';
-};
-
-avatar.addEventListener('click', switchFunction);
-
-const gameButtons = document.querySelectorAll('[data-selection]');
-
-gameButtons.forEach((gameButtons) => {
-  gameButtons.addEventListener('click', (e) => {
-    const selectionName = gameButtons.dataset.selection;
-    makeSelection(selectionName);
+avatars.forEach(avatar => {
+  avatar.addEventListener('click', () => {
+    let url = avatar.src;
+    // console.log(url); 
+    window.localStorage.setItem('avatarUrl', url);
+    // window.location.href = 'spelsidan.html';
   });
 });
 
-function makeSelection(selection) {
-  console.log(selection);
-}
 
-const a = 10;
+// const gameButtons = document.querySelectorAll('[data-selection]');
+// gameButtons.forEach((gameButtons) => {
+//   gameButtons.addEventListener('click', (e) => {
+//     const selectionName = gameButtons.dataset.selection;
+//     makeSelection(selectionName);
+//   });
+// });
+// function makeSelection(selection) {
+//   console.log(selection);
+// }
+
+
 
 // What to do for  bark Audio on icon click:
 // 1. Get the element by class/id for icon buttons
