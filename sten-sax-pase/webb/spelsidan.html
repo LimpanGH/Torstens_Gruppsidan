@@ -1,55 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="spelsidan.css" />
-  <script defer type="text/javascript" src="/sten-sax-pase/webb/script.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="spelsidan.css" />
+    <script
+      defer
+      type="text/javascript"
+      src="/sten-sax-pase/webb/spelsidan.js"
+    ></script>
+  </head>
 
   <body>
-  <header class="header">
-    <img class="logo" src="" alt="logo">
+    <header class="header">
+      <img class="logo" src="" alt="logo" />
 
-    <div class="scoreboardwrapper">
-      <p>Computer</p>
-      <span class="scoreboard scoreboard--computer">comp area</span>
+      <div class="scoreboardwrapper">
+        <p>Computer</p>
+        <span class="scoreboard scoreboard--computer">comp area</span>
+      </div>
+
+      <img
+        src="img/left-hand-paper-svgrepo-com.svg"
+        alt=""
+        class="header--center"
+      />
+
+      <p class="header--center">VS</p>
+
+      <img
+        src="img/right-hand-rock-svgrepo-com.svg"
+        alt=""
+        class="header--center"
+      />
+
+      <div class="scoreboardwrapper">
+        <span class="playerName" ></span>
+        <span class="scoreboard scoreboard--player">Play area</span>
+      </div>
+
+      <div class="nav__links">
+        <a>Restart</a>
+        <!-- class= "restart-btn"-->
+        <a href="#">Quit</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls">
+        <button data-selection="rock" class="button">Rock</button>
+        <button data-selection="paper" class="button">Paper</button>
+        <button data-selection="scissors" class="button">Scissors</button>
+      </section>
+    </main>
+
+    <div class="computer-avatar">
+      <img
+        src="img/race-dog-computer-3-removebg-preview.png"
+        alt="race dog computer"
+      />
     </div>
-
-    <img src="img/left-hand-paper-svgrepo-com.svg" alt="" class="header--center">
-
-    <p class="header--center">VS</p>
-
-    <img src="img/right-hand-rock-svgrepo-com.svg" alt="" class="header--center">
-
-    <div class="scoreboardwrapper">
-      <p>Player</p>
-      <span class="scoreboard scoreboard--player">Play area</span>
+    <div class="player-avatar">
+      <img
+        src="img/race-dog-player-2-removebg-preview.png"
+        alt="race dog player"
+      />
     </div>
-
-    <div class="nav__links">
-      <a>Restart</a>  <!-- class= "restart-btn"-->
-      <a href="#">Quit</a>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="controls">
-
-      <button data-selection="rock" class="button">Rock</button>
-      <button data-selection="paper" class="button">Paper</button>
-      <button data-selection="scissors" class="button">Scissors</button>
-
-    </section>
-  </main>
-
-  <div class="computer-avatar"><img src="img/race-dog-computer-3-removebg-preview.png" alt="race dog computer"></div>
-  <div class="player-avatar"> <img src="img/race-dog-player-2-removebg-preview.png" alt="race dog player"></div>
-
-</body>
-
+  </body>
 </html>
