@@ -1,4 +1,4 @@
-// Getting user input and taking it over to Spelsidan, fully working.
+// ----- Getting user input and taking it over to Spelsidan. ------
 const form = document.querySelector('#form');
 const playerName = document.getElementById('playername');
 // Appending a submit-event to form that fires when we click on the submit-button, and when an input is submittet, the fc runs .
@@ -16,20 +16,21 @@ form.addEventListener('submit', (e) => {
   window.location.href = 'spelsidan.html';
 });
 //To check what is in your local storage:
-console.log(localStorage);
+// console.log(localStorage);
 
-// Getting the chosen avatar and taking it over to spelsidan, not working yet.
-const avatars = document.querySelectorAll('.avatar')
-
-avatars.forEach(avatar => {
+// ------ Getting the chosen avatar and taking it over to spelsidan. ------
+const avatars = document.querySelectorAll('.avatar');
+// looping through the node-list with all elements with the class avatar.
+avatars.forEach((avatar) => {
+  // Adding click-listener to each of the elements in the node-list.
   avatar.addEventListener('click', () => {
+    // Making a variable and setting it to be the url of the element.
     let url = avatar.src;
-    // console.log(url); 
+    // Using setItem-method to store the value (url) to our local-storage-key (avatarUrl)
     window.localStorage.setItem('avatarUrl', url);
     // window.location.href = 'spelsidan.html';
   });
 });
-
 
 // const gameButtons = document.querySelectorAll('[data-selection]');
 // gameButtons.forEach((gameButtons) => {
@@ -41,8 +42,6 @@ avatars.forEach(avatar => {
 // function makeSelection(selection) {
 //   console.log(selection);
 // }
-
-
 
 // What to do for  bark Audio on icon click:
 // 1. Get the element by class/id for icon buttons
