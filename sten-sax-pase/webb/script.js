@@ -1,20 +1,11 @@
 /* Objective
-- Receive and display user name that we got from startsidan
-// - Get the user’s choice.
-// - Get the computer’s choice.
-// - Compare the two choices and determine a winner.
-// - Start the program and display the results. 
-- Display image of player's choice and computer's choice
-- Adjust scoreboard
-// - Make winning dog move forward one step
-// - When player or computer won 5 times: declare winner
+1 Get the user’s choice.
+2 Get the computer’s choice.
+3 Compare the two choices and determine a winner.
+4 Start the program and display the results. 
+5 Display image of player's choice and computer's choice
+6 Adjust scoreboard
 */
-
-// Extracting data from localstorage using the getItem-method and by putting the key inside the parenthes, we assign the value to our varable.
-const fullName = localStorage.getItem("fullName");
-// Selecting the span-element with #name and writing the value from localstorage to the span.
-document.getElementById("name").textContent = fullName; 
-
 
 
 
@@ -22,7 +13,7 @@ let winPlayer = 0;
 let winComputer = 0;
 
 //Dom Manipulation  
-const roundResult = document.getElementById("result");
+// const roundResult = document.getElementById("result");
 const rock = document.getElementById("btnR");
 const paper = document.getElementById("btnP");
 const scissors = document.getElementById("btnS");
@@ -54,15 +45,15 @@ function rockRound() {
   let userInput = "ROCK";
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
-    roundResult.textContent = "DRAW";
+    // roundResult.textContent = "DRAW";
   } else if (computerInput === "SCISSORS" && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = "WIN";
+    // roundResult.textContent = "WIN";
   } else if(winComputer <= 5){
     winComputer++;
     winAnimationComputer() 
-    roundResult.textContent = "LOSE";
+    // roundResult.textContent = "LOSE";
   }
   checkWinner();
 }
@@ -73,15 +64,15 @@ function paperRound() {
   let userInput = "PAPER";
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
-    roundResult.textContent = "DRAW";
+    // roundResult.textContent = "DRAW";
   } else if (computerInput === "ROCK" && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = "WIN";
+    // roundResult.textContent = "WIN";
   } else  if(winComputer <= 5){
     winComputer++;
     winAnimationComputer() 
-    roundResult.textContent = "LOSE";
+    // roundResult.textContent = "LOSE";
   }
   checkWinner();
 }
@@ -94,15 +85,15 @@ function scissorsRound() {
   let computerInput = getComputerChoice();
   showScissors()
   if (userInput === computerInput) {
-    roundResult.textContent = "DRAW";
+    // roundResult.textContent = "DRAW";
   } else if (computerInput === "PAPER" && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = "WIN";
+    // roundResult.textContent = "WIN";
   } else if(winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = "LOSE";
+    // roundResult.textContent = "LOSE";
   }
    checkWinner();
 }
@@ -185,17 +176,7 @@ function restartgame () {
 }
   
 
-  
-
-
-  
-
-
-
-
-
-
-// ------------------ ⬇️ Old parts that we might reuse ⬇️--------------------------
+// const asdf = () => {};
 
 // const getUserInput = (userInput) => {
 //   userInput = userInput.toUpperCase();
@@ -207,7 +188,7 @@ function restartgame () {
 //   }
 // };
 
-// console.log(getUserInput("rock"));
+// // console.log(getUserInput("rock"));
 
 // const getComputerChoice = () => {
 //   const computerChoice = Math.floor(Math.random() * 3);
@@ -225,7 +206,7 @@ function restartgame () {
 //   }
 // };
 
-// console.log(getComputerChoice());
+// // console.log(getComputerChoice());
 
 // const winner = (userInput, computerChoice) => {
 //   if (userInput == computerChoice) {
@@ -269,19 +250,26 @@ function restartgame () {
 
 // runGame();
 
-// const gameButtons = document.querySelectorAll("[data-selection]");
 
-// gameButtons.forEach((gameButtons) => {
-//   gameButtons.addEventListener("click", (e) => {
-//     const selectionName = gameButtons.dataset.selection;
-//     makeSelection(selectionName);
-//   });
-// });
 
-// function makeSelection(selection) {
-//   console.log(selection);
-// }
 
-// const a = 10;
 
-// ------------------ ⬆️ Old parts that we might reuse ⬆️--------------------------
+const gameButtons = document.querySelectorAll("[data-selection]");
+
+gameButtons.forEach((gameButtons) => {
+  gameButtons.addEventListener("click", (e) => {
+    const selectionName = gameButtons.dataset.selection;
+    makeSelection(selectionName);
+  });
+});
+
+function makeSelection(selection) {
+  console.log(selection);
+}
+
+const a = 10;
+
+
+
+
+
