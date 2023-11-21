@@ -42,10 +42,11 @@ a {
 /* Styling the playerAvatarImg */
 #imgOfPlayerAvatar {
 
-    max-width: 65px;
-    max-height: 65px;
+    max-width: 70px;
+    max-height: 70px;
     border-radius: 50%;
     border: none;
+    background-color: #7498e2
 }
 
 /* -------- Scoreboard area start --------- */
@@ -71,6 +72,7 @@ a {
 
 .av__comp {
     background-color: #74e2be;
+
 }
 
 /* -------- Scoreboard area end --------- */
