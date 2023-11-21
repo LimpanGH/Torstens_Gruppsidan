@@ -7,18 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="startsidan.css" />
     <script src="startsidan.js" defer></script>
-    <title>Sten Sax Påse</title>
+    <script src="startsidan.js" defer></script>
+  <title>Sten Sax Påse</title>
   </head>
 
 <body>
   <!-- <img src="img/logo-2.png" alt=""> -->
   <div class="wrapper">
     <header class="header">
+      <!-- Det finns på title  -->
       <div class="button">
         <h3 id="sten">Sten</h3>
         <h3 id="sax">Sax</h3>
         <h3 id="påse">Påse</h3>
       </div>
+      <!-- Det finns för animation "dog"  -->
       <div class="dog">
         <div class="torso">
           <div class="fur">
@@ -93,38 +96,39 @@
            <p>The dog version of rock, paper, scissors</p> 
         </div>
       </div> -->
-      </header>
-
-      <main class="main">
-        <div>
-          <h2 class="title">Select your avatar</h2>
-        </div>
+    </header>
+<!-- Välje Avatar -->
+    <main class="main">
+      <div>
+        <h2 class="title">Select your avatar</h2>
+      </div>
 
       <div class="avatar-flex">
         <div class="avatar-flex1">
           <label for="avatar1"></label>
           <input type="hidden" id="avatar1" name="avatar" value="avatar1" />
-          <img src="img/avatot1.png" alt="Avatar 1" class="avatar" onclick="borderClick(this)" />
+          <img src="img/avatar1-removebg-preview.png" alt="Avatar 1" class="avatar" onclick="borderClick(this)" />
           <label for="avatar2"></label>
           <input type="hidden" id="avatar2" name="avata2" value="avatar2" />
-          <img src="img/avator2.png" alt="Avatar 2" class="avatar" onclick="borderClick(this)" />
+          <img src="img/avatar2-removebg-preview.png" alt="Avatar 2" class="avatar" onclick="borderClick(this)" />
           <label for="avatar3"></label>
-          <input type="hidden" id="avatar3" name="avatar3" value="avatar3" />
-          <img src="img/avator3.png" alt="Avatar 3" class="avatar" onclick="borderClick(this)" />
+          <input type="hidden"  name="avatar3" value="avatar3" />
+          <img src="img/avatar3-removebg-preview.png" alt="Avatar 3" class="avatar" onclick="borderClick(this)" />
         </div>
 
         <div class="avatar-flex1">
           <label for="avatar5"></label>
           <input type="hidden" id="avatar5" name="avatar5" value="avatar5" />
-          <img src="img/avator4.png" alt="Avatar 5" class="avatar" onclick="borderClick(this)" />
+          <img src="img/avatar4-removebg-preview (1).png" alt="Avatar 5" class="avatar" onclick="borderClick(this)" />
           <label for="avatar4"></label>
           <input type="hidden" id="avatar4" name="avatar4" value="avatar4" />
-          <img src="img/avator5.png" alt="Avatar 4" class="avatar" onclick="borderClick(this)" />
+          <img src="img/avatar5-removebg-preview.png" alt="Avatar 4" class="avatar"  style="height: 30%;"  onclick="borderClick(this)" />
           <label for="avatar6"></label>
           <input type="hidden" id="avatar3" name="avatar" value="avatar3" />
-          <img src="img/avator6.png" alt="Avatar 3" class="avatar" onclick="borderClick(this)" />
+          <img src="img/avatar7-removebg-preview.png" alt="Avatar 3" class="avatar" onclick="borderClick(this)" />
         </div>
       </div>
+      <!-- Select input  -->
       <div class="playernam">
 
         <input type="text" name="playername" id="playername" placeholder="Enter your nam" />
@@ -133,19 +137,15 @@
 
 
 
-
+<!-- Start button -->
 
       <div class="select">
         <a href="spelsidan.html"><button>Start</button></a>
-        <!-- leila -->
       </div>
     </main>
-    <!-- <div class="settings">
-      <button id="select-opponent-pc">PC</button>
-      <button id="select-opponent-friend">FRIEND</button>
-      <button id="number-of-games">NUMER OF GAMES</button>
-    </div> -->
+
   </div>
+  <!-- Set script code för välje avatar med röd border -->
   <script>
     function borderClick(box) {
       //selects all avatars as eligible items, and allows a max of 1 item to be affected by borderClick

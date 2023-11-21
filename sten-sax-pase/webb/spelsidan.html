@@ -5,27 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
   <link rel="stylesheet" href="spelsidan.css" />
-  <script defer type="text/javascript" src="script.js"></script>
+  <script defer type="text/javascript" src="/sten-sax-pase/webb/script.js"></script>
 </head>
 
-  <body>
+<body>
     <header class="header">
-      <img class="logo" src="" alt="logo" />
+      <img class="logo" src="img/logo-4.png" alt="logo" />
 
-      <div class="scoreboardwrapper">
-        <p>Computer</p>
-        <span class="scoreboard scoreboard--computer">comp area</span>
-      </div>
+    <div class="scoreboardwrapper">
+      <p>Computer</p>
+      <img img class="avatar av__comp" src="img/computer_avatar_2.png" alt="">
+    </div>
 
-      <img
-        src="img/left-hand-paper-svgrepo-com.svg"
-        alt=""
-        class="header--center"
-      />
-
-      <p class="header--center">VS</p>
+    <img src="img/left-hand-paper-svgrepo-com.svg" alt="" class="header--center">
 
       <img
         src="img/right-hand-rock-svgrepo-com.svg"
@@ -41,26 +35,25 @@
       </div>
 
     <div class="nav__links">
-      
-    <button id="restart" onclick="restartgame()">Restart</button>
-      <!-- <a>Restart</a>  class= "restart-btn" -->
+      <a>Restart</a> <!-- class= "restart-btn"-->
       <a href="#">Quit</a>
     </div>
   </header>
 
   <main>
 
+    <img class="dogs dog__computer" id="computerDog" src="img/race-dog-computer.png" alt="race dog computer">
+
+    <img class="dogs dog__player" id="playerDog" src="img/race-dog-player.png" alt="race dog player">
+
     <section class="controls">
 
-      <button data-selection="rock" class="button" id="btnR" onclick="rockRound()">Rock</button>
-      <button data-selection="paper" class="button" id="btnP" onclick="paperRound()">Paper</button>
-      <button data-selection="scissors" class="button" id="btnS" onclick="scissorRound()">Scissors</button>
+      <button data-selection="rock" class="button">Rock</button>
+      <button data-selection="paper" class="button">Paper</button>
+      <button data-selection="scissors" class="button">Scissors</button>
 
     </section>
   </main>
-
-  <div class="computer-avatar" id="computerDog"><img src="img/race-dog-computer-3-removebg-preview.png" alt="race dog computer"></div>
-  <div class="player-avatar" id="playerDog"> <img src="img/race-dog-player-2-removebg-preview.png" alt="race dog player"></div>
 
 </body>
 

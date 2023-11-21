@@ -1056,6 +1056,7 @@ p {
     justify-content: center;
     gap: 2.5rem;
     margin-top: 10px;
+    
 }
 
 .avatar {
@@ -1064,6 +1065,7 @@ p {
     height: 15%;
     border-radius: 50%;
     border: none;
+  
     /* transition: all 1s ease-in-out; */
     /* leila */
 }
@@ -1082,6 +1084,7 @@ p {
 .avatar.clicked {
     border-radius: 50%;
     border: 5px solid red;
+   
 }
 
 #avatar1 {
@@ -1100,17 +1103,7 @@ p {
     transform: scale(1.4, 1.4)
 
 } */
-#avatar1:hover {
-    content: url(img/istockphoto-1090693262-612x612.jpg);
-    cursor: pointer;
-    transform: scale(1.4, 1.4)
-}
 
-#avatar3:hover {
-    content: url(img/isabel-vittrup-pallier-yy03FLwEWAw-unsplash.jpg);
-    cursor: pointer;
-    transform: scale(1.4, 1.4)
-}
 
 .playernam {
 

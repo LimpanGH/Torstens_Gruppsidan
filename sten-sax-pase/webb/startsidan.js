@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 // ----- Getting user input and taking it over to Spelsidan. ------
 const form = document.querySelector('#form');
 const playerName = document.getElementById('playername');
+=======
+// Getting user input and taking it over to Spelsidan, fully working.
+const form = document.getElementById('form');
+const playerName = document.getElementById('name');
+>>>>>>> master
 // Appending a submit-event to form that fires when we click on the submit-button, and when an input is submittet, the fc runs .
 form.addEventListener('submit', (e) => {
   // Prevents the default action of the submit-method which is submitting the form itself and refreshing the page.
@@ -16,6 +22,7 @@ form.addEventListener('submit', (e) => {
   window.location.href = 'spelsidan.html';
 });
 //To check what is in your local storage:
+<<<<<<< HEAD
 // console.log(localStorage);
 
 // ------ Getting the chosen avatar and taking it over to spelsidan. ------
@@ -70,3 +77,52 @@ function borderClick(box) {
   //styles borders on click
   box.style.border = '5px solid red';
 }
+=======
+//console.log(localStorage);
+
+// Getting the chosen avatar and taking it over to spelsidan, not working yet.
+const avatar = document.querySelectorAll('.avatar');
+
+let switchFunction = () => {
+  switch (true) {
+    case avatar.id == '#avatar1':
+      chosenAvatar = src = 'img/charlesdeluvio-Mv9hjnEUHR4-unsplash.jpg';
+      return;
+      chosenAvatar;
+      break;
+    case avatar.id == '#avatar 2':
+      return;
+      '#avatar 2';
+      break;
+    case avatar.id == '#avatar 3':
+      return;
+      '#avatar 3';
+      break;
+    case avatar.id == '#avatar 4':
+      return;
+      '#avatar 4';
+      break;
+    case avatar.id == '#avatar 5':
+      return;
+      '#avatar 5';
+      break;
+    case avatar.id == '#avatar 6':
+      return;
+      '#avatar 6';
+      break;
+  }
+  window.localStorage.setItem('myAvatar', chosenAvatar);
+  window.location.href = 'spelsidan.html';
+};
+
+avatar.addEventListener('click', switchFunction);
+
+// const form = document.getElementById("form");
+// const playerName = document.getElementById("name");
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const nameValue = playerName.value;
+//   localStorage.setItem("fullName", nameValue);
+//   window.location.href = "spelsidan.html";
+// });
+>>>>>>> master
