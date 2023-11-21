@@ -7,24 +7,26 @@
 6 Adjust scoreboard
 */
 
-const asdf = () => {};
 
-const getUserInput = (userInput) => {
-  userInput = userInput.toUpperCase();
 
-  if (userInput == "ROCK" || userInput == "PAPER" || userInput == "SCISSORS") {
-    return userInput;
-  } else {
-    return "error";
-  }
-};
+let winPlayer = 0;
+let winComputer = 0;
 
-// console.log(getUserInput("rock"));
+//Dom Manipulation  
+// const roundResult = document.getElementById("result");
+const rock = document.getElementById("btnR");
+const paper = document.getElementById("btnP");
+const scissors = document.getElementById("btnS");
+const scoreElementPlayer = document.getElementById('playerDog'); 
+const scoreElementComputer = document.getElementById('computerDog');  
+const restart = document.getElementById('restart');
 
+
+//function to make computer choose r-p or s
 const getComputerChoice = () => {
-  const computerChoice = Math.floor(Math.random() * 3);
+  const computerInput = Math.floor(Math.random() * 3);
 
-  switch (computerChoice) {
+  switch (computerInput) {
     case 0:
       return "ROCK";
       break;
@@ -36,38 +38,205 @@ const getComputerChoice = () => {
       break;
   }
 };
+//plays a single round as rock
+// if win, increments winplayer and adds a animation class.
+//if lose increments wincomputer and adds a animation class
+function rockRound() {
+  let userInput = "ROCK";
+  let computerInput = getComputerChoice();
+  if (userInput === computerInput) {
+    // roundResult.textContent = "DRAW";
+  } else if (computerInput === "SCISSORS" && winPlayer <= 5) {
+    winPlayer++;
+    winAnimationPlayer();
+    // roundResult.textContent = "WIN";
+  } else if(winComputer <= 5){
+    winComputer++;
+    winAnimationComputer() 
+    // roundResult.textContent = "LOSE";
+  }
+  checkWinner();
+}
+//plays a single round as paper
+// if win, increments winplayer and adds a animation class.
+//if lose increments wincomputer and adds a animation class
+function paperRound() {
+  let userInput = "PAPER";
+  let computerInput = getComputerChoice();
+  if (userInput === computerInput) {
+    // roundResult.textContent = "DRAW";
+  } else if (computerInput === "ROCK" && winPlayer <= 5) {
+    winPlayer++;
+    winAnimationPlayer();
+    // roundResult.textContent = "WIN";
+  } else  if(winComputer <= 5){
+    winComputer++;
+    winAnimationComputer() 
+    // roundResult.textContent = "LOSE";
+  }
+  checkWinner();
+}
 
-// console.log(getComputerChoice());
+//plays single round  as scissors
+// if win, increments winplayer and adds a animation class.
+//if lose increments wincomputer and adds a animation class
+function scissorsRound() {
+  let userInput = "SCISSORS";
+  let computerInput = getComputerChoice();
+  showScissors()
+  if (userInput === computerInput) {
+    // roundResult.textContent = "DRAW";
+  } else if (computerInput === "PAPER" && winPlayer <= 5) {
+    winPlayer++;
+    winAnimationPlayer();
+    // roundResult.textContent = "WIN";
+  } else if(winComputer <= 5) {
+    winComputer++;
+    winAnimationComputer();
+    // roundResult.textContent = "LOSE";
+  }
+   checkWinner();
+}
 
-const winner = (userInput, computerChoice) => {
-  if (userInput == computerChoice) {
-    return "It/s a tie";
+//function that is ran after every (rock/paper/scissors round to check for a winner of the game (first to 5))
+function checkWinner() {
+  if (winComputer == 5) {
+    roundResult.textContent = "You lost the game!";
+    
+  } else if (winPlayer == 5) {
+    roundResult.textContent = "You won the game!";
+  }
+}
+
+// function that adds animation classes to the dog element for player. one class is added per win for player
+function winAnimationPlayer() {
+  switch (winPlayer)
+  {
+  
+    case 1:
+      scoreElementPlayer.classList.add('win-anim-P');
+      
+      break;
+    case 2:
+      scoreElementPlayer.classList.add('win-anim-P-2');
+      
+      break;
+      case 3:
+        scoreElementPlayer.classList.add('win-anim-P-3');
+
+        break;
+        case 4:
+          scoreElementPlayer.classList.add('win-anim-P-4');
+
+        break;
+        case 5:
+           scoreElementPlayer.classList.add('win-anim-P-5');
+        break;
+
+  }
+  
+}
+  
+// function that adds animation classes to the dog element for computer. one class is added per win for computer
+  function winAnimationComputer() {
+    switch (winComputer)
+  {
+  
+    case 1:
+      scoreElementComputer.classList.add('win-anim-C');
+      
+      break;
+    case 2:
+      scoreElementComputer.classList.add('win-anim-C-2');
+      
+      break;
+      case 3:
+        scoreElementComputer.classList.add('win-anim-C-3');
+
+        break;
+        case 4:
+          scoreElementComputer.classList.add('win-anim-C-4');
+
+        break;
+        case 5:
+           scoreElementComputer.classList.add('win-anim-C-5');
+        break;
+
+  } 
   }
 
-  if (userInput == "ROCK") {
-    if (computerChoice == "SCISSORS") {
-      return "DU";
-    } else {
-      return "Datorn";
-    }
-  }
+// Restart function that sets score to 0 (line 172-173) and removes amination classes from dogs (line 174-175)
+function restartgame () {
+  let winPlayer = 0;
+  let winComputer = 0;
+  scoreElementComputer.classList.remove ('win-anim-C', 'win-anim-C-2',  'win-anim-C-3', 'win-anim-C-4', 'win-anim-C-5')
+   scoreElementPlayer.classList.remove ('win-anim-P', 'win-anim-P-2',  'win-anim-P-3', 'win-anim-P-4', 'win-anim-P-5')
+   roundResult.textContent = "RESULT"
 
-  if (userInput == "PAPER") {
-    if (computerChoice == "ROCK") {
-      return "DU";
-    } else {
-      return "Datorn";
-    }
-  }
+}
+  
 
-  if (userInput == "SCISSORS") {
-    if (computerChoice == "PAPER") {
-      return "DU";
-    } else {
-      return "Datorn";
-    }
-  }
-};
+// const asdf = () => {};
+
+// const getUserInput = (userInput) => {
+//   userInput = userInput.toUpperCase();
+
+//   if (userInput == "ROCK" || userInput == "PAPER" || userInput == "SCISSORS") {
+//     return userInput;
+//   } else {
+//     return "error";
+//   }
+// };
+
+// // console.log(getUserInput("rock"));
+
+// const getComputerChoice = () => {
+//   const computerChoice = Math.floor(Math.random() * 3);
+
+//   switch (computerChoice) {
+//     case 0:
+//       return "ROCK";
+//       break;
+//     case 1:
+//       return "PAPER";
+//       break;
+//     case 2:
+//       return "SCISSORS";
+//       break;
+//   }
+// };
+
+// // console.log(getComputerChoice());
+
+// const winner = (userInput, computerChoice) => {
+//   if (userInput == computerChoice) {
+//     return "It/s a tie";
+//   }
+
+//   if (userInput == "ROCK") {
+//     if (computerChoice == "SCISSORS") {
+//       return "DU";
+//     } else {
+//       return "Datorn";
+//     }
+//   }
+
+//   if (userInput == "PAPER") {
+//     if (computerChoice == "ROCK") {
+//       return "DU";
+//     } else {
+//       return "Datorn";
+//     }
+//   }
+
+//   if (userInput == "SCISSORS") {
+//     if (computerChoice == "PAPER") {
+//       return "DU";
+//     } else {
+//       return "Datorn";
+//     }
+//   }
+// };
 
 // console.log(determineWinner('SCISSORS', 'PAPER'));
 
@@ -100,32 +269,7 @@ function makeSelection(selection) {
 
 const a = 10;
 
-// What to do for  bark Audio on icon click:
-// 1. Get the element by class/id for icon buttons
-// 2. make a function that plays the Audio
-// 3. make the function run onclick
-// 4. connect the onclick to  appropriate html element
-
-// let bark = document.getElementsByClassName(avatar-flex);
-// element.addEventListener("click" function, (e) => {
-//  play
-
-//   )
 
 
 
-// onClick function for bark.mp3
-function playAudio(file) {
-  new Audio(file).play();
-}
 
-function borderClick(box) {
-  //selects all avatars as eligible items, and allows a max of 1 item to be affected by borderClick
-  var allAvatars = document.querySelectorAll('.avatar');
-  allAvatars.forEach(function (avatar) {
-    avatar.style.border = 'none';
-  });
-
- //styles borders on click
-  box.style.border = '5px solid red';
-}
