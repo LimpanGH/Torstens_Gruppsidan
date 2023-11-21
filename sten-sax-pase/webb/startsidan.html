@@ -12,13 +12,14 @@
 </head>
 
 <body>
+  <!-- <img src="img/logo-2.png" alt=""> -->
   <div class="wrapper">
     <header class="header">
-    <div class="button">
+      <div class="button">
         <h3 id="sten">Sten</h3>
         <h3 id="sax">Sax</h3>
         <h3 id="påse">Påse</h3>
-    </div>
+      </div>
       <div class="dog">
         <div class="torso">
           <div class="fur">
@@ -85,9 +86,9 @@
           </div>
         </div>
       </div>
- 
-      
-     <!--  <div class="hero-image">
+
+
+      <!--  <div class="hero-image">
         <div class="hero-text">
            
            <p>The dog version of rock, paper, scissors</p> 
@@ -104,30 +105,30 @@
         <div class="avatar-flex1">
           <label for="avatar1"></label>
           <input type="hidden" id="avatar1" name="avatar" value="avatar1" />
-          <img src="img/charlesdeluvio-Mv9hjnEUHR4-unsplash.jpg" alt="Avatar 1" class="avatar" />
+          <img src="img/avatot1.png" alt="Avatar 1" class="avatar" onclick="borderClick(this)" />
           <label for="avatar2"></label>
           <input type="hidden" id="avatar2" name="avata2" value="avatar2" />
-          <img src="img/alvan-nee-brFsZ7qszSY-unsplash.jpg" alt="Avatar 2" class="avatar" />
+          <img src="img/avator2.png" alt="Avatar 2" class="avatar" onclick="borderClick(this)" />
           <label for="avatar3"></label>
           <input type="hidden" id="avatar3" name="avatar3" value="avatar3" />
-          <img src="img/karsten-winegeart-5PVXkqt2s9k-unsplash.jpg" alt="Avatar 3" class="avatar" />
+          <img src="img/avator3.png" alt="Avatar 3" class="avatar" onclick="borderClick(this)" />
         </div>
 
-        <div  class="avatar-flex1">
+        <div class="avatar-flex1">
           <label for="avatar5"></label>
           <input type="hidden" id="avatar5" name="avatar5" value="avatar5" />
-          <img src="img/s-j-6S60CF1HgTo-unsplash.jpg" alt="Avatar 5" class="avatar" id="avatar2" />
+          <img src="img/avator4.png" alt="Avatar 5" class="avatar" onclick="borderClick(this)" />
           <label for="avatar4"></label>
           <input type="hidden" id="avatar4" name="avatar4" value="avatar4" />
-          <img src="img/istockphoto-1184380915-612x612.jpg" alt="Avatar 4" class="avatar" id="avatar1" />
+          <img src="img/avator5.png" alt="Avatar 4" class="avatar" onclick="borderClick(this)" />
           <label for="avatar6"></label>
           <input type="hidden" id="avatar3" name="avatar" value="avatar3" />
-          <img src="img/istockphoto-153565138-170667a.webp" alt="Avatar 3" class="avatar" id="avatar3" />
+          <img src="img/avator6.png" alt="Avatar 3" class="avatar" onclick="borderClick(this)" />
         </div>
       </div>
       <div class="playernam">
 
-        <input type="text" name="playername" id="playername" placeholder="Enter your nam"/>
+        <input type="text" name="playername" id="playername" placeholder="Enter your nam" />
 
       </div>
 
@@ -136,8 +137,8 @@
 
 
       <div class="select">
-        <a href="spelsidan.html"><button >Start</button></a>
-         <!-- leila -->
+        <a href="spelsidan.html"><button>Start</button></a>
+        <!-- leila -->
       </div>
     </main>
     <!-- <div class="settings">
@@ -146,6 +147,18 @@
       <button id="number-of-games">NUMER OF GAMES</button>
     </div> -->
   </div>
+  <script>
+    function borderClick(box) {
+      //selects all avatars as eligible items, and allows a max of 1 item to be affected by borderClick
+      var allAvatars = document.querySelectorAll('.avatar');
+      allAvatars.forEach(function (avatar) {
+        avatar.style.border = 'none';
+      });
+      //styles borders on click
+      box.style.border = '5px solid red';
+    }
+
+  </script>
 </body>
 
 </html>
