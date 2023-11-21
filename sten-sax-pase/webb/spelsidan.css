@@ -1,12 +1,13 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     background-image: url("img/race-track-background-iphone-12.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 li,
@@ -31,7 +32,11 @@ a {
     /* justify-content: space-between; */
     gap: 1rem;
     padding: 0.6rem 2%;
-    background: rgba(134, 133, 133, 0.281);
+    /* background: rgba(235, 231, 231); */
+}
+
+.logo {
+    height: 20px;
 }
 
 /* -------- Scoreboard area start --------- */
@@ -41,20 +46,22 @@ a {
     flex-direction: column;
 }
 
-.scoreboard {
-    background-color: azure;
-    padding: 1rem 0rem;
-    margin: 0.5rem 0rem;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+.header--center {
+    align-self: center;
+    height: 60px;
+    width: 60px;
+    margin-top: 1rem;
 }
 
-.scoreboard--computer {
-    border: 5px solid #82e274;
+/* --- new avatar wrapper --- */
+.avatar {
+    margin: 0.8rem 0rem;
+    border-radius: 50%;
+    height: 70px;
 }
 
-.scoreboard--player {
-    border: 5px solid #7498e2;
+.av__comp {
+    background-color: #74e2be;
 }
 
 /* -------- Scoreboard area end --------- */
@@ -70,11 +77,6 @@ a {
     cursor: pointer;
 }
 
-.header--center {
-    align-self: center;
-    height: 60px;
-    width: 60px;
-}
 
 /* Puts the logo and the links on each sides */
 
@@ -117,19 +119,25 @@ a {
 /* -------- Spelkontroller slut --------- */
 
 
-/* -------- Hundarnas Utseende  --------- */
+/* -------- Hundarnas Utseende och position  --------- */
 
-.computer-avatar img{
+.dogs {
+    position: absolute;
     width: 190px;
-    margin-top: 90px;
+    /* Adjust the width and height as needed */
 }
 
-.player-avatar img{
-    width: 190px;
-    margin-top: -30px;
+.dog__computer {
+    top: 30%;
+    left: 5%;
 }
 
-@keyframes moveDog{
+.dog__player {
+    top: 45%;
+    left: 5%;
+}
+
+@keyframes moveDog {
 
     0%,
     100% {
@@ -153,10 +161,10 @@ a {
     }
 }
 
-.computer-avatar img {
+.dog__computer {
     animation: moveDog 1s ease-in-out infinite;
 }
 
-.player-avatar img{
-    animation: moveDog2 1s ease-in-out infinite ;
+.dog__player {
+    animation: moveDog2 1s ease-in-out infinite;
 }
