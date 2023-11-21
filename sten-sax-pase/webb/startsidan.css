@@ -14,7 +14,7 @@ body {
   height: 100%;
   margin: 0;
   padding-top: 15rem;
-  background-color: #e3e3e3;
+  background-color: #E3E3E3;
 }
 
 body {
@@ -31,19 +31,22 @@ body {
 
 :root {
   --color-fur: #ffb141;
-  --color-fur-dark: #f5832c;
-  --color-spot: #f9584c;
+  --color-fur-dark: #F5832C;
+  --color-spot: #F9584C;
   --color-snout: #544258;
-  --color-collar: #3eab6c;
-  --duration: 0.7s;
+  --color-collar: #3EAB6C;
+  --duration: .7s;
   --semi-duration: calc(var(--duration) / 2);
-  --easing: cubic-bezier(0.5, 0, 0.5, 1);
+  --easing: cubic-bezier(.5, 0, .5, 1);
   --stagger: calc(-1 * var(--semi-duration) / 2);
 
   --radius: 10px;
 }
 
+/* Starta animation(dog) */
+
 .dog {
+
   border-radius: var(--radius);
   z-index: 1;
   height: 300px;
@@ -57,6 +60,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+
 }
 
 .dog * {
@@ -71,7 +75,7 @@ body {
   left: 0;
   width: 100%;
   height: 3.3333333333%;
-  background-color: #d3d1d1;
+  background-color: #D3D1D1;
   border-radius: 2px;
   -webkit-animation: shadow calc(1 * var(--semi-duration)) infinite;
   animation: shadow calc(1 * var(--semi-duration)) infinite;
@@ -90,7 +94,7 @@ body {
 }
 
 .fur:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 150%;
@@ -102,7 +106,7 @@ body {
   transform-origin: center bottom;
 }
 
-.torso > .fur {
+.torso>.fur {
   height: 100%;
   width: 185px;
   border-top-left-radius: 40px;
@@ -115,7 +119,7 @@ body {
   z-index: 1;
 }
 
-.torso > .fur:after {
+.torso>.fur:after {
   height: 100%;
   width: 100%;
   border-bottom-left-radius: 200px 85px;
@@ -130,8 +134,7 @@ body {
   border-radius: 50%;
   background-color: var(--color-spot);
   z-index: 1;
-  -webkit-animation: spot var(--duration) calc(-1 * var(--semi-duration)) both
-    infinite;
+  -webkit-animation: spot var(--duration) calc(-1 * var(--semi-duration)) both infinite;
   animation: spot var(--duration) calc(-1 * var(--semi-duration)) both infinite;
 }
 
@@ -160,13 +163,13 @@ body {
   z-index: 2;
 }
 
-.neck > .fur {
+.neck>.fur {
   border-bottom-left-radius: 10px;
   height: 100%;
   width: 100%;
 }
 
-.neck > .fur:before {
+.neck>.fur:before {
   content: '';
   position: absolute;
   top: 0;
@@ -192,18 +195,17 @@ body {
   -ms-transform-origin: left center;
   transform-origin: left center;
   z-index: 2;
-  -webkit-animation: head var(--semi-duration) calc(var(--semi-duration) / 4)
-    infinite;
+  -webkit-animation: head var(--semi-duration) calc(var(--semi-duration) / 4) infinite;
   animation: head var(--semi-duration) calc(var(--semi-duration) / 4) infinite;
 }
 
-.head > .fur {
+.head>.fur {
   height: 100%;
   width: 100%;
   border-bottom-right-radius: 80px;
 }
 
-.head > .fur:before {
+.head>.fur:before {
   content: '';
   position: absolute;
   top: -80%;
@@ -268,13 +270,11 @@ body {
   -webkit-transform-origin: bottom left;
   -ms-transform-origin: bottom left;
   transform-origin: bottom left;
-  -webkit-animation: ear-mark var(--semi-duration)
-    calc(-1 * var(--semi-duration)) infinite;
-  animation: ear-mark var(--semi-duration) calc(-1 * var(--semi-duration))
-    infinite;
+  -webkit-animation: ear-mark var(--semi-duration) calc(-1 * var(--semi-duration)) infinite;
+  animation: ear-mark var(--semi-duration) calc(-1 * var(--semi-duration)) infinite;
 }
 
-.ear > .fur {
+.ear>.fur {
   border-top-left-radius: 100%;
   height: 100%;
   width: 100%;
@@ -343,8 +343,7 @@ body {
   left: -5px;
   bottom: 30px;
   border-radius: 5px;
-  -webkit-animation: collar var(--semi-duration) calc(var(--semi-duration) / 4)
-    infinite;
+  -webkit-animation: collar var(--semi-duration) calc(var(--semi-duration) / 4) infinite;
   animation: collar var(--semi-duration) calc(var(--semi-duration) / 4) infinite;
   z-index: 2;
 }
@@ -365,7 +364,7 @@ body {
   animation: tag var(--semi-duration) infinite both;
 }
 
-.torso > .legs {
+.torso>.legs {
   position: absolute;
   top: 0;
   left: 0;
@@ -385,12 +384,12 @@ body {
   animation: leg infinite var(--duration) var(--delay, 0s);
 }
 
-.leg > .fur {
+.leg>.fur {
   width: 144.4444444444%;
   height: 100%;
 }
 
-.leg > .fur:after {
+.leg>.fur:after {
   width: 45px;
   bottom: 0;
   top: initial;
@@ -410,7 +409,7 @@ body {
 }
 
 .leg-inner:before {
-  content: '';
+  content: "";
   width: 45px;
   height: 45px;
   background-color: var(--color);
@@ -419,7 +418,7 @@ body {
   top: -22.5px;
 }
 
-.leg > .leg-inner {
+.leg>.leg-inner {
   -webkit-animation: leg-inner infinite var(--duration) calc(var(--delay));
   animation: leg-inner infinite var(--duration) calc(var(--delay));
   -webkit-transform: rotate(90deg);
@@ -427,7 +426,7 @@ body {
   transform: rotate(90deg);
 }
 
-.leg-inner > .fur {
+.leg-inner>.fur {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -436,8 +435,8 @@ body {
   overflow: hidden;
 }
 
-.leg-inner > .fur:after {
-  content: '';
+.leg-inner>.fur:after {
+  content: "";
   position: absolute;
   width: 100%;
   height: 150%;
@@ -452,37 +451,37 @@ body {
   transform: rotate(15deg);
 }
 
-.legs > .leg {
+.legs>.leg {
   bottom: 5px;
   --color: var(--color-fur);
 }
 
-.legs > .leg:nth-child(1),
+.legs>.leg:nth-child(1),
 .legs .leg:nth-child(3) {
   right: 15px;
 }
 
-.legs > .leg:nth-child(3),
-.legs > .leg:nth-child(4) {
+.legs>.leg:nth-child(3),
+.legs>.leg:nth-child(4) {
   --color: var(--color-fur-dark);
   z-index: -1;
 }
 
-.legs > .leg:nth-child(1),
+.legs>.leg:nth-child(1),
 .legs .leg:nth-child(4) {
   --delay: 0s;
 }
 
-.legs > .leg:nth-child(2),
-.legs > .leg:nth-child(3) {
+.legs>.leg:nth-child(2),
+.legs>.leg:nth-child(3) {
   --delay: calc(-1 * var(--duration) / 2);
 }
 
-.legs > .leg:nth-child(2) {
+.legs>.leg:nth-child(2) {
   left: 0;
 }
 
-.legs > .leg:nth-child(4) {
+.legs>.leg:nth-child(4) {
   left: 0;
 }
 
@@ -496,7 +495,7 @@ body {
   animation: tail var(--semi-duration) infinite;
 }
 
-.torso > .tail {
+.torso>.tail {
   --color: var(--color-spot);
   bottom: calc(100% - 15px);
   left: 0;
@@ -508,7 +507,7 @@ body {
   transform: rotate(-45deg);
 }
 
-.tail > .tail {
+.tail>.tail {
   bottom: calc(90%);
   -webkit-transform-origin: bottom left;
   -ms-transform-origin: bottom left;
@@ -521,6 +520,7 @@ body {
 }
 
 @-webkit-keyframes shadow {
+
   from,
   to {
     -webkit-transform: scaleX(0.75);
@@ -535,6 +535,7 @@ body {
 }
 
 @keyframes shadow {
+
   from,
   to {
     -webkit-transform: scaleX(0.75);
@@ -549,6 +550,7 @@ body {
 }
 
 @-webkit-keyframes torso {
+
   from,
   to {
     -webkit-transform: none;
@@ -562,6 +564,7 @@ body {
 }
 
 @keyframes torso {
+
   from,
   to {
     -webkit-transform: none;
@@ -575,6 +578,7 @@ body {
 }
 
 @-webkit-keyframes spot {
+
   from,
   66%,
   to {
@@ -589,6 +593,7 @@ body {
 }
 
 @keyframes spot {
+
   from,
   66%,
   to {
@@ -603,6 +608,7 @@ body {
 }
 
 @-webkit-keyframes head {
+
   from,
   to {
     -webkit-transform: rotate(-10deg);
@@ -616,6 +622,7 @@ body {
 }
 
 @keyframes head {
+
   from,
   to {
     -webkit-transform: rotate(-10deg);
@@ -643,6 +650,7 @@ body {
 }
 
 @-webkit-keyframes ear-mark {
+
   from,
   to {
     -webkit-transform: rotate(0deg);
@@ -656,6 +664,7 @@ body {
 }
 
 @keyframes ear-mark {
+
   from,
   to {
     -webkit-transform: rotate(0deg);
@@ -669,6 +678,7 @@ body {
 }
 
 @-webkit-keyframes ear-back {
+
   from,
   to {
     -webkit-transform: rotate(0deg);
@@ -682,6 +692,7 @@ body {
 }
 
 @keyframes ear-back {
+
   from,
   to {
     -webkit-transform: rotate(0deg);
@@ -695,6 +706,7 @@ body {
 }
 
 @-webkit-keyframes collar {
+
   from,
   to {
     -webkit-transform: none;
@@ -708,6 +720,7 @@ body {
 }
 
 @keyframes collar {
+
   from,
   to {
     -webkit-transform: none;
@@ -721,6 +734,7 @@ body {
 }
 
 @-webkit-keyframes tag {
+
   from,
   to {
     -webkit-transform: rotate(-15deg);
@@ -734,6 +748,7 @@ body {
 }
 
 @keyframes tag {
+
   from,
   to {
     -webkit-transform: rotate(-15deg);
@@ -747,6 +762,7 @@ body {
 }
 
 @-webkit-keyframes leg {
+
   from,
   to {
     -webkit-transform: none;
@@ -765,6 +781,7 @@ body {
 }
 
 @keyframes leg {
+
   from,
   to {
     -webkit-transform: none;
@@ -783,6 +800,7 @@ body {
 }
 
 @-webkit-keyframes leg-inner {
+
   from,
   to {
     -webkit-transform: none;
@@ -801,6 +819,7 @@ body {
 }
 
 @keyframes leg-inner {
+
   from,
   to {
     -webkit-transform: none;
@@ -819,6 +838,7 @@ body {
 }
 
 @-webkit-keyframes tail {
+
   from,
   to {
     -webkit-transform: rotate(-45deg) translateX(-15%);
@@ -832,6 +852,7 @@ body {
 }
 
 @keyframes tail {
+
   from,
   to {
     -webkit-transform: rotate(-45deg) translateX(-15%);
@@ -845,6 +866,7 @@ body {
 }
 
 @-webkit-keyframes tail-inner {
+
   from,
   to {
     -webkit-transform: rotate(-10deg) translateY(50%) scaleX(0.8) scaleY(0.9);
@@ -858,6 +880,7 @@ body {
 }
 
 @keyframes tail-inner {
+
   from,
   to {
     -webkit-transform: rotate(-10deg) translateY(50%) scaleX(0.8) scaleY(0.9);
@@ -870,11 +893,14 @@ body {
   }
 }
 
+/* Slut animqation(dog) */
+
 img,
 picture,
 svg,
 video {
   display: block;
+
 }
 
 input,
@@ -890,9 +916,12 @@ select {
   /* Leila */
 }
 
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+
 }
+
 
 label,
 h1,
@@ -902,36 +931,21 @@ p {
   text-align: center;
   /* leila */
   margin-top: 1rem;
+
 }
 
-.button {
+#title {
   display: flex;
   justify-content: center;
   gap: 1rem;
   color: green;
-  padding-bottom: 6rem;
+  margin-bottom: 1.6rem;
   padding-left: 2rem;
 
-  animation: skew-y-shake 2.5s infinite;
+
 }
 
-/*    @keyframes skew-y-shake {
-        0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-        
-            50% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        
-            100% {
-                transform: translateX(100%);
-                opacity: 0;
-            }
- }  */
-
+    
 #sten {
   width: 8rem;
   height: 8rem;
@@ -958,6 +972,7 @@ p {
   color: rgb(243, 237, 237);
 }
 
+
 .title {
   color: #7498e2;
   font-size: 3rem;
@@ -974,12 +989,19 @@ p {
   border-radius: var(--radius);
 }
 
+
+
+
 .header {
   grid-area: header;
 }
 
+
 .main {
   grid-area: main;
+
+
+
 }
 
 /* Grid wrapper ends */
@@ -1012,6 +1034,7 @@ p {
   margin-bottom: 2.5rem;
   justify-content: center;
   margin-top: 1.5rem;
+
 }
 
 .avatar-flex1 {
@@ -1021,9 +1044,11 @@ p {
   justify-content: center;
   gap: 2.5rem;
   margin-top: 10px;
+
 }
 
 .avatar {
+
   width: 15%;
   height: 15%;
   border-radius: 50%;
@@ -1034,36 +1059,37 @@ p {
 }
 
 .avatar:hover {
+
   cursor: pointer;
   /* transform: scale(1.2); */
   /*    border: #544258; */
   /*  border-radius: 5px solid black; */
 
   /* Leila */
+
 }
 
 .avatar.clicked {
   border-radius: 50%;
   border: 5px solid red;
+
 }
 
 #avatar1 {
+
   width: 65px;
   height: 65px;
   border-radius: 50%;
   border: none;
   /*   transition: all 1s ease-in-out; */
-  /* leila */
+ 
 }
 
-/* #avatar2:hover {
-    content: url(img/s-j-508khDxcc5I-unsplash.jpg);
-    cursor: pointer;
-    transform: scale(1.4, 1.4)
 
-} */
 
 .playernam {
+
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1072,11 +1098,16 @@ p {
   align-content: space-between;
   padding-left: 2rem;
   width: 100%;
+
+
 }
+
+
 
 /* Does form styling even reference to anything? - Gabriel */
 .form__styling {
   margin-top: 1rem;
+
 }
 
 .form__styling button {
@@ -1085,26 +1116,32 @@ p {
   border-radius: 20px;
   padding: 0.2rem 2rem 0.2rem 2rem;
   border: none;
+
 }
 
 .form__styling button:hover {
   cursor: pointer;
   background-color: white;
-  color: darkslategray;
+  color: darkslategray
 }
+
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
-/* leila */
+
+
 .select {
   display: flex;
   justify-content: center;
   border: none;
   padding-left: 1.5rem;
+
+
 }
 
 input {
@@ -1121,9 +1158,10 @@ button:hover {
   background-color: #7498e2;
   transform: scale(1.3, 1.3);
   cursor: pointer;
+
 }
 
-@media (max-width: 570px) {
+@media(max-width: 570px) {
   .hero-image {
     /*      background-image: url("img/Brown\ Abstract\ Pet\ Shop\ Free\ Logo.png"); */
     height: 80vh;
@@ -1147,6 +1185,16 @@ button:hover {
     color: #7498e2;
     font-size: 1.5rem;
   }
+    #title {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      color: green;
+      margin-bottom: 2.5rem;
+      padding-left: 2rem;
+  
+  
+    }
 
   input {
     width: 50%;
@@ -1179,4 +1227,6 @@ button:hover {
     width: 6rem;
     height: 6rem;
   }
+
+
 }

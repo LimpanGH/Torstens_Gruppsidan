@@ -2,84 +2,84 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="startsidan.css" />
-    <script src="startsidan.js" defer></script>
 
-    <title>Sten Sax Påse</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="startsidan.css" />
+  <script src="startsidan.js" defer></script>
 
-  <body>
-    <!-- <img src="img/logo-2.png" alt=""> -->
-    <div class="wrapper">
-      <header class="header">
-        <!-- Det finns på title  -->
-        <div class="button">
-          <h3 id="sten">Sten</h3>
-          <h3 id="sax">Sax</h3>
-          <h3 id="påse">Påse</h3>
-        </div>
-        <!-- Det finns för animation "dog"  -->
-        <div class="dog">
-          <div class="torso">
-            <div class="fur">
-              <div class="spot"></div>
+  <title>Sten Sax Påse</title>
+</head>
+
+<body>
+  <!-- <img src="img/logo-2.png" alt=""> -->
+  <div class="wrapper">
+    <header class="header">
+      <!-- Det finns på title  -->
+      <div id="title">
+        <h3 id="sten">Sten</h3>
+        <h3 id="sax">Sax</h3>
+        <h3 id="påse">Påse</h3>
+      </div>
+      <!-- Starta animation "dog"  -->
+      <div class="dog">
+        <div class="torso">
+          <div class="fur">
+            <div class="spot"></div>
+          </div>
+          <div class="neck">
+            <div class="fur"></div>
+            <div class="head">
+              <div class="fur">
+                <div class="snout"></div>
+              </div>
+              <div class="ears">
+                <div class="ear">
+                  <div class="fur"></div>
+                </div>
+                <div class="ear">
+                  <div class="fur"></div>
+                </div>
+              </div>
+              <div class="eye"></div>
             </div>
-            <div class="neck">
+            <div class="collar"></div>
+          </div>
+          <div class="legs">
+            <div class="leg">
               <div class="fur"></div>
-              <div class="head">
-                <div class="fur">
-                  <div class="snout"></div>
-                </div>
-                <div class="ears">
-                  <div class="ear">
-                    <div class="fur"></div>
-                  </div>
-                  <div class="ear">
-                    <div class="fur"></div>
-                  </div>
-                </div>
-                <div class="eye"></div>
-              </div>
-              <div class="collar"></div>
-            </div>
-            <div class="legs">
-              <div class="leg">
+              <div class="leg-inner">
                 <div class="fur"></div>
-                <div class="leg-inner">
-                  <div class="fur"></div>
-                </div>
-              </div>
-              <div class="leg">
-                <div class="fur"></div>
-                <div class="leg-inner">
-                  <div class="fur"></div>
-                </div>
-              </div>
-              <div class="leg">
-                <div class="fur"></div>
-                <div class="leg-inner">
-                  <div class="fur"></div>
-                </div>
-              </div>
-              <div class="leg">
-                <div class="fur"></div>
-                <div class="leg-inner">
-                  <div class="fur"></div>
-                </div>
               </div>
             </div>
+            <div class="leg">
+              <div class="fur"></div>
+              <div class="leg-inner">
+                <div class="fur"></div>
+              </div>
+            </div>
+            <div class="leg">
+              <div class="fur"></div>
+              <div class="leg-inner">
+                <div class="fur"></div>
+              </div>
+            </div>
+            <div class="leg">
+              <div class="fur"></div>
+              <div class="leg-inner">
+                <div class="fur"></div>
+              </div>
+            </div>
+          </div>
+          <div class="tail">
             <div class="tail">
               <div class="tail">
-                <div class="tail">
-                  <div class="tail -end">
+                <div class="tail -end">
+                  <div class="tail">
                     <div class="tail">
                       <div class="tail">
-                        <div class="tail">
-                          <div class="tail"></div>
-                        </div>
+                        <div class="tail"></div>
                       </div>
                     </div>
                   </div>
@@ -88,115 +88,73 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- Sluta animation "dog"  -->
+    </header>
+    <!-- Välje Avatar -->
+    <main class="main">
+      <div>
+        <h2 class="title">Select your avatar</h2>
+      </div>
 
-        <!--  <div class="hero-image">
-        <div class="hero-text">
-           
-           <p>The dog version of rock, paper, scissors</p> 
+      <div class="avatar-flex">
+        <div class="avatar-flex1">
+          <label for="avatar1"></label>
+          <input type="hidden" id="avatar1" name="avatar" value="avatar1" />
+          <img src="img/avatar1-removebg-preview.png" alt="Avatar 1" class="avatar" onclick="borderClick(this)" />
+          <label for="avatar2"></label>
+          <input type="hidden" id="avatar2" name="avata2" value="avatar2" />
+          <img src="img/avatar2-removebg-preview.png" alt="Avatar 2" class="avatar" onclick="borderClick(this)" />
+          <label for="avatar3"></label>
+          <input type="hidden" name="avatar3" value="avatar3" />
+          <img src="img/avatar3-removebg-preview.png" alt="Avatar 3" class="avatar" onclick="borderClick(this)" />
         </div>
-      </div> -->
-      </header>
-      <!-- Välje Avatar -->
-      <main class="main">
-        <div>
-          <h2 class="title">Select your avatar</h2>
+
+        <div class="avatar-flex1">
+          <label for="avatar5"></label>
+          <input type="hidden" id="avatar5" name="avatar5" value="avatar5" />
+          <img src="img/avatar4-removebg-preview (1).png" alt="Avatar 5" class="avatar" onclick="borderClick(this)" />
+          <label for="avatar4"></label>
+          <input type="hidden" id="avatar4" name="avatar4" value="avatar4" />
+          <img src="img/avatar5-removebg-preview.png" alt="Avatar 4" class="avatar" style="height: 30%"
+            onclick="borderClick(this)" />
+          <label for="avatar6"></label>
+          <input type="hidden" id="avatar3" name="avatar" value="avatar3" />
+          <img src="img/avatar7-removebg-preview.png" alt="Avatar 3" class="avatar" onclick="borderClick(this)" />
         </div>
+      </div>
+      <!-- Select input  -->
 
-        <div class="avatar-flex">
-          <div class="avatar-flex1">
-            <label for="avatar1"></label>
-            <input type="hidden" id="avatar1" name="avatar" value="avatar1" />
-            <img
-              src="img/avatar1-removebg-preview.png"
-              alt="Avatar 1"
-              class="avatar"
-              onclick="borderClick(this)"
-            />
-            <label for="avatar2"></label>
-            <input type="hidden" id="avatar2" name="avata2" value="avatar2" />
-            <img
-              src="img/avatar2-removebg-preview.png"
-              alt="Avatar 2"
-              class="avatar"
-              onclick="borderClick(this)"
-            />
-            <label for="avatar3"></label>
-            <input type="hidden" name="avatar3" value="avatar3" />
-            <img
-              src="img/avatar3-removebg-preview.png"
-              alt="Avatar 3"
-              class="avatar"
-              onclick="borderClick(this)"
-            />
-          </div>
 
-          <div class="avatar-flex1">
-            <label for="avatar5"></label>
-            <input type="hidden" id="avatar5" name="avatar5" value="avatar5" />
-            <img
-              src="img/avatar4-removebg-preview (1).png"
-              alt="Avatar 5"
-              class="avatar"
-              onclick="borderClick(this)"
-            />
-            <label for="avatar4"></label>
-            <input type="hidden" id="avatar4" name="avatar4" value="avatar4" />
-            <img
-              src="img/avatar5-removebg-preview.png"
-              alt="Avatar 4"
-              class="avatar"
-              style="height: 30%"
-              onclick="borderClick(this)"
-            />
-            <label for="avatar6"></label>
-            <input type="hidden" id="avatar3" name="avatar" value="avatar3" />
-            <img
-              src="img/avatar7-removebg-preview.png"
-              alt="Avatar 3"
-              class="avatar"
-              onclick="borderClick(this)"
-            />
-          </div>
+      <form id="form">
+        <div class="playernam">
+          <label for="playername"></label> <br />
+          <input id="playername" type="text" name="playername" placeholder="Enter your name" />
         </div>
-        <!-- Select input  -->
-
-        <!-- <form action="" class="playernam" id="form">
-          <input
-            type="text"
-            name="playername"
-            id="playername"
-            placeholder="Enter your name"
-          />
-        </form> -->
-
-        <form id="form">
-          <div>
-            <label for="playername">Enter you name</label> <br />
-            <input id="playername" type="text" name="playername" />
-          </div>
-          <div>
-            <button type="submit">Start Game</button>
-          </div>
-        </form>
-
         <!-- Start button -->
+        <div>
+          <button type="submit">
+            Start
+          </button>
+        </div>
+      </form>
 
-        <!-- <div class="select">
-          <a href="spelsidan.html"><button>Start</button></a>
-        </div> -->
-      </main>
-    </div>
-    <!-- Set script code för välje avatar med röd border -->
-    <script>
-      function borderClick(box) {
-        //selects all avatars as eligible items, and allows a max of 1 item to be affected by borderClick
-        var allAvatars = document.querySelectorAll('.avatar');
-        allAvatars.forEach(function (avatar) {
-          avatar.style.border = 'none';
-        });
-        //styles borders on click
-        box.style.border = '5px solid red';
-      }
-    </script>
-  </body>
+
+
+    </main>
+  </div>
+  <!-- Set script code för välje avatar med röd border -->
+  <script>
+    function borderClick(box) {
+      //selects all avatars as eligible items, and allows a max of 1 item to be affected by borderClick
+      var allAvatars = document.querySelectorAll('.avatar');
+      allAvatars.forEach(function (avatar) {
+        avatar.style.border = 'none';
+      });
+      //styles borders on click
+      box.style.border = '5px solid red';
+    }
+  </script>
+</body>
+
 </html>
