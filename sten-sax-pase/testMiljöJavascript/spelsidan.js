@@ -92,6 +92,7 @@ function paperRound() {
 function scissorsRound() {
   let userInput = "SCISSORS";
   let computerInput = getComputerChoice();
+  showScissors()
   if (userInput === computerInput) {
     roundResult.textContent = "DRAW";
   } else if (computerInput === "PAPER" && winPlayer <= 5) {
@@ -182,6 +183,8 @@ function restartgame () {
    roundResult.textContent = "RESULT"
 
 }
+  
+
   
 
 
