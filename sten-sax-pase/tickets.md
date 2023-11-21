@@ -90,7 +90,14 @@ Moved old index.html to folder "Files not used"
 - Made a branch called testMiljöJavascript.
 - Integrated localstorage for name to current html and css in main on branch testMiljöJavascript.
 - Added localstorage for avatar image so that it is displayed on spelsidan on branch testMiljöJavascript.
-- Minor changes to startsidan.html, spelsidan .html and spelsidan.css for the above adds to function correctly.-
+- Minor changes to startsidan.html, spelsidan .html and spelsidan.css for the above adds to function correctly.
+
+231121:
+
+- Helped the others to merge their branchs to master.
+- Merged testMiljöJavascript to master
+- Made localstorage work in spelsidan.js and startsidan.js
+- Minor changes to html and css
 
 Resources Linus: ---------------------------------------------
 
