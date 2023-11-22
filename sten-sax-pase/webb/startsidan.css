@@ -43,11 +43,7 @@ body {
   --radius: 10px;
 }
 
-#torstensLogo {
-  width: 4rem;
-  height: rem;
-  
-}
+
 
 /* Starta animation(dog) */
 
@@ -72,6 +68,12 @@ body {
 .dog * {
   position: absolute;
   will-change: transform;
+}
+#torstensLogo{
+  width: 5rem;
+  height: 4rem;
+  margin-top: 10rem;
+  padding-left: 0.5rem;
 }
 
 .dog:before {
@@ -940,18 +942,51 @@ p {
   margin-top: 1rem;
 
 }
+h2{
+  position: relative;
+  font-size: 4vw;
+  color: #d1efdd;
+  -webkit-text-stroke: 0.3vw #d1efdd;;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  
+}
+h2::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #3EAB6C;
+  -webkit-text-stroke: 0vw #3EAB6C;;
+  border-right: 2px solid #247546;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+
+}
+@keyframes animate{
+  0%,10%,100%
+  {
+    width: 0;
+  }
+  70%,90%
+  {
+    width: 130%;
+  }
+}
 
 #title {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   color: green;
   margin-bottom: 1.6rem;
   padding-left: 2rem;
 
 
 }
-
+ 
     
 #sten {
   width: 8rem;
@@ -1167,6 +1202,7 @@ button:hover {
   cursor: pointer;
 
 }
+/* Responsive for mobile */
 
 @media(max-width: 570px) {
   .hero-image {
@@ -1197,7 +1233,7 @@ button:hover {
       justify-content: center;
       gap: 1rem;
       color: green;
-      margin-bottom: 2.5rem;
+      margin-bottom: 10rem;
       padding-left: 2rem;
   
   
@@ -1214,13 +1250,23 @@ button:hover {
     font-size: 0.8rem;
     margin-left: 50px;
   }
+    h2 {
+      position: relative;
+      font-size: 8vw;
+      color: #d1efdd;
+      -webkit-text-stroke: 0.3vw #d1efdd;
+      text-transform: uppercase;
+      margin-bottom: 6rem;
+  
+    }
 
-  #sten {
+ /*  #sten {
     padding: 1rem 0;
     font-size: xx-large;
     color: rgb(247, 239, 239);
     width: 6rem;
     height: 6rem;
+    
   }
 
   #sax {
@@ -1237,7 +1283,15 @@ button:hover {
     color: rgb(243, 237, 237);
     width: 6rem;
     height: 6rem;
-  }
+
+  } */
+  #torstensLogo {
+      width: 5rem;
+      height: 4rem;
+      margin-bottom: 3rem;
+      padding-left: 0.5rem;
+    
+    }
 
 
 }
