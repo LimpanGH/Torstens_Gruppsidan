@@ -5,6 +5,7 @@
 }
 
 body {
+  
   background-image: url('img/race-track-background-iphone-12.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -55,16 +56,18 @@ a:hover{
 }
 
 .logo {
-  height: 20px;
+  height: 3rem;
+  width: 4rem;
 }
 
 /* Styling the playerAvatarImg */
 #imgOfPlayerAvatar {
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 75px;
+  max-height: 75px;
   border-radius: 50%;
   border: none;
   background-color: #7498e2;
+  margin-top: 0.5rem;
 }
 
 /* -------- Scoreboard area start --------- */
@@ -90,6 +93,8 @@ a:hover{
 
 .av__comp {
   background-color: #74e2be;
+  width: 75px;
+  height: 75px;
 }
 
 /* -------- Scoreboard area end --------- */
@@ -151,7 +156,7 @@ a:hover{
 }
 
 .button:hover {
-  background-color: #7499e2ce;
+  background-color: #74e2be;
   cursor: pointer;
 }
 
