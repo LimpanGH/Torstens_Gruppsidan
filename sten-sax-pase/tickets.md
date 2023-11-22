@@ -44,13 +44,15 @@ Bestämma hur sidan ska se ut och bete sig i större format:
 - skapa html för att ta fram bild för människa (sten sax påse) [Kanske använd get elementbyid?]
 - skriv js för scoreboarden
 
-**Leila**
+** ⬇️ Leila ⬇️ **
 
 <!-- Leila -->
 
 15-10-2023 13:00
 
-- Create new branch (LEila)
+
+
+- Create new branch (Leila)
 - Add somthing on my branch and I will want to change some design on my spelsidan after approval from the group may be put on main branch
 - Fix main frame on center
 - Fix all margin and padding (image/text/h1/h2)
@@ -64,6 +66,44 @@ Bestämma hur sidan ska se ut och bete sig i större format:
 - Put avatar and design according avatar animate zoom in(in section tiyle and put icon)
 - Also put image in section(computer)(player )with icon and fixing padding and margin
   -put hover in link on section of icon(Paw,noise,tail)
+
+  07-11-2023  13:00
+
+  - redesigned startsidan
+  -added animation  for title and dog just with shape created animation  as dog walkin and cratetd with various shape is hust code not image
+  -responsive for mobile
+  -setting padding and margin fo all avator and button
+  added placeholder for input button for write your name when you want register on play.
+ - worked a little on javascript and test it on consol with 3 button rock, papper, scissors through onclick on html code and pop on with alert() to show the result.
+
+
+ 08-11-2023   10:00
+ -(StartSidan)changed title like button and matched with second page for button(Sten, Sax, Påse) 
+ -finde some images for match them as Avator and when click on used animation and change image like zoom in and relataed to bachgrund image(changed avator with animation (zoom in))
+ - (StartSidan)--->change backgrund color and text color  and matched with second page(responsive just for mobile)
+
+
+ 14-11-2023   10:00
+
+ -Changed avatar to human na d fixing hover avatar with Javascript when click on every avatar slect it with red border!!
+ -Redit title(ste,sax,påse)
+
+ -Responsive startsidan for mobile and desktop 
+
+ 21-11-2023      11:00
+
+ completed StartSidan and again chang all Avatar for match od spel sidan about the backgrund and last test on startSidan, then connected with javaScript and solve every problem that were on this section with group!
+
+ 22-11-2023    9:00
+ gjorde sista test i in Startsida och klart för html code, css, JavaScript,Responsive
+
+
+ Resource Leila:
+ Work on animation dog and use it from YouTube and chat Gpt and creat all shape with Css code and create animation ==========>  https://youtube.com/shorts/aI653J3jbfc?si=XXSb-yz_U5lwkc1D
+ ===========>  https://youtu.be/IhbSuNXNnnU?si=UIK0-CKgwrypSteN
+
+ _ Everything which  I've learned from Edda and Ämneclippt on Canvas , Ämne Html, css , JavaScript in Canvas
+
 
 <!-- ⬇️ Linus ⬇️ -->
 
