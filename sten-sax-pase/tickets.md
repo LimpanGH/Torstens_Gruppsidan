@@ -98,6 +98,7 @@ Bestämma hur sidan ska se ut och bete sig i större format:
  gjorde sista test i in Startsida och klart för html code, css, JavaScript,Responsive
  - Edit logo and put on start and spelsidan and also fix pdding, margin and responsive it and put link main page Torsten groupen and connect to main page
  - Add animation on title(sten, sax, påse), responsive it
+ -- Add color and font size and icon on JavaScript code  on SpelSidan
 
 
 
