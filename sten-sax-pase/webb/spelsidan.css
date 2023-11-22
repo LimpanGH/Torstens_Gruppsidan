@@ -422,8 +422,8 @@ a:hover{
   }
 
   100% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
   }
 }
 
@@ -434,8 +434,8 @@ a:hover{
   }
 
   100% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
   }
 }
 
@@ -446,25 +446,25 @@ a:hover{
 
 @keyframes win-anim-C-4 {
   0% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
   }
 
   100% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
+    -webkit-transform: translateX(64vw);
+    transform: translateX(64vw);
   }
 }
 
 @-webkit-keyframes win-anim-C-4 {
   0% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
   }
 
   100% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
+    -webkit-transform: translateX(64vw);
+    transform: translateX(64vw);
   }
 }
 
@@ -475,25 +475,25 @@ a:hover{
 
 @keyframes win-anim-C-5 {
   0% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
+    -webkit-transform: translateX(64vw);
+    transform: translateX(64vw);
   }
 
   100% {
-    -webkit-transform: translateX(64vw);
-    transform: translateX(64vw);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
   }
 }
 
 @-webkit-keyframes win-anim-C-5 {
   0% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
+    -webkit-transform: translateX(64vw);
+    transform: translateX(64vw);
   }
 
   100% {
-    -webkit-transform: translateX(64vw);
-    transform: translateX(64vw);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
   }
 }
 

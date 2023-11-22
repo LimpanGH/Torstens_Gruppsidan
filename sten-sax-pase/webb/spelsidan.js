@@ -24,6 +24,8 @@ const scoreElementPlayer = document.getElementById('playerDog');
 const scoreElementComputer = document.getElementById('computerDog');
 const restart = document.getElementById('restart');
 
+let timeout;
+
 //function to make computer choose r-p or s
 const getComputerChoice = () => {
   const computerInput = Math.floor(Math.random() * 3);
@@ -44,6 +46,10 @@ const getComputerChoice = () => {
 // if win, increments winplayer and adds a animation class.
 //if lose increments wincomputer and adds a animation class
 function rockRound() {
+  clearTimeout(timeout);
+  if (winComputer === 5 || winPlayer === 5) {
+    return;
+  }
   let userInput = 'ROCK';
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
@@ -60,12 +66,17 @@ function rockRound() {
     roundResult.textContent = 'LOSE';
     resetText();
   }
+  console.count('rock');
   checkWinner();
 }
 //plays a single round as paper
 // if win, increments winplayer and adds a animation class.
 //if lose increments wincomputer and adds a animation class
 function paperRound() {
+  clearTimeout(timeout);
+  if (winComputer === 5 || winPlayer === 5) {
+    return;
+  }
   let userInput = 'PAPER';
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
@@ -89,6 +100,10 @@ function paperRound() {
 // if win, increments winplayer and adds a animation class.
 //if lose increments wincomputer and adds a animation class
 function scissorsRound() {
+  clearTimeout(timeout);
+  if (winComputer === 5 || winPlayer === 5) {
+    return;
+  }
   let userInput = 'SCISSORS';
   let computerInput = getComputerChoice();
   // showScissors();
@@ -123,20 +138,20 @@ function winAnimationPlayer() {
   switch (winPlayer) {
     case 1:
       scoreElementPlayer.classList.add('win-anim-P');
-
       break;
+
     case 2:
       scoreElementPlayer.classList.add('win-anim-P-2');
-
       break;
+
     case 3:
       scoreElementPlayer.classList.add('win-anim-P-3');
-
       break;
+
     case 4:
       scoreElementPlayer.classList.add('win-anim-P-4');
-
       break;
+
     case 5:
       scoreElementPlayer.classList.add('win-anim-P-5');
       break;
@@ -189,10 +204,11 @@ function restartgame() {
   roundResult.textContent = '';
 }
 resetText = () => {
-  roundResult.textContent == 'DRAW' || 'WIN' || 'LOSE'
-    ? setTimeout(() => {
-        // Checks textcontent at roundresult, if true to draw, win or lose see below comment
-        roundResult.textContent = ''; // Set the text content to an empty string  after 1500ms
-      }, 1500)
-    : '';
+  if (winComputer === 5 || winPlayer === 5) {
+    return;
+  }
+  timeout = setTimeout(() => {
+    // Checks textcontent at roundresult, if true to draw, win or lose see below comment
+    roundResult.textContent = ''; // Set the text content to an empty string  after 1500ms
+  }, 1500);
 };
