@@ -43,6 +43,12 @@ body {
   --radius: 10px;
 }
 
+#torstensLogo {
+  width: 4rem;
+  height: rem;
+  
+}
+
 /* Starta animation(dog) */
 
 .dog {
