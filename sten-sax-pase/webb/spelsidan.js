@@ -53,17 +53,30 @@ function rockRound() {
   let userInput = 'ROCK';
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
-    roundResult.textContent = 'DRAW';
+    roundResult.textContent = '👍 DRAW 👍';
+    /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'rgb(50, 48, 48)';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+    roundResult.style.fontSize = '30px';
     resetText();
   } else if (computerInput === 'SCISSORS' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = 'WIN';
+    roundResult.textContent = '👏 WIN  👏';
+    /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'green';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+    roundResult.style.fontSize = '30px';
+  
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = 'LOSE';
+    roundResult.textContent = '👎 LOSE 👎';
+    /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'red';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+    roundResult.style.fontSize = '30px';
     resetText();
   }
   console.count('rock');
@@ -80,17 +93,28 @@ function paperRound() {
   let userInput = 'PAPER';
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
-    roundResult.textContent = 'DRAW';
+    roundResult.textContent = ' 👍 DRAW 👍';
+        /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'rgb(50, 48, 48)';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+
     resetText();
   } else if (computerInput === 'ROCK' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = 'WIN';
+    roundResult.textContent = ' 👏 WIN 👏';
+        /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'green';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+    
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = 'LOSE';
+    roundResult.textContent = '👎 LOSE 👎';
+        /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'red';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     resetText();
   }
   checkWinner();
@@ -108,17 +132,27 @@ function scissorsRound() {
   let computerInput = getComputerChoice();
   // showScissors();
   if (userInput === computerInput) {
-    roundResult.textContent = 'DRAW';
+    roundResult.textContent =  ' 👍DRAW 👍';
+        /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'rgb(50, 48, 48)';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     resetText();
   } else if (computerInput === 'PAPER' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = 'WIN';
+    roundResult.textContent = ' 👏 WIN 👏';
+        /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'green';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+   
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = 'LOSE';
+    roundResult.textContent = '👎 LOSE 👎';
+        /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.style.color = 'red';
+     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     resetText();
   }
   checkWinner();
@@ -127,9 +161,9 @@ function scissorsRound() {
 //function that is ran after every (rock/paper/scissors round to check for a winner of the game (first to 5))
 function checkWinner() {
   if (winComputer == 5) {
-    roundResult.textContent = 'You lost the game!';
+    roundResult.textContent = ' 🤯 You lost the game! 🤯';
   } else if (winPlayer == 5) {
-    roundResult.textContent = 'You won the game!';
+    roundResult.textContent = ' 🤩 You won the game! 🤩';
   }
 }
 

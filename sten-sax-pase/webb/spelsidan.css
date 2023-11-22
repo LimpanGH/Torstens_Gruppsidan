@@ -503,3 +503,111 @@ a:hover{
 }
 
 /* ------------- Animationer at win slut ----------------- */
+
+.win-color {
+    color: green;
+  }
+
+  .lose-color {
+    color: red;
+  }
+
+  .draw-color {
+    color: black;
+  }
+
+  /* Define a rotating animation */
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Apply the rotating animation to the icon */
+  .rotate-icon {
+    animation: rotate 1s infinite linear;
+  }
+</style>
+
+<!-- Modify your existing function -->
+function paperRound() {
+  clearTimeout(timeout);
+  if (winComputer === 5 || winPlayer === 5) {
+    return;
+  }
+  let userInput = 'PAPER';
+  let computerInput = getComputerChoice();
+  let resultText;
+
+  if (userInput === computerInput) {
+    resultText = 'DRAW';
+    resetText();
+  } else if (computerInput === 'ROCK' && winPlayer <= 5) {
+    winPlayer++;
+    winAnimationPlayer();
+    resultText = 'WIN';
+    resetText();
+  } else if (winComputer <= 5) {
+    winComputer++;
+    winAnimationComputer();
+    resultText = 'LOSE';
+    resetText();
+  }
+
+  // Change text color based on the result
+  if (resultText === 'WIN') {
+    roundResult.classList.add('win-color');
+    addIcon('win-icon'); // Add a class or ID for your win icon
+  } else if (resultText === 'LOSE') {
+    roundResult.classList.add('lose-color');
+    addIcon('lose-icon'); // Add a class or ID for your lose icon
+  } else {
+    roundResult.classList.add('draw-color');
+    addIcon('draw-icon'); // Add a class or ID for your draw icon
+  }
+
+  roundResult.textContent = resultText;
+  checkWinner();
+}
+
+// Function to add an icon
+function addIcon(iconClass) {
+  let icon = document.createElement('i');
+  icon.className = `rotate-icon ${iconClass} fas fa-icon-class`; // Replace 'fa-icon-class' with the actual Font Awesome class for your icon
+  roundResult.appendChild(icon);
+}
+This code introduces CSS classes for different text colors (win-color, lose-color, draw-color) and a rotating animation for icons. The addIcon function creates an <i> element with the specified icon class and appends it to the roundResult element. Adjust the icon classes and styling as needed based on your icon preferences.
+
+
+
+
+User
+but it doesn't work
+ChatGPT
+I apologize for any confusion. Let's simplify the code and focus on changing the text color and adding a small rotating icon based on the result. I'll use Font Awesome for the rotating icons.
+
+html
+Copy code
+<!-- Add Font Awesome to your head -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-xxQjGtmHvL9TuStS5sZ9WDK+NU8zVw0sj01MTVvfU4BfNkz/b2EQ0vqGZ1TDBTxFdrCQrqL7a9K1myxFsEnqsA==" crossorigin="anonymous" />
+
+<!-- Add this style to your head or in a style tag -->
+<style>
+  .win-color {
+    color: green;
+  }
+
+  .lose-color {
+    color: red;
+  }
+
+  .draw-color {
+    color: black;
+  }
+
+  /* Define a rotating animation */
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Apply the rotating animation to the icon */
