@@ -13,7 +13,8 @@ body {
 li,
 a,
 p,
-button {
+button,
+span {
     font-family: "montserrat", sans-serif;
     font-weight: 600;
     color: white;
@@ -48,6 +49,8 @@ a {
     border: none;
     background-color: #7498e2
 }
+
+
 
 /* -------- Scoreboard area start --------- */
 
@@ -86,6 +89,21 @@ a {
 .nav__links:hover {
     font-weight: 600;
     cursor: pointer;
+}
+
+/* Result text */
+
+.resultText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 4rem;
+    margin-right: 6rem;
+    color: black;
+    
+
+
 }
 
 
