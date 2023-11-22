@@ -46,7 +46,7 @@ Bestämma hur sidan ska se ut och bete sig i större format:
 
 ** ⬇️ Leila ⬇️ **
 
-<!-- Leila -->
+<!--Start  Leila -->
 
 15-10-2023 13:00
 
@@ -96,13 +96,22 @@ Bestämma hur sidan ska se ut och bete sig i större format:
 
  22-11-2023    9:00
  gjorde sista test i in Startsida och klart för html code, css, JavaScript,Responsive
+ - Edit logo and put on start and spelsidan and also fix pdding, margin and responsive it and put link main page Torsten groupen and connect to main page
+ - Add animation on title(sten, sax, påse), responsive it
 
 
- Resource Leila:
+
+ <!-- Resource Leila: -->
  Work on animation dog and use it from YouTube and chat Gpt and creat all shape with Css code and create animation ==========>  https://youtube.com/shorts/aI653J3jbfc?si=XXSb-yz_U5lwkc1D
  ===========>  https://youtu.be/IhbSuNXNnnU?si=UIK0-CKgwrypSteN
 
  _ Everything which  I've learned from Edda and Ämneclippt on Canvas , Ämne Html, css , JavaScript in Canvas
+ =========> https://youtu.be/ccO2B40zkv4?si=dyWZxBxXEQ1jRVzC   (helped me to animation title(sten, sax, påse)
+ ========>  https://stackoverflow.com/questions/42463871/how-to-put-spaces-between-text-in-html    (helped me how can I use space between words on one tag and in html code without any CSS code ) 
+
+
+<!--  Slut Leila  -->
+
 
 
 <!-- ⬇️ Linus ⬇️ -->
