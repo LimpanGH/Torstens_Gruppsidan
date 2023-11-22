@@ -33,6 +33,13 @@ button#restart {
 a{
     padding-right: 1rem;
     margin-top: 1rem;
+    
+}
+a:hover{
+    color: #7498e2;
+}
+ button#restart:hover{
+    color: #7498e2;
 }
 
 
