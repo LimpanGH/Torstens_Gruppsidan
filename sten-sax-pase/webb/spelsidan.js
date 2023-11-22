@@ -12,12 +12,11 @@ const fullName = localStorage.getItem('fullName');
 // Selecting the span-element with #name and writing the value from localstorage to the span.
 document.querySelector('.playerName').textContent = fullName;
 
-
 let winPlayer = 0;
 let winComputer = 0;
 
 //Dom Manipulation
- const roundResult = document.getElementById("result");
+const roundResult = document.getElementById('result');
 const rock = document.getElementById('btnR');
 const paper = document.getElementById('btnP');
 const scissors = document.getElementById('btnS');
@@ -48,17 +47,17 @@ function rockRound() {
   let userInput = 'ROCK';
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
-    roundResult.textContent = "DRAW";
-   resetText();
+    roundResult.textContent = 'DRAW';
+    resetText();
   } else if (computerInput === 'SCISSORS' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = "WIN";
+    roundResult.textContent = 'WIN';
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = "LOSE";
+    roundResult.textContent = 'LOSE';
     resetText();
   }
   checkWinner();
@@ -70,17 +69,17 @@ function paperRound() {
   let userInput = 'PAPER';
   let computerInput = getComputerChoice();
   if (userInput === computerInput) {
-    roundResult.textContent = "DRAW";
-   resetText();
+    roundResult.textContent = 'DRAW';
+    resetText();
   } else if (computerInput === 'ROCK' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = "WIN";
+    roundResult.textContent = 'WIN';
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = "LOSE";
+    roundResult.textContent = 'LOSE';
     resetText();
   }
   checkWinner();
@@ -94,18 +93,18 @@ function scissorsRound() {
   let computerInput = getComputerChoice();
   // showScissors();
   if (userInput === computerInput) {
-   roundResult.textContent = "DRAW";
-   resetText();
+    roundResult.textContent = 'DRAW';
+    resetText();
   } else if (computerInput === 'PAPER' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = "WIN";
+    roundResult.textContent = 'WIN';
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-   roundResult.textContent = "LOSE";
-   resetText();
+    roundResult.textContent = 'LOSE';
+    resetText();
   }
   checkWinner();
 }
@@ -113,10 +112,9 @@ function scissorsRound() {
 //function that is ran after every (rock/paper/scissors round to check for a winner of the game (first to 5))
 function checkWinner() {
   if (winComputer == 5) {
-    
     roundResult.textContent = 'You lost the game!';
   } else if (winPlayer == 5) {
-     roundResult.textContent = 'You won the game!';
+    roundResult.textContent = 'You won the game!';
   }
 }
 
@@ -172,8 +170,8 @@ function winAnimationComputer() {
 
 // Restart function that sets score to 0 (line 172-173) and removes amination classes from dogs (line 174-175)
 function restartgame() {
-  let winPlayer = 0;
-  let winComputer = 0;
+  winPlayer = 0;
+  winComputer = 0;
   scoreElementComputer.classList.remove(
     'win-anim-C',
     'win-anim-C-2',
@@ -191,7 +189,10 @@ function restartgame() {
   roundResult.textContent = '';
 }
 resetText = () => {
-   roundResult.textContent == 'DRAW' || 'WIN' || 'LOSE'?  setTimeout(() => { 
-    // Checks textcontent at roundresult, if true to draw, win or lose see below comment
-    roundResult.textContent = ''; // Set the text content to an empty string  after 1500ms
-  }, 1500)  : ''}
+  roundResult.textContent == 'DRAW' || 'WIN' || 'LOSE'
+    ? setTimeout(() => {
+        // Checks textcontent at roundresult, if true to draw, win or lose see below comment
+        roundResult.textContent = ''; // Set the text content to an empty string  after 1500ms
+      }, 1500)
+    : '';
+};

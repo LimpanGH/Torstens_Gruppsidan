@@ -1,13 +1,13 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-image: url("img/race-track-background-iphone-12.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('img/race-track-background-iphone-12.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 li,
@@ -15,485 +15,467 @@ a,
 p,
 button,
 span {
-    font-family: "montserrat", sans-serif;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    text-align: center;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
 a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* -------- Navbar start --------- */
 
 .header {
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 1rem;
-    padding: 0.6rem 2%;
-    /* background: rgba(235, 231, 231); */
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 1rem;
+  padding: 0.6rem 2%;
+  /* background: rgba(235, 231, 231); */
 }
 
 .logo {
-    height: 20px;
+  height: 20px;
 }
 
 /* Styling the playerAvatarImg */
 #imgOfPlayerAvatar {
-
-    max-width: 70px;
-    max-height: 70px;
-    border-radius: 50%;
-    border: none;
-    background-color: #7498e2
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  border: none;
+  background-color: #7498e2;
 }
-
-
 
 /* -------- Scoreboard area start --------- */
 
 .scoreboardwrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .header--center {
-    align-self: center;
-    height: 50px;
-    width: 50px;
-    margin-top: 1rem;
+  align-self: center;
+  height: 50px;
+  width: 50px;
+  margin-top: 1rem;
 }
 
 /* --- new avatar wrapper --- */
 .avatar {
-    margin: 0.5rem 0rem;
-    border-radius: 50%;
-    height: 70px;
+  margin: 0.5rem 0rem;
+  border-radius: 50%;
+  height: 70px;
 }
 
 .av__comp {
-    background-color: #74e2be;
-
+  background-color: #74e2be;
 }
 
 /* -------- Scoreboard area end --------- */
 
 .nav__links {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
 }
 
 .nav__links:hover {
-    font-weight: 600;
-    cursor: pointer;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 /* Result text */
 
 .resultText {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 4rem;
-    margin-right: 6rem;
-    color: black;
-    
-
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 4rem;
+  margin-right: 6rem;
+  color: black;
 }
-
 
 /* Puts the logo and the links on each sides */
 
 .header div:nth-of-type(1) {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .header div:nth-of-type(3) {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 /* -------- Navbar slut --------- */
 
-
 /* -------- Spelkontroller start --------- */
 
 .controls {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    padding: 0.7rem 2%;
-    gap: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 0.7rem 2%;
+  gap: 1rem;
 }
 
 .button {
-    background-color: #7498e2;
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    border: none;
+  background-color: #7498e2;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  border: none;
 }
 
 .button:hover {
-    background-color: #7499e2ce;
-    cursor: pointer;
+  background-color: #7499e2ce;
+  cursor: pointer;
 }
 
 /* -------- Spelkontroller slut --------- */
 
-
 /* -------- Hundarnas Utseende och position  --------- */
 
 .dogs {
-    position: absolute;
-    width: 190px;
-    /* Adjust the width and height as needed */
+  position: absolute;
+  width: 190px;
+  /* Adjust the width and height as needed */
 }
 
 .dog__computer {
-    top: 35%;
-    left: 5%;
+  top: 35%;
+  left: 5%;
 }
 
 .dog__player {
-    top: 50%;
-    left: 5%;
+  top: 50%;
+  left: 5%;
 }
 
 @keyframes moveDog {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
 
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
+  50% {
+    transform: translateX(10px);
+  }
 }
 
 @keyframes moveDog2 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
 
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-
-    80% {
-        transform: translateX(10px);
-    }
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .dog__computer {
-    animation: moveDog 1s ease-in-out infinite;
+  animation: moveDog 1s ease-in-out infinite;
 }
 
 .dog__player {
-    animation: moveDog2 1s ease-in-out infinite;
+  animation: moveDog2 1s ease-in-out infinite;
 }
-
-
 
 /* ------------- Animationer at win ----------------- */
 
 .win-anim-P {
-    -webkit-animation: win-anim-P 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-P 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-P 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-P 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @-webkit-keyframes win-anim-P {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 
-    100% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
+  100% {
+    -webkit-transform: translateX(16vw);
+    transform: translateX(16vw);
+  }
 }
 
 @keyframes win-anim-P {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 
-    100% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
+  100% {
+    -webkit-transform: translateX(16vw);
+    transform: translateX(16vw);
+  }
 }
 
 .win-anim-P-2 {
-    -webkit-animation: win-anim-P-2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-P-2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-P-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-P-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @-webkit-keyframes win-anim-P-2 {
-    0% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
+  0% {
+    -webkit-transform: translateX(16vw);
+    transform: translateX(16vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
+  100% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 }
 
 @keyframes win-anim-P-2 {
-    0% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
+  0% {
+    -webkit-transform: translateX(16vw);
+    transform: translateX(16vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
+  100% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 }
 
 .win-anim-P-3 {
-    -webkit-animation: win-anim-P-3 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-P-3 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-P-3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-P-3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @-webkit-keyframes win-anim-P-3 {
-    0% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
+  0% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(300px);
-        transform: translateX(300px);
-    }
+  100% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 }
 
 @keyframes win-anim-P-3 {
-    0% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
+  0% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(300px);
-        transform: translateX(300px);
-    }
+  100% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(48vw);
+  }
 }
 
 .win-anim-P-4 {
-    -webkit-animation: win-anim-P-4 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-P-4 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-P-4 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-P-4 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @-webkit-keyframes win-anim-P-4 {
-    0% {
-        -webkit-transform: translateX(300px);
-        transform: translateX(300px);
-    }
+  0% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(400px);
-        transform: translateX(400px);
-    }
+  100% {
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
+  }
 }
 
 @keyframes win-anim-P-4 {
-    0% {
-        -webkit-transform: translateX(300px);
-        transform: translateX(300px);
-    }
+  0% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(48vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(400px);
-        transform: translateX(400px);
-    }
+  100% {
+    -webkit-transform: translateX(48vw);
+    transform: translateX(64vw);
+  }
 }
 
 .win-anim-P-5 {
-    -webkit-animation: win-anim-P-5 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-P-5 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-P-5 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-P-5 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @-webkit-keyframes win-anim-P-5 {
-    0% {
-        -webkit-transform: translateX(400px);
-        transform: translateX(400px);
-    }
+  0% {
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(500px);
-        transform: translateX(500px);
-    }
+  100% {
+    -webkit-transform: translateX(64vw);
+    transform: translateX(64vw);
+  }
 }
 
 @keyframes win-anim-P-5 {
-    0% {
-        -webkit-transform: translateX(400px);
-        transform: translateX(400px);
-    }
+  0% {
+    -webkit-transform: translateX(48vw);
+    transform: translateX(64vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(500px);
-        transform: translateX(500px);
-    }
+  100% {
+    -webkit-transform: translateX(64vw);
+    transform: translateX(80vw);
+  }
 }
-
-
 
 .win-anim-C {
-    -webkit-animation: win-anim-C 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-C 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-C 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-C 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-
 @keyframes win-anim-C {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 
-    100% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
+  100% {
+    -webkit-transform: translateX(16vw);
+    transform: translateX(16vw);
+  }
 }
 
 @-webkit-keyframes win-anim-C {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 
-    100% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
+  100% {
+    -webkit-transform: translateX(16vw);
+    transform: translateX(16vw);
+  }
 }
 
 .win-anim-C-2 {
-    -webkit-animation: win-anim-C-2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-C-2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-C-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-C-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C-2 {
-    0% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
+  0% {
+    -webkit-transform: translateX(16vw);
+    transform: translateX(16vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
+  100% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 }
 
 @-webkit-keyframes win-anim-C-2 {
-    0% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-    }
+  0% {
+    -webkit-transform: translateX(16vw);
+    transform: translateX(16vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
+  100% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 }
 
 .win-anim-C-3 {
-    -webkit-animation: win-anim-C-3 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-C-3 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-C-3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-C-3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C-3 {
-    0% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
+  0% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(300px);
-        transform: translateX(300px);
-    }
+  100% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 }
 
 @-webkit-keyframes win-anim-C-3 {
-    0% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
-    }
+  0% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(300px);
-        transform: translateX(300px);
-    }
+  100% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 }
 
 .win-anim-C-4 {
-    -webkit-animation: win-anim-C-4 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-C-4 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-C-4 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-C-4 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C-4 {
-    0% {
-        -webkit-transform: translateX(300px);
-        transform: translateX(300px);
-    }
+  0% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(400px);
-        transform: translateX(400px);
-    }
+  100% {
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
+  }
 }
 
 @-webkit-keyframes win-anim-C-4 {
-    0% {
-        -webkit-transform: translateX(300px);
-        transform: translateX(300px);
-    }
+  0% {
+    -webkit-transform: translateX(32vw);
+    transform: translateX(32vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(400px);
-        transform: translateX(400px);
-    }
+  100% {
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
+  }
 }
 
-
 .win-anim-C-5 {
-    -webkit-animation: win-anim-C-5 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: win-anim-C-5 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: win-anim-C-5 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: win-anim-C-5 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C-5 {
-    0% {
-        -webkit-transform: translateX(400px);
-        transform: translateX(400px);
-    }
+  0% {
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(500px);
-        transform: translateX(500px);
-    }
+  100% {
+    -webkit-transform: translateX(64vw);
+    transform: translateX(64vw);
+  }
 }
 
 @-webkit-keyframes win-anim-C-5 {
-    0% {
-        -webkit-transform: translateX(400px);
-        transform: translateX(400px);
-    }
+  0% {
+    -webkit-transform: translateX(48vw);
+    transform: translateX(48vw);
+  }
 
-    100% {
-        -webkit-transform: translateX(500px);
-        transform: translateX(500px);
-    }
+  100% {
+    -webkit-transform: translateX(64vw);
+    transform: translateX(64vw);
+  }
 }
 
 /* ------------- Animationer at win slut ----------------- */
