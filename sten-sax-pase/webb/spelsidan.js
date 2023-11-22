@@ -188,7 +188,7 @@ function restartgame() {
     'win-anim-P-4',
     'win-anim-P-5'
   );
-  roundResult.textContent = 'RESULT';
+  roundResult.textContent = '';
 }
 resetText = () => {
    roundResult.textContent == 'DRAW' || 'WIN' || 'LOSE'?  setTimeout(() => { 
