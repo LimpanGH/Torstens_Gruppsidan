@@ -908,12 +908,13 @@ textarea,
 button,
 select {
   font: inherit;
-  /* Leila */
+  
   margin: 20px;
   padding: 10px;
   border-radius: 20px;
   border: none;
-  /* Leila */
+  
+ 
 }
 
 
@@ -1198,10 +1199,14 @@ button:hover {
 
   input {
     width: 50%;
+    font-size: 0.8rem;
+    
   }
 
   button {
     width: 80px;
+    font-size: 0.8rem;
+    margin-left: 50px;
   }
 
   #sten {
