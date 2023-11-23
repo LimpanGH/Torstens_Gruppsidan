@@ -69,11 +69,12 @@ body {
   position: absolute;
   will-change: transform;
 }
-#torstensLogo{
+
+#torstensLogo {
   width: 5rem;
   height: 4rem;
-  margin-top: 10rem;
-  padding-left: 0.5rem;
+  margin-top: 8rem;
+  padding: 0.7rem 1rem;
 }
 
 .dog:before {
@@ -916,13 +917,13 @@ textarea,
 button,
 select {
   font: inherit;
-  
+
   margin: 20px;
   padding: 10px;
   border-radius: 20px;
   border: none;
-  
- 
+
+
 }
 
 
@@ -942,16 +943,21 @@ p {
   margin-top: 1rem;
 
 }
-h2{
+
+h2 {
   position: relative;
   font-size: 4vw;
   color: #d1efdd;
-  -webkit-text-stroke: 0.3vw #d1efdd;;
+  -webkit-text-stroke: 0.3vw #d1efdd;
+  ;
   text-transform: uppercase;
   margin-bottom: 6rem;
-  
+
 }
-h2::before{
+/* remove animaition title */
+
+/* 
+h2::before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -959,23 +965,28 @@ h2::before{
   width: 0;
   height: 100%;
   color: #3EAB6C;
-  -webkit-text-stroke: 0vw #3EAB6C;;
+  -webkit-text-stroke: 0vw #3EAB6C;
+  ;
   border-right: 2px solid #247546;
   overflow: hidden;
   animation: animate 6s linear infinite;
 
 }
-@keyframes animate{
-  0%,10%,100%
-  {
+
+@keyframes animate {
+
+  0%,
+  10%,
+  100% {
     width: 0;
   }
-  70%,90%
-  {
+
+  70%,
+  90% {
     width: 130%;
   }
 }
-
+ */
 #title {
   display: flex;
   justify-content: center;
@@ -986,8 +997,8 @@ h2::before{
 
 
 }
- 
-    
+
+
 #sten {
   width: 8rem;
   height: 8rem;
@@ -1124,7 +1135,7 @@ h2::before{
   border-radius: 50%;
   border: none;
   /*   transition: all 1s ease-in-out; */
- 
+
 }
 
 
@@ -1202,6 +1213,7 @@ button:hover {
   cursor: pointer;
 
 }
+
 /* Responsive for mobile */
 
 @media(max-width: 570px) {
@@ -1228,21 +1240,22 @@ button:hover {
     color: #7498e2;
     font-size: 1.5rem;
   }
-    #title {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      color: green;
-      margin-bottom: 10rem;
-      padding-left: 2rem;
-  
-  
-    }
+
+  #title {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: green;
+    margin-bottom: 10rem;
+    padding-left: 2rem;
+
+
+  }
 
   input {
     width: 50%;
     font-size: 0.8rem;
-    
+
   }
 
   button {
@@ -1250,17 +1263,18 @@ button:hover {
     font-size: 0.8rem;
     margin-left: 50px;
   }
-    h2 {
-      position: relative;
-      font-size: 8vw;
-      color: #d1efdd;
-      -webkit-text-stroke: 0.3vw #d1efdd;
-      text-transform: uppercase;
-      margin-bottom: 6rem;
-  
-    }
 
- /*  #sten {
+  h2 {
+    position: relative;
+    font-size: 8vw;
+    color: #d1efdd;
+    -webkit-text-stroke: 0.3vw #d1efdd;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+
+  }
+
+  /*  #sten {
     padding: 1rem 0;
     font-size: xx-large;
     color: rgb(247, 239, 239);
@@ -1286,12 +1300,12 @@ button:hover {
 
   } */
   #torstensLogo {
-      width: 5rem;
-      height: 4rem;
-      margin-bottom: 3rem;
-      padding-left: 0.5rem;
-    
-    }
+    width: 5rem;
+    height: 4rem;
+    margin-bottom: 3rem;
+    padding: 0.7rem 1rem;
+
+  }
 
 
 }
