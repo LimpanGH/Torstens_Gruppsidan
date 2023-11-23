@@ -199,6 +199,7 @@ button#restart:hover {
 i#mute {
   align-self: flex-start;
   margin-right: auto;
+  color: blue;
   margin-top: 2rem;
   margin-left: 0.5rem;
 }
