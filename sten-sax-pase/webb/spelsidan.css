@@ -5,10 +5,11 @@
 }
 
 body {
-
-  background-image: url('img/race-track-background-iphone-12.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("img/race-embrace-hero.jpg");
 }
 
 li,
@@ -47,7 +48,17 @@ button#restart:hover {
   color: #7498e2;
 }
 
-
+.container {
+  position: relative;
+  background-image: url('img/race-track-background-iphone-12.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  min-width: 844px;
+  height: 390px;
+  margin: 0 auto;
+  border: solid 2px white;
+}
 
 /* -------- Navbar start --------- */
 
