@@ -38,6 +38,7 @@ const getComputerChoice = () => {
   switch (computerInput) {
     case 0:
       return 'ROCK';
+      
       break;
     case 1:
       return 'PAPER';
