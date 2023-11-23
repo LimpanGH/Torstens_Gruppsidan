@@ -9,12 +9,44 @@
   <link rel="stylesheet" href="spelsidan.css" />
   <script defer type="text/javascript" src="spelsidan.js"></script>
   <link rel="stylesheet" href="path/to/fontawesome-free-5.x.x-web/css/all.min.css">
-
-
-
 </head>
 
 <body>
+  <!-- Game sounds -->
+  <!-- Background music and crowd -->
+
+  <audio loop id="sound-bgd-crowd">
+    <source src="audio/6401-pixabay-medium-crowd.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <audio loop id="sound-bgd-music">
+    <source src="audio/40283-pixabay-funky-loop.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Player sounds -->
+  <audio id="sound-winRound">
+    <source src="audio/6297-pixabay-win-round.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="sound-looseRound">
+    <source src="audio/7184-pixabay-loose-round.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="sound-winGame">
+    <source src="audio/pixabay-win-game.wav" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="sound-looseGame">
+    <source src="audio/15231-pixabay-loose-game.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <!-- Sound ends  -->
+  
     <header class="header">
       <!-- Logo and connect to main page Torstensänglar -->
       <a href="/index.html"><img class="logo" src="img/logo-2-removebg-preview (2).png" alt="logo" /></a>
