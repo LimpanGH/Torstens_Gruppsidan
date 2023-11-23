@@ -12,6 +12,20 @@ const fullName = localStorage.getItem('fullName');
 // Selecting the span-element with #name and writing the value from localstorage to the span.
 document.querySelector('.playerName').textContent = fullName;
 
+/* --- Music and crowd sounds --- */
+
+//background sound --starts with document and with lower volume
+//document.addEventListener('load', function () {
+  const crowdSound = document.getElementById("sound-bgd-crowd");
+  const musicSound = document.getElementById("sound-bgd-music");
+  crowdSound.volume = 0.7;
+  musicSound.volume = 0.4;
+  crowdSound.play();
+  musicSound.play();
+//});
+
+/* --- Music and crowd sound ends --- */
+
 let winPlayer = 0;
 let winComputer = 0;
 
@@ -172,22 +186,23 @@ function winAnimationPlayer() {
   switch (winPlayer) {
     case 1:
       scoreElementPlayer.classList.add('win-anim-P');
+      soundWinRound();
       break;
-
     case 2:
       scoreElementPlayer.classList.add('win-anim-P-2');
+      soundWinRound();
       break;
-
     case 3:
       scoreElementPlayer.classList.add('win-anim-P-3');
+      soundWinRound();
       break;
-
     case 4:
       scoreElementPlayer.classList.add('win-anim-P-4');
+      soundWinRound();
       break;
-
     case 5:
       scoreElementPlayer.classList.add('win-anim-P-5');
+      soundWinGame();
       break;
   }
 }
@@ -197,22 +212,23 @@ function winAnimationComputer() {
   switch (winComputer) {
     case 1:
       scoreElementComputer.classList.add('win-anim-C');
-
+      soundLooseRound();
       break;
     case 2:
       scoreElementComputer.classList.add('win-anim-C-2');
-
+      soundLooseRound();
       break;
     case 3:
       scoreElementComputer.classList.add('win-anim-C-3');
-
+      soundLooseRound();
       break;
     case 4:
       scoreElementComputer.classList.add('win-anim-C-4');
-
+      soundLooseRound();
       break;
     case 5:
       scoreElementComputer.classList.add('win-anim-C-5');
+      soundLooseGame();
       break;
   }
 }
@@ -245,4 +261,26 @@ resetText = () => {
     // Checks textcontent at roundresult, if true to draw, win or lose see below comment
     roundResult.textContent = ''; // Set the text content to an empty string  after 1500ms
   }, 1500);
+};
+
+/* --- Player sounds ---  */
+//Win round
+function soundWinRound() {
+  const audio = document.getElementById('sound-winRound');
+  audio.play();
+};
+//Loose round
+function soundLooseRound() {
+  const audio = document.getElementById('sound-looseRound');
+  audio.play();
+};
+//Win game
+function soundWinGame() {
+  const audio = document.getElementById('sound-winGame');
+  audio.play();
+};
+//Loose game
+function soundLooseGame() {
+  const audio = document.getElementById('sound-looseGame');
+  audio.play();
 };
