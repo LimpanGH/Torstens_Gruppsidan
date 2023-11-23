@@ -23,6 +23,11 @@ const scissors = document.getElementById('btnS');
 const scoreElementPlayer = document.getElementById('playerDog');
 const scoreElementComputer = document.getElementById('computerDog');
 const restart = document.getElementById('restart');
+const audio = document.getElementById('sound-bgd-music');
+const audio2 = document.getElementById('sound-bgd-crowd');
+
+
+let isMuted = false;
 
 let timeout;
 
@@ -246,3 +251,36 @@ resetText = () => {
     roundResult.textContent = ''; // Set the text content to an empty string  after 1500ms
   }, 1500);
 };
+<<<<<<< HEAD
+=======
+
+/* --- Player sounds ---  */
+//Win round
+function soundWinRound() {
+  const audio = document.getElementById('sound-winRound');
+  audio.play();
+};
+//Loose round
+function soundLooseRound() {
+  const audio = document.getElementById('sound-looseRound');
+  audio.play();
+};
+//Win game
+function soundWinGame() {
+  const audio = document.getElementById('sound-winGame');
+  audio.play();
+};
+//Loose game
+function soundLooseGame() {
+  const audio = document.getElementById('sound-looseGame');
+  audio.play();
+};
+
+
+
+toggleMute = () => {
+  isMuted = !isMuted; // Toggle the mute state
+
+  audio.muted = isMuted;
+  audio2.muted = isMuted }
+>>>>>>> 4f5c3c1f221beb46926a467bf2bd7f0b5359d2bd
