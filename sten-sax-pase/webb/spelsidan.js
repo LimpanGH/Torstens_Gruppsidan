@@ -25,6 +25,15 @@ const scoreElementComputer = document.getElementById('computerDog');
 const restart = document.getElementById('restart');
 const audio = document.getElementById('sound-bgd-music');
 const audio2 = document.getElementById('sound-bgd-crowd');
+//background sound --starts with document and with lower volume
+document.addEventListener('DOMContentLoaded', function () {
+    const crowdSound = document.getElementById("sound-bgd-crowd");
+    const musicSound = document.getElementById("sound-bgd-music");
+    crowdSound.volume = 0.7;
+    musicSound.volume = 0.4;
+    crowdSound.play();
+    musicSound.play();
+});
 
 
 let isMuted = false;
@@ -177,6 +186,7 @@ function winAnimationPlayer() {
   switch (winPlayer) {
     case 1:
       scoreElementPlayer.classList.add('win-anim-P');
+
       break;
 
     case 2:
@@ -202,22 +212,23 @@ function winAnimationComputer() {
   switch (winComputer) {
     case 1:
       scoreElementComputer.classList.add('win-anim-C');
-
+      soundLoseRound();
       break;
     case 2:
       scoreElementComputer.classList.add('win-anim-C-2');
-
+      soundLoseRound();
       break;
     case 3:
-      scoreElementComputer.classList.add('win-anim-C-3');
-
+      scoreElementComputer.classList.add('win-anim-C-3'); 
+      soundLoseRound();
       break;
     case 4:
       scoreElementComputer.classList.add('win-anim-C-4');
-
+      soundLoseRound();
       break;
     case 5:
       scoreElementComputer.classList.add('win-anim-C-5');
+      soundLoseGame();
       break;
   }
 }
@@ -259,7 +270,7 @@ function soundWinRound() {
   audio.play();
 };
 //Loose round
-function soundLooseRound() {
+function soundLoseRound() {
   const audio = document.getElementById('sound-looseRound');
   audio.play();
 };
@@ -269,7 +280,7 @@ function soundWinGame() {
   audio.play();
 };
 //Loose game
-function soundLooseGame() {
+function soundLoseGame() {
   const audio = document.getElementById('sound-looseGame');
   audio.play();
 };
