@@ -25,6 +25,8 @@ const scoreElementComputer = document.getElementById('computerDog');
 const restart = document.getElementById('restart');
 const audio = document.getElementById('sound-bgd-music');
 const audio2 = document.getElementById('sound-bgd-crowd');
+/* Add Leila for pu id tag from html sound mute */
+const soundIcon = document.getElementById('mute');
 //background sound --starts with document and with lower volume
 document.addEventListener('DOMContentLoaded', function () {
     const crowdSound = document.getElementById("sound-bgd-crowd");
@@ -111,6 +113,7 @@ function paperRound() {
         /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'rgb(50, 48, 48)';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+    roundResult.style.fontSize = '30px';
 
     resetText();
   } else if (computerInput === 'ROCK' && winPlayer <= 5) {
@@ -120,6 +123,7 @@ function paperRound() {
         /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'green';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+    roundResult.style.fontSize = '30px';
     
     resetText();
   } else if (winComputer <= 5) {
@@ -129,6 +133,7 @@ function paperRound() {
         /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'red';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+    roundResult.style.fontSize = '30px';
     resetText();
   }
   checkWinner();
@@ -296,4 +301,8 @@ toggleMute = () => {
   isMuted = !isMuted; // Toggle the mute state
 
   audio.muted = isMuted;
-  audio2.muted = isMuted }
+  audio2.muted = isMuted;
+  /* Add it Leila when click on them show us mute and unmute icon */
+  soundIcon.className = audio.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up'; 
+  soundIcon.style.color = audio.muted ? 'red' : 'blue';
+}
