@@ -186,23 +186,28 @@ function winAnimationPlayer() {
   switch (winPlayer) {
     case 1:
       scoreElementPlayer.classList.add('win-anim-P');
+      soundWinRound();
 
       break;
 
     case 2:
       scoreElementPlayer.classList.add('win-anim-P-2');
+       soundWinRound();
       break;
 
     case 3:
       scoreElementPlayer.classList.add('win-anim-P-3');
+       soundWinRound();
       break;
 
     case 4:
       scoreElementPlayer.classList.add('win-anim-P-4');
+       soundWinRound();
       break;
 
     case 5:
       scoreElementPlayer.classList.add('win-anim-P-5');
+       soundWinGame();
       break;
   }
 }
