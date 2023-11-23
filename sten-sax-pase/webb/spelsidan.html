@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="spelsidan.css" />
   <script defer type="text/javascript" src="spelsidan.js"></script>
   <link rel="stylesheet" href="path/to/fontawesome-free-5.x.x-web/css/all.min.css">
+  <script src="https://kit.fontawesome.com/427fa62431.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -85,8 +86,10 @@
 
 
     <span id="result" class="resultText"></span>
-    <section class="controls">
 
+    <section class="controls">
+      
+       <i class="fa-solid fa-volume-xmark  fa-2xl mute" id="mute"  onclick="toggleMute()"></i>
       <button data-selection="rock" class="button" id="btnR" onclick="rockRound()">Rock</button>
       <button data-selection="paper" class="button" id="btnP" onclick="paperRound()">Paper</button>
       <button data-selection="scissors" class="button" id="btnS" onclick="scissorsRound()">Scissors</button>

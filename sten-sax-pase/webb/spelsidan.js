@@ -37,6 +37,11 @@ const scissors = document.getElementById('btnS');
 const scoreElementPlayer = document.getElementById('playerDog');
 const scoreElementComputer = document.getElementById('computerDog');
 const restart = document.getElementById('restart');
+const audio = document.getElementById('sound-bgd-music');
+const audio2 = document.getElementById('sound-bgd-crowd');
+
+
+let isMuted = false;
 
 let timeout;
 
@@ -284,3 +289,11 @@ function soundLooseGame() {
   const audio = document.getElementById('sound-looseGame');
   audio.play();
 };
+
+
+
+toggleMute = () => {
+  isMuted = !isMuted; // Toggle the mute state
+
+  audio.muted = isMuted;
+  audio2.muted = isMuted }

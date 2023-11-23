@@ -160,6 +160,23 @@ a:hover{
   cursor: pointer;
 }
 
+
+.mute {
+ align-self: flex-start;
+  color: red;
+  margin-right:auto;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
+
+.mute:hover {
+    cursor: pointer;
+}
+
+.mute:focus {
+  color: #7498e2;
+}
+
 /* -------- Spelkontroller slut --------- */
 
 /* -------- Hundarnas Utseende och position  --------- */
