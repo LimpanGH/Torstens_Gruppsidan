@@ -23,6 +23,11 @@ const scissors = document.getElementById('btnS');
 const scoreElementPlayer = document.getElementById('playerDog');
 const scoreElementComputer = document.getElementById('computerDog');
 const restart = document.getElementById('restart');
+const audio = document.getElementById('sound-bgd-music');
+const audio2 = document.getElementById('sound-bgd-crowd');
+
+
+let isMuted = false;
 
 let timeout;
 
@@ -241,8 +246,38 @@ resetText = () => {
   if (winComputer === 5 || winPlayer === 5) {
     return;
   }
-  timeout = setTimeout(() => {
+                                                                  timeout = setTimeout(() => {
     // Checks textcontent at roundresult, if true to draw, win or lose see below comment
     roundResult.textContent = ''; // Set the text content to an empty string  after 1500ms
   }, 1500);
 };
+
+/* --- Player sounds ---  */
+//Win round
+function soundWinRound() {
+  const audio = document.getElementById('sound-winRound');
+  audio.play();
+};
+//Loose round
+function soundLooseRound() {
+  const audio = document.getElementById('sound-looseRound');
+  audio.play();
+};
+//Win game
+function soundWinGame() {
+  const audio = document.getElementById('sound-winGame');
+  audio.play();
+};
+//Loose game
+function soundLooseGame() {
+  const audio = document.getElementById('sound-looseGame');
+  audio.play();
+};
+
+
+
+toggleMute = () => {
+  isMuted = !isMuted; // Toggle the mute state
+
+  audio.muted = isMuted;
+  audio2.muted = isMuted }
