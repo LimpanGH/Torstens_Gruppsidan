@@ -259,9 +259,9 @@ content: '\f028';
   
 } 
  */
-/* -------- Spelkontroller(Gabriel) slut --------- */
 
-/* -------- Hundarnas Utseende och position  --------- */
+/* -------- Spelkontroller(Gabriel) slut --------- */
+/* -------- Hundarnas Utseende, position och rörelse när de står still  --------- */
 
 .dogs {
   position: absolute;
@@ -271,14 +271,15 @@ content: '\f028';
 
 .dog__computer {
   top: 35%;
-  left: 5%;
+  left: 1%;
 }
 
 .dog__player {
   top: 50%;
-  left: 5%;
+  left: 1%;
 }
 
+/* Rörelse när hunden står still */
 @keyframes moveDog {
 
   0%,
@@ -298,7 +299,7 @@ content: '\f028';
     transform: translateX(0);
   }
 
-  80% {
+  50% {
     transform: translateX(10px);
   }
 }
@@ -314,292 +315,142 @@ content: '\f028';
 /* ------------- Animationer at win ----------------- */
 
 .win-anim-P {
-  -webkit-animation: win-anim-P 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-P 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes win-anim-P {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  100% {
-    -webkit-transform: translateX(16vw);
-    transform: translateX(16vw);
-  }
 }
 
 @keyframes win-anim-P {
   0% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 
   100% {
-    -webkit-transform: translateX(16vw);
-    transform: translateX(16vw);
+    transform: translateX(115px);
   }
 }
 
 .win-anim-P-2 {
-  -webkit-animation: win-anim-P-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-P-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes win-anim-P-2 {
-  0% {
-    -webkit-transform: translateX(16vw);
-    transform: translateX(16vw);
-  }
-
-  100% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
-  }
 }
 
 @keyframes win-anim-P-2 {
   0% {
-    -webkit-transform: translateX(16vw);
-    transform: translateX(16vw);
+    transform: translateX(115px);
   }
 
   100% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
+    transform: translateX(230px);
   }
 }
 
 .win-anim-P-3 {
-  -webkit-animation: win-anim-P-3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-P-3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes win-anim-P-3 {
-  0% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
-  }
-
-  100% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
-  }
 }
 
 @keyframes win-anim-P-3 {
   0% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
+    transform: translateX(230px);
   }
 
   100% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(48vw);
+    transform: translateX(345px);
   }
 }
 
 .win-anim-P-4 {
-  -webkit-animation: win-anim-P-4 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-P-4 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes win-anim-P-4 {
-  0% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
-  }
-
-  100% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
-  }
 }
 
 @keyframes win-anim-P-4 {
   0% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(48vw);
+    transform: translateX(345px);
   }
 
   100% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(64vw);
+    transform: translateX(460px);
   }
 }
 
 .win-anim-P-5 {
-  -webkit-animation: win-anim-P-5 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-P-5 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes win-anim-P-5 {
-  0% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
-  }
-
-  100% {
-    -webkit-transform: translateX(64vw);
-    transform: translateX(64vw);
-  }
 }
 
 @keyframes win-anim-P-5 {
   0% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(64vw);
+    transform: translateX(480px);
   }
 
   100% {
-    -webkit-transform: translateX(64vw);
-    transform: translateX(80vw);
+    transform: translateX(575px);
   }
 }
 
 .win-anim-C {
-  -webkit-animation: win-anim-C 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-C 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C {
   0% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 
   100% {
-    -webkit-transform: translateX(16vw);
-    transform: translateX(16vw);
-  }
-}
-
-@-webkit-keyframes win-anim-C {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  100% {
-    -webkit-transform: translateX(16vw);
-    transform: translateX(16vw);
+    transform: translateX(115px);
   }
 }
 
 .win-anim-C-2 {
-  -webkit-animation: win-anim-C-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-C-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C-2 {
   0% {
-    -webkit-transform: translateX(16vw);
-    transform: translateX(16vw);
+    transform: translateX(115px);
   }
 
   100% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
-  }
-}
-
-@-webkit-keyframes win-anim-C-2 {
-  0% {
-    -webkit-transform: translateX(16vw);
-    transform: translateX(16vw);
-  }
-
-  100% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
+    transform: translateX(230px);
   }
 }
 
 .win-anim-C-3 {
-  -webkit-animation: win-anim-C-3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-C-3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C-3 {
   0% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
+    transform: translateX(230px);
   }
 
   100% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
-  }
-}
-
-@-webkit-keyframes win-anim-C-3 {
-  0% {
-    -webkit-transform: translateX(32vw);
-    transform: translateX(32vw);
-  }
-
-  100% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
+    transform: translateX(345px);
   }
 }
 
 .win-anim-C-4 {
-  -webkit-animation: win-anim-C-4 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-C-4 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C-4 {
   0% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
+    transform: translateX(345px);
   }
 
   100% {
-    -webkit-transform: translateX(64vw);
-    transform: translateX(64vw);
-  }
-}
-
-@-webkit-keyframes win-anim-C-4 {
-  0% {
-    -webkit-transform: translateX(48vw);
-    transform: translateX(48vw);
-  }
-
-  100% {
-    -webkit-transform: translateX(64vw);
-    transform: translateX(64vw);
+    transform: translateX(460px);
   }
 }
 
 .win-anim-C-5 {
-  -webkit-animation: win-anim-C-5 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: win-anim-C-5 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes win-anim-C-5 {
   0% {
-    -webkit-transform: translateX(64vw);
-    transform: translateX(64vw);
+    transform: translateX(460px);
   }
 
   100% {
-    -webkit-transform: translateX(80vw);
-    transform: translateX(80vw);
-  }
-}
-
-@-webkit-keyframes win-anim-C-5 {
-  0% {
-    -webkit-transform: translateX(64vw);
-    transform: translateX(64vw);
-  }
-
-  100% {
-    -webkit-transform: translateX(80vw);
-    transform: translateX(80vw);
+    transform: translateX(575px);
   }
 }
 
