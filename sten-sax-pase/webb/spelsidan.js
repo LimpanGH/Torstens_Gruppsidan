@@ -277,23 +277,24 @@ resetText = () => {
 //Win round
 function soundWinRound() {
   const audio = document.getElementById('sound-winRound');
-  audio.play();
+   isMuted ? console.log() : audio.play();
 };
 //Loose round
 function soundLoseRound() {
   const audio = document.getElementById('sound-looseRound');
-  audio.play();
+  isMuted ? console.log() : audio.play();
 };
 //Win game
 function soundWinGame() {
   const audio = document.getElementById('sound-winGame');
-  audio.play();
+   isMuted ? console.log() : audio.play();
 };
 //Loose game
 function soundLoseGame() {
-  const audio = document.getElementById('sound-looseGame');
-  audio.play();
+ const audio = document.getElementById('sound-looseGame');
+  isMuted ? console.log() : audio.play();
 };
+
 
 
 
@@ -306,3 +307,7 @@ toggleMute = () => {
   soundIcon.className = audio.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up'; 
   soundIcon.style.color = audio.muted ? 'red' : 'blue';
 }
+
+
+
+
