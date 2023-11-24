@@ -1,6 +1,15 @@
 // ----- Getting user input and taking it over to Spelsidan. ------
 const form = document.querySelector('#form');
 const playerName = document.getElementById('playername');
+
+document.addEventListener("DOMContentLoaded", function() {
+  const audio = document.getElementById("sound-startsida");
+
+  // Lägg till en klickhändelse för att starta uppspelningen
+  document.addEventListener("click", function() {
+    audio.play();
+  });
+});
 // console.log(playerName.value);
 // Appending a submit-event to form that fires when we click on the submit-button, and when an input is submittet, the fc runs .
 form.addEventListener('submit', (e) => {
