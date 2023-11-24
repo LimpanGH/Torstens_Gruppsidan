@@ -304,8 +304,8 @@ toggleMute = () => {
   audio.muted = isMuted;
   audio2.muted = isMuted;
   /* Add it Leila when click on them show us mute and unmute icon */
-  soundIcon.className = audio.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up'; 
-  soundIcon.style.color = audio.muted ? 'red' : 'blue';
+  soundIcon.className = audio.muted ? 'fas fa-volume-mute fa-2xl' : 'fas fa-volume-up fa-2xl'; 
+  soundIcon.style.color = audio.muted ? 'red' : '#274d97';
 }
 
 

@@ -196,14 +196,14 @@ button#restart:hover {
   cursor: pointer;
 }
 /* Start sound mute & unmute (Leila) */
-i#mute {
+#mute {
   align-self: flex-start;
   margin-right: auto;
-  color: blue;
+  color: #274d97;
   margin-top: 2rem;
   margin-left: 0.5rem;
 }
-i#mute:hover {
+#mute:hover {
   cursor: pointer;
   color: red;
 
