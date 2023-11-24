@@ -180,6 +180,7 @@ button#restart:hover {
   bottom: 0px;
   padding: 1.7rem 2%;
   gap: 1rem;
+  z-index: 3;
 }
 
 .button {
@@ -490,9 +491,20 @@ content: '\f028';
   }
 }
 
-@media(min-height: 500px)  {
+@media screen and (min-height: 500px)  {
   .container {
     background-image: url('img/race-track-background-large-screen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 500px;
+  }
+
+  .audience {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Ensure the audience is on top */
   }
 }
