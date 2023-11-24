@@ -175,7 +175,6 @@ button#restart:hover {
 
 .controls {
   display: flex;
-  justify-content: center;
   position: absolute;
   width: 100%;
   bottom: 0px;
@@ -483,6 +482,17 @@ content: '\f028';
 .rotate-icon {
   animation: rotate 1s infinite linear;
 }
-@media(max-width: 570px){
 
+@media(min-width: 844px), (min-height: 390px)  {
+  body {
+    background-image: url("img/race-embrace-hero.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media(min-height: 500px)  {
+  .container {
+    background-image: url('img/race-track-background-large-screen.jpg');
+    height: 500px;
+  }
 }
