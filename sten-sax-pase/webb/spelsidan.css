@@ -188,12 +188,13 @@ button#restart:hover {
   border-radius: 50%;
   height: 60px;
   width: 60px;
-  border: none;
+  border: solid 1px;
 }
 
 .button:hover {
-  background-color: #274d97;
+  background-color: #5874ac;
   cursor: pointer;
+}
 }
 /* Start sound mute & unmute (Leila) */
 #mute {
