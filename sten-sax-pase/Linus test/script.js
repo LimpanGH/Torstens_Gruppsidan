@@ -1,6 +1,6 @@
 const computer = document.querySelector('.computer img');
 const player = document.querySelector('.player img');
-const computerPoints = document.querySelector('.computerPoints');
+const computerPoints = document.querySelector('.computerPoints'); 
 const playerPoints = document.querySelector('.playerPoints');
 const options = document.querySelectorAll('.options button');
 
@@ -15,14 +15,12 @@ options.forEach((option) => {
 
       player.src = `img/${option.innerHTML}Player.svg`;
 
-
       const choice = ['rock', 'paper', 'scissors'];
       let arrayNum = Math.floor(Math.random() * 3);
       let computerChoice = choice[arrayNum];
       computer.src = `img/${computerChoice}Computer.svg`;
 
-    //   computer.src = `./${computerChoice}Computer.svg`;
-      
+      //   computer.src = `./${computerChoice}Computer.svg`;
 
       let cPoints = parseInt(computerPoints.innerHTML);
       let pPoints = parseInt(playerPoints.innerHTML);
