@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sten Sax Påse</title>
+  <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
+  <link rel="stylesheet" href="spelsidan.css" />
+  <script defer type="text/javascript" src="spelsidan.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-xxQjGtmHvL9TuStS5sZ9WDK+NU8zVw0sj01MTVvfU4BfNkz/b2EQ0vqGZ1TDBTxFdrCQrqL7a9K1myxFsEnqsA=="
+    crossorigin="anonymous" />
+<script src="https://kit.fontawesome.com/427fa62431.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!-- Game sounds -->
+  <!-- Background music and crowd -->
+
+  <audio loop id="sound-bgd-crowd">
+    <source src="audio/6401-pixabay-medium-crowd.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <audio loop id="sound-bgd-music">
+    <source src="audio/40283-pixabay-funky-loop.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Player sounds -->
+  <audio id="sound-winRound">
+    <source src="audio/6297-pixabay-win-round.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="sound-looseRound">
+    <source src="audio/7184-pixabay-loose-round.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="sound-winGame">
+    <source src="audio/pixabay-win-game.wav" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="sound-looseGame">
+    <source src="audio/15231-pixabay-loose-game.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <!-- Sound ends  -->
+  <div class="container">
+  <header class="header">
+    <!-- Logo and connect to main page Torstensänglar -->
+    <a href="/index.html"><img class="logo" src="img/logo-2-removebg-preview (2).png" alt="logo" /></a>
+    <div class="wrapperCoUs">
+      <div class="scoreboardwrapper">
+        <p>Computer</p>
+        <img img class="avatar av__comp" src="img/computer_avatar_2.png" alt="">
+      </div>
+      <div class="hand">
+        <img src="img/left-hand-paper-svgrepo-com.svg" alt="" class="header--center">
+        <img src="img/right-hand-rock-svgrepo-com.svg" alt="" class="header--center" />
+      </div>
+      <div class="scoreboardwrapper">
+        <span class="playerName"></span>
+        <!-- <span class="scoreboard scoreboard--player"> -->
+        <img id="imgOfPlayerAvatar" alt="">
+        </span>
+      </div>
+      
+    </div>
+
+    
+
+    <div class="nav__links">
+      <button id="restart" onclick="restartgame()">Restart</button>
+      <a href="startsidan.html">Quit</a>
+    </div>
+  </header>
+
+  <main>
+
+    <img class="dogs dog__computer" id="computerDog" src="img/race-dog-computer.png" alt="race dog computer">
+
+    <img class="dogs dog__player" id="playerDog" src="img/race-dog-player.png" alt="race dog player">
+
+
+    <span id="result" class="resultText"></span>
+    <section class="controls">
+     <i class="fa-solid fa-volume-high mute"  id="mute"  onclick="toggleMute()"></i>
+      <div onclick="rockRound()"> 
+
+        
+        <!-- Your other content -->
+      
+
+        <button data-selection="rock" class="button" id="btnR"><img width="40px" height="40px"
+            src="img/816-8161371_rock-paper-scissor-icon-png-removebg-preview.png" alt=""></button>
+
+      </div>
+      <div onclick="paperRound()">
+        <button data-selection="paper" class="button" id="btnP"><img width="40px" height="40px"
+            src="img/paper-removebg-preview (3).png" alt=""></button>
+
+      </div>
+      <div onclick="scissorsRound()">
+        <button data-selection="scissors" class="button" id="btnS"><img width="40px" height="40px"
+            src="img/scissors.png" alt=""></button>
+
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+
+</html>
