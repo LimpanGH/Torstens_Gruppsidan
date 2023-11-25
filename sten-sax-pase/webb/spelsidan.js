@@ -307,7 +307,23 @@ toggleMute = () => {
   soundIcon.className = audio.muted ? 'fas fa-volume-mute fa-2xl' : 'fas fa-volume-up fa-2xl'; 
   soundIcon.style.color = audio.muted ? 'red' : '#274d97';
 }
+ function toggleState(button) {
+            // Deactivate all buttons
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(b => {
+                b.classList.remove('active');
+                b.classList.add('inactive');
+            });
 
+            // Activate the clicked button
+            button.classList.add('active');
+            button.classList.remove('inactive');
 
+            // Deactivate after a delay
+            setTimeout(function() {
+                button.classList.remove('active');
+                button.classList.add('inactive');
+            }, 2000);
+        }
 
-
+         

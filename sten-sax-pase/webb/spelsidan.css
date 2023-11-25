@@ -28,10 +28,10 @@ span {
 }
 
 button#restart {
-  font-size: large;
-  cursor: pointer;
-  padding-right: .8rem;
-  margin-top: 0.4rem;
+      font-size: large;
+      cursor: pointer;
+      padding-right: .8rem;
+      margin-top: 0.4rem;
 }
 
 a {
@@ -53,7 +53,7 @@ button#restart:hover {
   background-image: url('img/race-track-background-iphone-12.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 0;
+  z-index: 0; 
   min-width: 844px;
   height: 390px;
   margin: 0 auto;
@@ -190,26 +190,30 @@ button#restart:hover {
   padding-right: 30.5rem;
 }
 
-.button {
-  background-color: #7498e2;
+ .button {
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  border: solid 1px;
-}
+   margin: 5px;
+   padding: 10px;
+   cursor: pointer;
+   background-color: #7498e2;
+   color: white;
+ }
+.active {
+      background-color: #314d86;
+    }
 
-.button:hover {
+/* .button:hover {
   background-color: #5874ac;
   cursor: pointer;
-}
-}
+} */
+
 /* Start sound mute & unmute (Leila) */
 #mute {
   align-self: flex-start;
   margin-right: auto;
   color: #274d97;
   margin-top: 2rem;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 #mute:hover {
   cursor: pointer;
@@ -509,7 +513,7 @@ content: '\f028';
 
   .audience {
     position: absolute;
-    top: 0;
+    top: 2rem; 
     left: 0;
     width: 100%;
     height: 100%;
