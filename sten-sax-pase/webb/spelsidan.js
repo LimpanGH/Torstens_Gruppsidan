@@ -25,6 +25,11 @@ const scoreElementComputer = document.getElementById('computerDog');
 const restart = document.getElementById('restart');
 const audio = document.getElementById('sound-bgd-music');
 const audio2 = document.getElementById('sound-bgd-crowd');
+// animation hands ⬇️
+const computer = document.querySelector('.computer img');
+const player = document.querySelector('.player img');
+const options = document.querySelectorAll('.options button');
+// animation hands ⬆️
 /* Add Leila for pu id tag from html sound mute */
 const soundIcon = document.getElementById('mute');
 //background sound --starts with document and with lower volume
@@ -138,6 +143,20 @@ function paperRound() {
   }
   checkWinner();
 }
+
+
+let shakeHandsFuncion = () => {
+  computer.classList.add('shakeComputer');
+  player.classList.add('shakePlayer');
+
+  setTimeout(() => {
+    computer.classList.remove('shakeComputer');
+    player.classList.remove('shakePlayer');
+
+    player.src = `img/${option.innerHTML}Player.png`;
+  }, 900);
+}
+
 
 //plays single round  as scissors
 // if win, increments winplayer and adds a animation class.

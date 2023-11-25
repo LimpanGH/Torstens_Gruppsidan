@@ -9,7 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("img/race-embrace-hero.jpg");
+  background-image: url('img/race-embrace-hero.jpg');
 }
 
 li,
@@ -24,20 +24,17 @@ span {
   text-align: center;
   background: none;
   border: none;
-
 }
 
 button#restart {
   font-size: large;
   cursor: pointer;
-  padding-right: .8rem;
+  padding-right: 0.8rem;
   margin-top: 0.4rem;
 }
 
 a {
   padding-right: 1rem;
-
-
 }
 
 a:hover {
@@ -86,7 +83,7 @@ button#restart:hover {
 }
 
 /* -------- Scoreboard area start --------- */
-.wrapperCoUs{
+.wrapperCoUs {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -94,17 +91,12 @@ button#restart:hover {
   align-items: center;
   align-self: center;
   margin: auto;
-  
-
 }
 .scoreboardwrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: auto;
-  
-  
-  
 }
 
 .header--center {
@@ -127,6 +119,54 @@ button#restart:hover {
   height: 75px;
 }
 
+/* ⬇️ Animation hands ⬇️ */
+
+.shakeComputer {
+  animation: shakeComputer 0.8s linear;
+}
+
+.shakePlayer {
+  animation: shakePlayer 0.8s linear;
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ⬆️ Animation hands ⬆️ */
+
 /* -------- Scoreboard area end --------- */
 
 .nav__links {
@@ -137,7 +177,6 @@ button#restart:hover {
   align-content: stretch;
   flex-direction: row;
   flex-wrap: nowrap;
-
 }
 
 .nav__links:hover {
@@ -155,8 +194,7 @@ button#restart:hover {
   font-size: 4rem;
   margin-right: 6rem;
   color: black;
-  margin-top: 11rem
- 
+  margin-top: 11rem;
 }
 
 /* Puts the logo and the links on each sides */
@@ -174,17 +212,17 @@ button#restart:hover {
 /* -------- Spelkontroller start --------- */
 
 .controls {
-     display: flex;
-      position: absolute;
-      width: 100%;
-      bottom: 0px;
-      padding: 1.7rem 2%;
-      gap: 1rem;
-      z-index: 3;
-      flex-wrap: nowrap;
-      align-content: center;
-      align-items: center;
-      justify-content: flex-end
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 1.7rem 2%;
+  gap: 1rem;
+  z-index: 3;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
 }
 ::before {
   padding-right: 30.5rem;
@@ -202,7 +240,7 @@ button#restart:hover {
   background-color: #5874ac;
   cursor: pointer;
 }
-}
+
 /* Start sound mute & unmute (Leila) */
 #mute {
   align-self: flex-start;
@@ -214,13 +252,9 @@ button#restart:hover {
 #mute:hover {
   cursor: pointer;
   color: red;
-
-
 }
 
-
 /* End sound mute & unmute  */
-
 
 /* -------- Spelkontroller(Gabriel) slut --------- */
 /* 
@@ -289,7 +323,6 @@ content: '\f028';
 
 /* Rörelse när hunden står still */
 @keyframes moveDog {
-
   0%,
   100% {
     transform: translateX(0);
@@ -301,7 +334,6 @@ content: '\f028';
 }
 
 @keyframes moveDog2 {
-
   0%,
   100% {
     transform: translateX(0);
@@ -492,14 +524,14 @@ content: '\f028';
   animation: rotate 1s infinite linear;
 }
 
-@media(min-width: 844px), (min-height: 390px)  {
+@media (min-width: 844px), (min-height: 390px) {
   body {
-    background-image: url("img/race-embrace-hero.jpg");
+    background-image: url('img/race-embrace-hero.jpg');
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (min-height: 500px)  {
+@media screen and (min-height: 500px) {
   .container {
     background-image: url('img/race-track-background-large-screen.jpg');
     background-size: cover;

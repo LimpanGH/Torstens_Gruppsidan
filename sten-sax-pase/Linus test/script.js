@@ -22,23 +22,24 @@ options.forEach((option) => {
 
       //   computer.src = `./${computerChoice}Computer.svg`;
 
-      let cPoints = parseInt(computerPoints.innerHTML);
-      let pPoints = parseInt(playerPoints.innerHTML);
+      // let cPoints = parseInt(computerPoints.innerHTML);
+      // let pPoints = parseInt(playerPoints.innerHTML);
 
-      if (option.innerHTML === 'rock') {
-        if (computerChoice === 'paper') computerPoints.innerHTML = cPoints + 1;
-        else if (computerChoice === 'scissors')
-          playerPoints.innerHTML = pPoints + 1;
-      } else if (option.innerHTML === 'paper') {
-        if (computerChoice === 'scissors')
-          computerPoints.innerHTML = cPoints + 1;
-        else if (computerChoice === 'rock')
-          playerPoints.innerHTML = pPoints + 1;
-      } else {
-        if (computerChoice === 'rock') computerPoints.innerHTML = cPoints + 1;
-        else if (computerChoice === 'paper')
-          playerPoints.innerHTML = pPoints + 1;
-      }
+      // if (option.innerHTML === 'rock') {
+      //   if (computerChoice === 'paper') computerPoints.innerHTML = cPoints + 1;
+      //   else if (computerChoice === 'scissors')
+      //     playerPoints.innerHTML = pPoints + 1;
+      // } else if (option.innerHTML === 'paper') {
+      //   if (computerChoice === 'scissors')
+      //     computerPoints.innerHTML = cPoints + 1;
+      //   else if (computerChoice === 'rock')
+      //     playerPoints.innerHTML = pPoints + 1;
+      // } else {
+      //   if (computerChoice === 'rock') computerPoints.innerHTML = cPoints + 1;
+      //   else if (computerChoice === 'paper')
+      //     playerPoints.innerHTML = pPoints + 1;
+      // }
+      
     }, 900);
   });
 });
