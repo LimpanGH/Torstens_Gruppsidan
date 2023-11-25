@@ -174,13 +174,20 @@ button#restart:hover {
 /* -------- Spelkontroller start --------- */
 
 .controls {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  padding: 1.7rem 2%;
-  gap: 1rem;
-  z-index: 3;
+     display: flex;
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      padding: 1.7rem 2%;
+      gap: 1rem;
+      z-index: 3;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+      justify-content: flex-end
+}
+::before {
+  padding-right: 30.5rem;
 }
 
 .button {
