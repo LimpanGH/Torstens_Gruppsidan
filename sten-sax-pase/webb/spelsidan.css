@@ -27,14 +27,8 @@ span {
 }
 
 button#restart {
-      font-size: large;
-      cursor: pointer;
-      padding-right: .8rem;
-      margin-top: 0.4rem;
   font-size: large;
   cursor: pointer;
-  padding-right: 0.8rem;
-  margin-top: 0.4rem;
 }
 
 a {
