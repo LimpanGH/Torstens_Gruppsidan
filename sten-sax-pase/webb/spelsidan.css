@@ -213,7 +213,7 @@ button#restart:hover {
 #mute {
   align-self: flex-start;
   margin-right: auto;
-  color: #274d97;
+  color: blue;
   margin-top: 2rem;
   margin-left: 1rem;
    padding-top: 0.5rem;
