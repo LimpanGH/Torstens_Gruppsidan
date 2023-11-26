@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sten Sax Påse</title>
+  
   <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
   <link rel="stylesheet" href="spelsidan.css" />
   <script defer type="text/javascript" src="spelsidan.js"></script>
@@ -66,11 +67,11 @@
       <div class="hand">
 
         <div class="computer">
-           <img src="img/scissorPlayer.png" alt="" class="header--center">
+           <img src="imgHands/rockPlayer.png" alt="" class="header--center">
         </div>
       
         <div class="player option">
-          <img src="img/stonePlayer.png" alt="" class="header--center" />
+          <img src="imgHands/rockComputer.png" alt="" class="header--center" />
         </div>
 
       </div>
@@ -108,19 +109,19 @@
     <section class="controls">
      <i class="fa-solid fa-volume-high mute fa-2xl"  id="mute"  onclick="toggleMute()"></i>
       
-     <div class="options" onclick="rockRound(); shakeHandsFuncion()">    
+     <div class="options" onclick="rockRound()">    
         <button type="button" data-selection="rock" class="button" id="btnR"><img width="40px" height="40px"
-            src="img/stonePlayer.png" alt=""></button>
+            src="imgHands/rockPlayer.png" alt=""></button>
       </div>
 
-      <div class="options" onclick="paperRound(); shakeHandsFuncion()">
+      <div class="options" onclick="paperRound()">
         <button type="button" data-selection="paper" class="button" id="btnP"><img width="40px" height="40px"
-            src="img/paperPlayer.png" alt=""></button>
+            src="imgHands/paperPlayer.png" alt=""></button>
       </div>
 
-      <div class="options" onclick="scissorsRound(); shakeHandsFuncion()">
+      <div class="options" onclick="scissorsRound()">
         <button type="button" data-selection="scissors" class="button" id="btnS"><img width="40px" height="40px"
-            src="img/scissorbPlayer.png" alt=""></button>
+            src="imgHands/scissorsPlayer.png" alt=""></button>
       </div>
 
     </section>
