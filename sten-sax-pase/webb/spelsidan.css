@@ -10,6 +10,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-image: url('img/race-embrace-hero.jpg');
+  background-size: cover;
 }
 
 li,

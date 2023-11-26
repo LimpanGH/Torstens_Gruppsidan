@@ -25,6 +25,18 @@ form.addEventListener('submit', (e) => {
   // Redirects to our other page (spelsidan) when our form is submitted and the items have been set to localstorage
   window.location.href = 'spelsidan.html';
 });
+
+
+function borderClick(box) {
+  //selects all avatars as eligible items, and allows a max of 1 item to be affected by borderClick
+  var allAvatars = document.querySelectorAll('.avatar');
+  allAvatars.forEach(function (avatar) {
+    avatar.style.border = 'none';
+  });
+  //styles borders on click
+  box.style.border = '5px solid red';
+}
+
 //To check what is in your local storage:
 // console.log(localStorage);
 

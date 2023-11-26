@@ -74,7 +74,7 @@ function rockRound() {
   let computerInput = getComputerChoice();
   computer.src = `imgHands/${computerInput.toLowerCase()}Computer.png`;
   if (userInput === computerInput) {
-    roundResult.textContent = '👍 DRAW 👍';
+    roundResult.textContent = 'DRAW';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'rgb(50, 48, 48)';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -83,7 +83,7 @@ function rockRound() {
   } else if (computerInput === 'SCISSORS' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = '👏 WIN  👏';
+    roundResult.textContent = 'WIN';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'green';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -93,7 +93,7 @@ function rockRound() {
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = '👎 LOSE 👎';
+    roundResult.textContent = 'LOSE';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'red';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -116,7 +116,7 @@ function paperRound() {
   computer.src = `imgHands/${computerInput.toLowerCase()}Computer.png`;
 
   if (userInput === computerInput) {
-    roundResult.textContent = ' 👍 DRAW 👍';
+    roundResult.textContent = 'DRAW';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'rgb(50, 48, 48)';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -126,7 +126,7 @@ function paperRound() {
   } else if (computerInput === 'ROCK' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = ' 👏 WIN 👏';
+    roundResult.textContent = 'WIN';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'green';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -136,7 +136,7 @@ function paperRound() {
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = '👎 LOSE 👎';
+    roundResult.textContent = 'LOSE';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'red';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -160,7 +160,7 @@ function scissorsRound() {
 
   // showScissors();
   if (userInput === computerInput) {
-    roundResult.textContent = ' 👍DRAW 👍';
+    roundResult.textContent = ' DRAW';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'rgb(50, 48, 48)';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -168,7 +168,7 @@ function scissorsRound() {
   } else if (computerInput === 'PAPER' && winPlayer <= 5) {
     winPlayer++;
     winAnimationPlayer();
-    roundResult.textContent = ' 👏 WIN 👏';
+    roundResult.textContent = 'WIN';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'green';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -177,7 +177,7 @@ function scissorsRound() {
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
-    roundResult.textContent = '👎 LOSE 👎';
+    roundResult.textContent = 'LOSE';
     /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'red';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
@@ -211,9 +211,9 @@ options.forEach((option) => {
 //function that is ran after every (rock/paper/scissors round to check for a winner of the game (first to 5))
 function checkWinner() {
   if (winComputer == 5) {
-    roundResult.textContent = ' 🤯 You lost the game! 🤯';
+    roundResult.textContent = 'You lost the game!';
   } else if (winPlayer == 5) {
-    roundResult.textContent = ' 🤩 You won the game! 🤩';
+    roundResult.textContent = 'You won the game!';
   }
 }
 
@@ -308,8 +308,8 @@ resetText = () => {
 //Win round
 function soundWinRound() {
   const audio = document.getElementById('sound-forRound');
-   isMuted ? console.log() : audio.play();
-};
+  isMuted ? console.log() : audio.play();
+}
 //Loose round
 function soundLoseRound() {
   const audio = document.getElementById('sound-forRound');
@@ -324,18 +324,18 @@ function soundWinGame() {
 function soundLoseGame() {
   const audio = document.getElementById('sound-looseGame');
   isMuted ? console.log() : audio.play();
-};
+}
 
 toggleMute = () => {
   isMuted = !isMuted; // Toggle the mute state
-audio.muted = isMuted;
+  audio.muted = isMuted;
   audio2.muted = isMuted;
   /* Add it Leila when click on them show us mute and unmute icon */
   soundIcon.className = audio.muted
     ? 'fas fa-volume-mute fa-2xl'
     : 'fas fa-volume-up fa-2xl';
   soundIcon.style.color = audio.muted ? 'red' : '#274d97';
-}
+};
 /*  function activateButton(button, roundFunction) {
             // Deactivate all buttons
             const buttons = document.querySelectorAll('.button');
