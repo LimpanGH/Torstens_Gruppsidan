@@ -190,7 +190,7 @@ button#restart:hover {
   padding-right: 30.5rem;
 }
 
-/*  .button {
+ .button {
    border-radius: 50%;
    margin: 5px;
    padding: 10px;
@@ -200,7 +200,7 @@ button#restart:hover {
  }
 .active {
       background-color: #314d86;
-    } */
+    }
 
 /* .button:hover {
   background-color: #5874ac;
@@ -214,7 +214,7 @@ button#restart:hover {
   color: #274d97;
   margin-top: 2rem;
   margin-left: 1rem;
-      padding-top: 0.5rem;
+   padding-top: 0.5rem;
 }
 #mute:hover {
   cursor: pointer;
