@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="spelsidan.css" />
   <script defer type="text/javascript" src="spelsidan.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-xxQjGtmHvL9TuStS5sZ9WDK+NU8zVw0sj01MTVvfU4BfNkz/b2EQ0vqGZ1TDBTxFdrCQrqL7a9K1myxFsEnqsA=="
-    crossorigin="anonymous" />
+  integrity="sha512-..." crossorigin="anonymous">
+
 <script src="https://kit.fontawesome.com/427fa62431.js" crossorigin="anonymous"></script>
 
 </head>
@@ -99,17 +99,17 @@
         <!-- Player controls -->
       
 
-        <button data-selection="rock" class="button" onclick="toggleState(this)" id="btnR"><img width="40px" height="40px"
+        <button data-selection="rock" class="button" onclick="activateButton(this, rockRound)" id="btnR"><img width="40px" height="40px"
             src="img/stonePlayer.png" alt=""></button>
 
       </div>
       <div onclick="paperRound()"> 
-        <button data-selection="paper" class="button" onclick="toggleState(this)"  id="btnP"><img width="40px" height="40px"
+        <button data-selection="paper" class="button"  onclick="activateButton(this, paperRound)"  id="btnP"><img width="40px" height="40px"
             src="img/paperPlayer.png" alt=""></button>
 
       </div>
       <div onclick="scissorsRound()">
-        <button data-selection="scissors" class="button" onclick="toggleState(this)" id="btnS"><img width="40px" height="40px"
+        <button data-selection="scissors" class="button" onclick="activateButton(this, scissorsRound)" id="btnS"><img width="40px" height="40px"
             src="img/scissorbPlayer.png" alt=""></button>
 
       </div>
