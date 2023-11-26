@@ -53,7 +53,7 @@ button#restart:hover {
   background-image: url('img/race-track-background-iphone-12.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 0; 
+  z-index: 3; 
   min-width: 844px;
   height: 390px;
   margin: 0 auto;
@@ -514,7 +514,7 @@ content: '\f028';
 
   .audience {
     position: absolute;
-    top: 2rem; 
+    top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
