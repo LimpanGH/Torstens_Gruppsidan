@@ -276,12 +276,12 @@ resetText = () => {
 /* --- Player sounds ---  */
 //Win round
 function soundWinRound() {
-  const audio = document.getElementById('sound-winRound');
+  const audio = document.getElementById('sound-forRound');
    isMuted ? console.log() : audio.play();
 };
 //Loose round
 function soundLoseRound() {
-  const audio = document.getElementById('sound-looseRound');
+  const audio = document.getElementById('sound-forRound');
   isMuted ? console.log() : audio.play();
 };
 //Win game
