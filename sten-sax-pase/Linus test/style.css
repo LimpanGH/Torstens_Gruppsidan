@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Färg på bodyn */
 body { 
   background: #2d2a3d;
   color: #fff;
@@ -19,6 +20,7 @@ body {
   height: 200px;
 }
 
+/* Händernas bredd */
 .computer img,
 .player img {
   width: 75%;

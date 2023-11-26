@@ -25,18 +25,22 @@ const scoreElementComputer = document.getElementById('computerDog');
 const restart = document.getElementById('restart');
 const audio = document.getElementById('sound-bgd-music');
 const audio2 = document.getElementById('sound-bgd-crowd');
+// animation hands ⬇️
+const computer = document.querySelector('.computer img');
+const player = document.querySelector('.player img');
+const options = document.querySelectorAll('.options button');
+// animation hands ⬆️
 /* Add Leila for pu id tag from html sound mute */
 const soundIcon = document.getElementById('mute');
 //background sound --starts with document and with lower volume
 document.addEventListener('DOMContentLoaded', function () {
-    const crowdSound = document.getElementById("sound-bgd-crowd");
-    const musicSound = document.getElementById("sound-bgd-music");
-    crowdSound.volume = 0.7;
-    musicSound.volume = 0.4;
-    crowdSound.play();
-    musicSound.play();
+  const crowdSound = document.getElementById('sound-bgd-crowd');
+  const musicSound = document.getElementById('sound-bgd-music');
+  crowdSound.volume = 0.7;
+  musicSound.volume = 0.4;
+  crowdSound.play();
+  musicSound.play();
 });
-
 
 let isMuted = false;
 
@@ -68,6 +72,7 @@ function rockRound() {
   }
   let userInput = 'ROCK';
   let computerInput = getComputerChoice();
+  computer.src = `imgHands/${computerInput.toLowerCase()}Computer.png`;
   if (userInput === computerInput) {
     roundResult.textContent = '👍 DRAW 👍';
     /* Leila: set color and font size like style sheet but with JavaScript code */
@@ -83,7 +88,7 @@ function rockRound() {
     roundResult.style.color = 'green';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     roundResult.style.fontSize = '30px';
-  
+
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
@@ -108,9 +113,11 @@ function paperRound() {
   }
   let userInput = 'PAPER';
   let computerInput = getComputerChoice();
+  computer.src = `imgHands/${computerInput.toLowerCase()}Computer.png`;
+
   if (userInput === computerInput) {
     roundResult.textContent = ' 👍 DRAW 👍';
-        /* Leila: set color and font size like style sheet but with JavaScript code */
+    /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'rgb(50, 48, 48)';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     roundResult.style.fontSize = '30px';
@@ -120,17 +127,17 @@ function paperRound() {
     winPlayer++;
     winAnimationPlayer();
     roundResult.textContent = ' 👏 WIN 👏';
-        /* Leila: set color and font size like style sheet but with JavaScript code */
+    /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'green';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     roundResult.style.fontSize = '30px';
-    
+
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
     roundResult.textContent = '👎 LOSE 👎';
-        /* Leila: set color and font size like style sheet but with JavaScript code */
+    /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'red';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     roundResult.style.fontSize = '30px';
@@ -149,10 +156,12 @@ function scissorsRound() {
   }
   let userInput = 'SCISSORS';
   let computerInput = getComputerChoice();
+  computer.src = `imgHands/${computerInput.toLowerCase()}Computer.png`;
+
   // showScissors();
   if (userInput === computerInput) {
-    roundResult.textContent =  ' 👍DRAW 👍';
-        /* Leila: set color and font size like style sheet but with JavaScript code */
+    roundResult.textContent = ' 👍DRAW 👍';
+    /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'rgb(50, 48, 48)';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     resetText();
@@ -160,22 +169,44 @@ function scissorsRound() {
     winPlayer++;
     winAnimationPlayer();
     roundResult.textContent = ' 👏 WIN 👏';
-        /* Leila: set color and font size like style sheet but with JavaScript code */
+    /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'green';
     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
-   
+
     resetText();
   } else if (winComputer <= 5) {
     winComputer++;
     winAnimationComputer();
     roundResult.textContent = '👎 LOSE 👎';
-        /* Leila: set color and font size like style sheet but with JavaScript code */
+    /* Leila: set color and font size like style sheet but with JavaScript code */
     roundResult.style.color = 'red';
-     roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
+    roundResult.style.fontFamily = 'YourDesiredFont, sans-serif';
     resetText();
   }
   checkWinner();
 }
+
+options.forEach((option) => {
+  option.addEventListener('click', () => {
+    computer.classList.add('shakeComputer');
+    player.classList.add('shakePlayer');
+
+    setTimeout(() => {
+      computer.classList.remove('shakeComputer');
+      player.classList.remove('shakePlayer');
+
+      const type = option.getAttribute('data-selection');
+      player.src = `imgHands/${type}Player.png`;
+      // clear the 2 other classes
+      // css class backgroundhtml
+
+      // const choice = ['rock', 'paper', 'scissors'];
+      // let arrayNum = Math.floor(Math.random() * 3);
+      // let computerChoice = choice[arrayNum];
+      // computer.src = `img/${computerChoice}Computer.svg`;
+    }, 900);
+  });
+});
 
 //function that is ran after every (rock/paper/scissors round to check for a winner of the game (first to 5))
 function checkWinner() {
@@ -197,22 +228,22 @@ function winAnimationPlayer() {
 
     case 2:
       scoreElementPlayer.classList.add('win-anim-P-2');
-       soundWinRound();
+      soundWinRound();
       break;
 
     case 3:
       scoreElementPlayer.classList.add('win-anim-P-3');
-       soundWinRound();
+      soundWinRound();
       break;
 
     case 4:
       scoreElementPlayer.classList.add('win-anim-P-4');
-       soundWinRound();
+      soundWinRound();
       break;
 
     case 5:
       scoreElementPlayer.classList.add('win-anim-P-5');
-       soundWinGame();
+      soundWinGame();
       break;
   }
 }
@@ -229,7 +260,7 @@ function winAnimationComputer() {
       soundLoseRound();
       break;
     case 3:
-      scoreElementComputer.classList.add('win-anim-C-3'); 
+      scoreElementComputer.classList.add('win-anim-C-3');
       soundLoseRound();
       break;
     case 4:
@@ -267,7 +298,7 @@ resetText = () => {
   if (winComputer === 5 || winPlayer === 5) {
     return;
   }
-                                                                  timeout = setTimeout(() => {
+  timeout = setTimeout(() => {
     // Checks textcontent at roundresult, if true to draw, win or lose see below comment
     roundResult.textContent = ''; // Set the text content to an empty string  after 1500ms
   }, 1500);
@@ -276,32 +307,45 @@ resetText = () => {
 /* --- Player sounds ---  */
 //Win round
 function soundWinRound() {
+<<<<<<< HEAD
   const audio = document.getElementById('sound-forRound');
    isMuted ? console.log() : audio.play();
 };
+=======
+  const audio = document.getElementById('sound-winRound');
+  isMuted ? console.log() : audio.play();
+}
+>>>>>>> animation-händer
 //Loose round
 function soundLoseRound() {
   const audio = document.getElementById('sound-forRound');
   isMuted ? console.log() : audio.play();
-};
+}
 //Win game
 function soundWinGame() {
   const audio = document.getElementById('sound-winGame');
-   isMuted ? console.log() : audio.play();
-};
+  isMuted ? console.log() : audio.play();
+}
 //Loose game
 function soundLoseGame() {
- const audio = document.getElementById('sound-looseGame');
+  const audio = document.getElementById('sound-looseGame');
   isMuted ? console.log() : audio.play();
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> animation-händer
 
 toggleMute = () => {
   isMuted = !isMuted; // Toggle the mute state
 audio.muted = isMuted;
   audio2.muted = isMuted;
   /* Add it Leila when click on them show us mute and unmute icon */
-  soundIcon.className = audio.muted ? 'fas fa-volume-mute fa-2xl' : 'fas fa-volume-up fa-2xl'; 
+  soundIcon.className = audio.muted
+    ? 'fas fa-volume-mute fa-2xl'
+    : 'fas fa-volume-up fa-2xl';
   soundIcon.style.color = audio.muted ? 'red' : '#274d97';
+<<<<<<< HEAD
 }
 /*  function activateButton(button, roundFunction) {
             // Deactivate all buttons
@@ -323,3 +367,6 @@ audio.muted = isMuted;
             }, 2000);
         }
            */
+=======
+};
+>>>>>>> animation-händer

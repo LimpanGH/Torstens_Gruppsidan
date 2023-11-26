@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sten Sax Påse</title>
+  
   <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
   <link rel="stylesheet" href="spelsidan.css" />
   <script defer type="text/javascript" src="spelsidan.js"></script>
@@ -55,22 +56,33 @@
   <header class="header">
     <!-- Logo and connect to main page Torstensänglar -->
     <a href="/index.html"><img class="logo" src="img/logo-2-removebg-preview (2).png" alt="logo" /></a>
+    
     <div class="wrapperCoUs">
+
       <div class="scoreboardwrapper">
         <p>Computer</p>
         <img img class="avatar av__comp" src="img/computer_avatar_2.png" alt="">
       </div>
+      
       <div class="hand">
-        <img src="img/scissorPlayer.png" alt="" class="header--center">
-        <img src="img/stonePlayer.png" alt="" class="header--center" />
+
+        <div class="computer">
+           <img src="imgHands/rockPlayer.png" alt="" class="header--center">
+        </div>
+      
+        <div class="player option">
+          <img src="imgHands/rockComputer.png" alt="" class="header--center" />
+        </div>
+
       </div>
+      
       <div class="scoreboardwrapper">
         <span class="playerName"></span>
         <!-- <span class="scoreboard scoreboard--player"> -->
         <img id="imgOfPlayerAvatar" alt="">
         </span>
       </div>
-      
+    
     </div>
 
     
@@ -91,14 +103,18 @@
     <img class="audience" src="img/race-track-audience-large.png" alt="">
 
 
+<<<<<<< HEAD
    
+=======
+    <span id="result" class="resultText"></span>
+
+    <!-- Player controls -->
+
+>>>>>>> animation-händer
     <section class="controls">
      <i class="fa-solid fa-volume-high mute fa-2xl"  id="mute"  onclick="toggleMute()"></i>
-      <div onclick="rockRound()"> 
-
-        
-        <!-- Player controls -->
       
+<<<<<<< HEAD
 
         <button data-selection="rock" class="button" onclick="activateButton(this, rockRound)" id="btnR"><img width="40px" height="40px"
             src="img/stonePlayer.png" alt=""></button>
@@ -107,14 +123,31 @@
       <div onclick="paperRound()"> 
         <button data-selection="paper" class="button"  onclick="activateButton(this, paperRound)"  id="btnP"><img width="40px" height="40px"
             src="img/paperPlayer.png" alt=""></button>
-
+=======
+     <div class="options" onclick="rockRound()">    
+        <button type="button" data-selection="rock" class="button" id="btnR"><img width="40px" height="40px"
+            src="imgHands/rockPlayer.png" alt=""></button>
       </div>
+>>>>>>> animation-händer
+
+      <div class="options" onclick="paperRound()">
+        <button type="button" data-selection="paper" class="button" id="btnP"><img width="40px" height="40px"
+            src="imgHands/paperPlayer.png" alt=""></button>
+      </div>
+<<<<<<< HEAD
       <div onclick="scissorsRound()">
         <button data-selection="scissors" class="button" onclick="activateButton(this, scissorsRound)" id="btnS"><img width="40px" height="40px"
             src="img/scissorbPlayer.png" alt=""></button>
+=======
+>>>>>>> animation-händer
 
+      <div class="options" onclick="scissorsRound()">
+        <button type="button" data-selection="scissors" class="button" id="btnS"><img width="40px" height="40px"
+            src="imgHands/scissorsPlayer.png" alt=""></button>
       </div>
+
     </section>
+
   </main>
 </div>
 </body>

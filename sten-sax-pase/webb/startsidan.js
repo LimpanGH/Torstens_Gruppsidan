@@ -1,4 +1,4 @@
-// ----- Getting user input and taking it over to Spelsidan. ------
+ // ----- Getting user input and taking it over to Spelsidan. ------
 const form = document.querySelector('#form');
 const playerName = document.getElementById('playername');
 
