@@ -307,15 +307,9 @@ resetText = () => {
 /* --- Player sounds ---  */
 //Win round
 function soundWinRound() {
-<<<<<<< HEAD
   const audio = document.getElementById('sound-forRound');
    isMuted ? console.log() : audio.play();
 };
-=======
-  const audio = document.getElementById('sound-winRound');
-  isMuted ? console.log() : audio.play();
-}
->>>>>>> animation-händer
 //Loose round
 function soundLoseRound() {
   const audio = document.getElementById('sound-forRound');
@@ -330,11 +324,7 @@ function soundWinGame() {
 function soundLoseGame() {
   const audio = document.getElementById('sound-looseGame');
   isMuted ? console.log() : audio.play();
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> animation-händer
 
 toggleMute = () => {
   isMuted = !isMuted; // Toggle the mute state
@@ -345,7 +335,6 @@ audio.muted = isMuted;
     ? 'fas fa-volume-mute fa-2xl'
     : 'fas fa-volume-up fa-2xl';
   soundIcon.style.color = audio.muted ? 'red' : '#274d97';
-<<<<<<< HEAD
 }
 /*  function activateButton(button, roundFunction) {
             // Deactivate all buttons
@@ -367,6 +356,3 @@ audio.muted = isMuted;
             }, 2000);
         }
            */
-=======
-};
->>>>>>> animation-händer
