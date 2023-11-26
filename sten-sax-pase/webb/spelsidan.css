@@ -64,6 +64,8 @@ button#restart:hover {
 
 .header {
   display: flex;
+  position: relative;
+  z-index: 4;
   /* justify-content: space-between; */
   gap: 1rem;
   padding: 0.6rem 2%;
