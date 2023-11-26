@@ -193,6 +193,7 @@ button#restart:hover {
 /* Result text */
 
 .resultText {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -200,7 +201,8 @@ button#restart:hover {
   font-size: 4rem;
   margin-right: 6rem;
   color: black;
-  margin-top: 13rem
+  margin-top: 13rem;
+  z-index: 3;
  
 }
 
