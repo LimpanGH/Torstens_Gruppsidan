@@ -241,8 +241,16 @@ button#restart:hover {
    color: white;
  }
 .active {
-      background-color: #314d86;
-    }
+  cursor: not-allowed;
+  background-color: #314d86;
+}
+
+.inactive {
+  cursor: pointer;
+  opacity: 0.5;
+  
+  /* Add other styles for the inactive state */
+}
 
 /* .button:hover {
   background-color: #5874ac;

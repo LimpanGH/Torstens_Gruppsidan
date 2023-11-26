@@ -100,6 +100,9 @@ Bestämma hur sidan ska se ut och bete sig i större format:
  - Add animation on title(sten, sax, påse), responsive it
  -- Add color and font size and icon on JavaScript code  on SpelSidan
 
+ 23-11-2023   15:00
+ -Test buttons active and disactive for(rock,paper,scissors) and solve some issue and works very well evrything(with javaScript)
+
 
 
  <!-- Resource Leila: -->
