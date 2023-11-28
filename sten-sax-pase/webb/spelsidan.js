@@ -337,69 +337,64 @@ toggleMute = () => {
   soundIcon.style.color = audio.muted ? 'red' : '#274d97';
 };
 
-
 /* try enable and disable button(rock,paper,scissor)===>Leila */
-rock.addEventListener('click', function(){
+rock.addEventListener('click', function () {
   activateButton(this, rockRound);
 });
-paper.addEventListener('click', function(){
+paper.addEventListener('click', function () {
   activateButton(this, paperRound);
 });
-scissors.addEventListener('click',function(){
+scissors.addEventListener('click', function () {
   activateButton(this, scissorsRound);
 });
 
- function activateButton(button, roundFunction) {
-    const buttons = document.querySelectorAll('.button');
+function activateButton(button, roundFunction) {
+  const buttons = document.querySelectorAll('.button');
 
-    // Check if the clicked button is already active
-    const isActive = button.classList.contains('active');
+  // Check if the clicked button is already active
+  const isActive = button.classList.contains('active');
 
-    // Deactivate all buttons
-    buttons.forEach(b => {
-        b.classList.remove('active');
-        b.classList.add('inactive');
-        b.style.opacity = '0.5'; // Set opacity for inactive buttons
-        b.disabled = true;
-    });
+  // Deactivate all buttons
+  buttons.forEach((b) => {
+    b.classList.remove('active');
+    b.classList.add('inactive');
+    b.style.opacity = '0.5'; // Set opacity for inactive buttons
+    b.disabled = true;
+  });
 
-    // Activate the clicked button if it wasn't already active
+  // Activate the clicked button if it wasn't already active
+  if (!isActive) {
+    button.classList.add('active');
+    button.classList.remove('inactive');
+    button.style.opacity = '1'; // Set full opacity for active button
+    button.disabled = false;
+  }
+
+  // Execute the round function after a delay
+  setTimeout(function () {
+    // Deactivate the button after executing the round function if it wasn't manually clicked
     if (!isActive) {
-        button.classList.add('active');
-        button.classList.remove('inactive');
-        button.style.opacity = '1'; // Set full opacity for active button
-        button.disabled = false;
+      button.classList.remove('active');
+      button.classList.add('inactive');
+      button.style.opacity = '0.5'; // Set opacity for inactive buttons
+      button.disabled = true;
     }
 
-    // Execute the round function after a delay
-    setTimeout(function () {
-        // Deactivate the button after executing the round function if it wasn't manually clicked
-        if (!isActive) {
-            button.classList.remove('active');
-            button.classList.add('inactive');
-            button.style.opacity = '0.5'; // Set opacity for inactive buttons
-            button.disabled = true;
-        }
+    // Reset opacity for all buttons
+    buttons.forEach((b) => {
+      b.style.opacity = '1';
+    });
 
-        // Reset opacity for all buttons
-        buttons.forEach(b => {
-            b.style.opacity = '1';
-        });
-
-      /*   // Call the roundFunction callback if it's provided
+    /*   // Call the roundFunction callback if it's provided
         if (typeof roundFunction === 'function') {
             roundFunction();
         } */
 
-        // Enable all buttons after a delay
-        setTimeout(function () {
-            buttons.forEach(b => {
-                b.disabled = false;
-            });
-        }, 900);
-    }, 1000);
+    // Enable all buttons after a delay
+    setTimeout(function () {
+      buttons.forEach((b) => {
+        b.disabled = false;
+      });
+    }, 900);
+  }, 1000);
 }
- 
-
-
-

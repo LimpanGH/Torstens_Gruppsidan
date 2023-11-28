@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+:root {
+  --cp-value: 0;
+  --pl-value: 0;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -49,7 +54,7 @@ button#restart:hover {
   background-image: url('img/race-track-background-iphone-12.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 3; 
+  z-index: 3;
   min-width: 844px;
   height: 390px;
   margin: 0 auto;
@@ -198,7 +203,6 @@ button#restart:hover {
   color: black;
   margin-top: 13rem;
   z-index: 3;
- 
 }
 
 /* Puts the logo and the links on each sides */
@@ -232,14 +236,14 @@ button#restart:hover {
   padding-right: 30.5rem;
 }
 
- .button {
-   border-radius: 50%;
-   margin: 5px;
-   padding: 10px;
-   cursor: pointer;
-   background-color: #7498e2;
-   color: white;
- }
+.button {
+  border-radius: 50%;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #7498e2;
+  color: white;
+}
 .active {
   cursor: not-allowed;
   background-color: #314d86;
@@ -248,7 +252,7 @@ button#restart:hover {
 .inactive {
   cursor: pointer;
   opacity: 0.5;
-  
+
   /* Add other styles for the inactive state */
 }
 
@@ -264,7 +268,7 @@ button#restart:hover {
   color: blue;
   margin-top: 2rem;
   margin-left: 1rem;
-   padding-top: 0.5rem;
+  padding-top: 0.5rem;
 }
 #mute:hover {
   cursor: pointer;
@@ -336,6 +340,8 @@ content: '\f028';
 .dog__player {
   top: 50%;
   left: 1%;
+  transform: translateX(calc(100px * var(--pl-value)));
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Rörelse när hunden står still */
@@ -558,7 +564,7 @@ content: '\f028';
 
   .audience {
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
